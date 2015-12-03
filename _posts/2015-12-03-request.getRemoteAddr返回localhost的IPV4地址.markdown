@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "request.getRemoteAddr()返回localhost地址为IPV6"
+date:   2015-12-03 10:48:41 +0800
+categories: jekyll update
+tags:   jsp
+---
+request.getRemoteAddr()返回localhost地址为 0:0:0:0:0:0:0:1
+
+希望返回IPv4地址：
+
+修改/etc/hosts (kubuntu)
+
+注释掉    `::1 localhost ip6-localhost ip6-loopback`
+
+或者添加 `127.0.0.1 localhost`
