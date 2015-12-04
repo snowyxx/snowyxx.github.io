@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "vim 使用系统剪切板"
+date:   2011-01-28 09:44:08 +0800
+categories: blog
+tags:   [linux,vim]
+---
+在vim中称为寄存器，对应系统剪切板的寄存器为+       
+ 
+* 把系统剪切板中的内容复制到vim中：在vim的输入模式中按`ctrl+insert`键   
+* 把vim的内容复制到系统剪切板：在vim中选中要复制的内容，按`“+y`三个键后到其他地方粘贴就可以了。  
+
+ubuntu和debin中vim默认是没有对应gui中的+寄存器的，要另外安装         
+`sudo apt-get install vim-gnome`
+
+
+PS:**事实上，从vim中复制到其他编辑器大可不用这么麻烦，更快的操作方式是在vim中按v进入可视模式，选中需要的内容，然后到其他编辑器中直接按鼠标中键就可以了。**

@@ -1,0 +1,43 @@
+---
+layout: post
+title:  "awk笔记"
+date:   2011-06-15 21:09:33 +0800
+categories: blog
+tags:   [awk,linux]
+---
+1. $0:当前行
+2. -F：字段分隔符
+——$ awk -F":" '{ print $1 $3 }' /etc/passwd
+3. -f：引用外部脚本
+——$ awk -f myscript.awk myfile.in
+4. BEGIN END：在处理文件之前/之后执行的代码。
+5. /abc/：正则表达式
+——$ awk '/root/ {print}' /etc/passwd
+6. 代码块之前的布尔表达式"=="、"<"、">"、"<="、">=" 和 "!="
+——$ awk -F":" '$1=="yxx" {print}' /etc/passwd
+7. "~" 和 "!~"：匹配和不匹配
+——$ awk -F":" '$1~/root/ {print}' /etc/passwd
+8. if(){}else if (){}else{}
+9. \|\|,&&
+10. 数值变量
+——BEGIN{x=0}
+         /^$/ {x=x+1}
+         END {print x" blank lines found"}
+11. 字符变量转换成数字变量(含有字符的变量将作为0计算)
+——x="1.11"
+         x=x+1
+         print x # x=2.11
+——{print $1^2+1}
+12. 支持的运算符
+——前后加减（ i++ 、 --foo ）、加／减／乘／除赋值运算符（ a+=3 、 b*=2 、 c/=2.2 、 d-=6.2 ）模／指数赋值运算符（ a^=2 、 b%=4 ）
+13. 分隔符设置FS
+——FS="\t+"
+——FS="[[:space:]+]"  #awk默认分隔符
+14. NF：字段数量
+15. NR：记录号
+16. RS：记录分隔符
+17. OFS：输出字段分隔符。插入到字段之间
+18. ORS：输出记录分隔符。                
+
+---
+参考：[http://www-128.ibm.com/developerworks/cn/linux/shell/awk/awk-1/index.html](http://www-128.ibm.com/developerworks/cn/linux/shell/awk/awk-1/index.html){:target="_blank"}

@@ -1,0 +1,72 @@
+---
+layout: post
+title:  "正则表达式笔记3"
+date:   2011-02-17 15:57:30 +0800
+categories: blog
+tags:   [regex,perl]
+---
+今天学的有点乱，一点一点地捋。。。
+
+# 替换:      
+s///, 可以使用g、x、s修饰。
+
+# 大小写切换。
+- \U 转换成大写
+- \L 转换成小写
+- \u  只一个字符转成大写
+- \l   只一个字符转成小写
+- \E 结束大小写转换
+- \u\L  首字母大写           
+   例子：  
+           
+            s/(\w+) with (\w+)/\U$2\E with $1/i; # $_ is now "I saw FRED with barney."
+            s/(fred|barney)/\u\L$1/ig; # $_ is now "I saw Fred with Barney."
+
+# 分割   
+@fields = split /separator/, $string;       
+列子：         
+    `@fields = split /:/, ":::a:b:c:::"; # gives ("", "", "", "a", "b", "c")`
+    
+> $_ 的默认分隔符就是空格 my @fields = split; # like split /\s+/, $_;
+
+
+# 合并
+my $result = join $glue, @pieces;      
+例子：   
+          
+        my @values = split /:/, $x;   # @values is (4, 6, 8, 10, 12)
+        my $z = join "-", @values;   # $z is "4-6-8-10-12"
+     
+# 非贪婪符号
+perl中的造作都是贪婪的，就是说首先吞掉最大范围，然后再一点一点往外吐。           
+非贪婪，就是一点一点地吃。           
+用法： +?、*?、 ??、{x,y}?        
+例子：去掉html文件中加粗标签。       
+     `s#<BOLD>(.*?)</BOLD>#$1#g;`
+     
+# 多行匹配
+    在模式后添加/m (hink m for multiple lines)
+
+# 处理多个文件
+例子：
+
+       #!/usr/bin/perl -w
+       use strict;
+       chomp(my $date = `date`);
+       $^I = ".bak";
+       while (<>) {
+           s/^Author:.*/Author: Randal L. Schwartz/;
+           s/^Phone:.*\n//;
+           s/^Date:.*/Date: $date/;
+       print;
+       }
+
+
+#  命令行执行
+例子：`$ perl -p -i.bak -w -e 's/Randall/Randal/g' fred*.dat`
+
+* -p 代表一个while循环
+* -e 代表是perl代码
+* -n  默认用print打印结果。-n可以禁止打印。
+
+以上内容来自《perl learning v5》第九章
