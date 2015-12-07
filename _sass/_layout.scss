@@ -240,3 +240,30 @@
         }
     }
 }
+table
+{
+    border-collapse: collapse;
+    display: block;
+    overflow: auto;
+    width: 100%;
+    word-break: keep-all;
+    word-break: normal;
+}
+table th
+{
+    font-weight: bold;
+}
+table th, td
+{
+    border: 1px solid #ddd;
+    padding: 6px 13px;
+}
+table tr
+{
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+}
+table tr:nth-child(2n)
+{
+    background-color: #f8f8f8;
+}

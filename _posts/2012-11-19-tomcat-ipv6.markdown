@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "tomcat的http只使用ipv6，而不使用ipv4的问题"
+date:   2012-11-19 11:20:08 +0800
+categories: blog
+tags:   [other]
+---
+在使用一个tomcat+mysql的Debian服务器的时候，（可能是由于使用Nessus扫描其漏洞），一段时间后不能通过浏览器访问了，发现java和mysql的进程都在运行，检查监听接口的时候，`netstat -tpl`，发现只在**tcp6**监听http端口了。             
+调查发现禁用IPv6没有作用，另外两中方法，一种使用在Debian上设置，一种是设置Tomcat的java参数：
+
+**【系统上设置】**     
+
+    replace "net.ipv6.bindv6only=1" with "net.ipv6.bindv6only=0" in your /etc/sysctl.d/ as a temporary solution.
+
+**【添加java参数】（测试有效）**
+
+    JAVA_OPTS= $JAVA_OPTS -Djava.net.preferIPv4Stack=true -Djava.net.preferIPv4Addresses
+
+参考：         
+[http://serverfault.com/questions/390840/how-does-one-get-tomcat-to-bind-to-ipv4-address](http://serverfault.com/questions/390840/how-does-one-get-tomcat-to-bind-to-ipv4-address){:target="_blank"}
+[http://linux.derkeiler.com/Mailing-Lists/Debian/2009-12/msg01262.html](http://linux.derkeiler.com/Mailing-Lists/Debian/2009-12/msg01262.html){:target="_blank"}

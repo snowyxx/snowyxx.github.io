@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Debian 启动时候启动MTA花费过多时间"
+date:   2012-09-10 10:13:11 +0800
+categories: blog
+tags:   [linux]
+---
+Debian启动的时候“**Starting MTA**”花费很长时间                 
+执行`dpkg-reconfigure exim4-config`                       
+选择`delivers mail locally only`
+
+更多信息：[http://www.linuxquestions.org/questions/blog/bittner-195120/howto-fix-long-boot-delay-with-starting-mta-common-issue-2882/](http://www.linuxquestions.org/questions/blog/bittner-195120/howto-fix-long-boot-delay-with-starting-mta-common-issue-2882/){:target="blank"}

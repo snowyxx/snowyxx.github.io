@@ -1,0 +1,49 @@
+---
+layout: post
+title:  "输出99乘法表 "
+date:   2012-01-13 16:36:34 +0800
+categories: blog
+tags:   [java,linux]
+---
+{% highlight java %}
+public static void main(String[] args) {
+    // 最常见的方法
+    for (int i = 1; i < 10; i++) {
+        for (int j = 1; j <= i; j++) {
+            System.out.print(i + "*" + j + "=" + i * j + "\t");
+        }
+        System.out.println();
+    }
+    haha(9);
+    System.out.println("*************************************************");
+    Yan2();
+}
+// 使用递归的方法
+public static void haha(int i) {
+    if (i == 1) {
+        System.out.println("1x1=1");
+    } else {
+        haha(i - 1);
+        for (int j = 1; j <= i; j++) {
+            System.out.print(j + "x" + i + "=" + j * i + "\t");
+        }
+        System.out.println();
+    }
+}
+// 使用一次循环的方法
+public static void Yan2() {
+    for (int i = 1, j = 1; i < 10; i++) {
+        if (j < i) {
+            System.out.println();
+            i = 0;
+            j++;
+        } else {
+            System.out.print(i + "x" + j + "=" + i * j + "\t");
+        }
+    }
+}
+{% endhighlight %}
+
+Linux命令行方法：   
+  
+    for i in {1..9}; do for j in $(seq 1 $i); do echo -ne $i×$j=$((i*j))\\t;done; echo;done

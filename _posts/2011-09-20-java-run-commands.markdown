@@ -8,7 +8,7 @@ tags:   [java]
 {% highlight java %}
     public static void getFreeSpace(String path) throws Exception {
         Process p = Runtime.getRuntime().exec("df -h /" + path);
-        //Windows should add "cmd /c" in fround of command
+        //Windows should add "cmd /c" at the fround of command
         InputStream reader = new BufferedInputStream(p.getInputStream());
         // StringBuffer buffer=new StringBuffer();//if use the StringBuffer, the
         // Chinese in output will be garbled.
