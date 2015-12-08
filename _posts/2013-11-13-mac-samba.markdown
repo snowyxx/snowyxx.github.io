@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "mac中mount网络共享文件夹-smb"
+date:   2013-11-13 10:25:51 +0800
+categories: blog
+tags:   [mac]
+---
+- 在finder中command+k，然后输入`smb://hostnamOrIP/folder`
+- 在终端中使用`monut -t smbfs` 或者使用`mount_smbfs`:
+
+        mount_smbfs //username@servername/sharefolder /localfolder
+
+- 如果使用域用户的话:   //[domain;][user[:password]@]server[/share]
+
+        mount_smbfs //domainName\;username@server/sharefolder /localfolder
+    
+    **注意分号前的斜杠  \;**

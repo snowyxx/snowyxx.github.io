@@ -1,0 +1,85 @@
+---
+layout: post
+title:  "把多个html文件转换成一个doc文档的方法"
+date:   2013-05-31 14:28:07 +0800
+categories: blog
+tags:   [other]
+---
+要把一个用户手册转换成功一个word文档，这个用户手册有几个百个html页面，做起来来很麻烦，也没有找到很好满足我的要求的软件，最后的过程如下，效果还不错。
+
+1. 整理HTML文件，删除每页重复的部分。主要是把每页中的页头页脚删除。           
+（方法工具：ms sharepoint designer和正则表达式）
+2. 整理要转换的文件列表。可以从index使用的目录中提取，有的在html文件中，有的在js文件中              
+（方法工具：notepad++和正则表达式）。
+3. 根据上面的列表重命名html文件，来按照需要的顺序对文件编号。这是为第5步做准备。                    
+（方法：`java RenameFile filelist.txt` RenameFile.java贴到后面。）
+4.  使用[All Office Converter Platinum](http://www.greenxf.com/soft/28974.html){:target="_blank"}导入已编号的所有文件然后转换。                          
+注，这个工具不能导入子文件夹，要逐步添加。或者编辑个列表导入到这个软件中。                   
+如果转换文件较多，这步将花费很长时间，占用大量系统资源。 
+5. 合并doc文件。             
+新建空白word文档，打开，选择**插入**>**对象**>**来自文件文本**，选择已经转换好的全部文档。                  
+(似乎word不能一下导入200+个文件，我就每次导入50个文件。不知道是我word 2007还是硬件的限制）
+![word2html](/images/word2html.jpeg)
+
+6. 整理合并后的doc文件。删除没用的字符、文字等；删除全部链接；统一文字颜色等样式。
+
+---
+[source code](https://github.com/snowyxx/MyTest/blob/master/RenameFile.java){:target="_blank"}
+
+    import java.io.BufferedReader;
+    import java.io.File;
+    import java.io.FileReader;
+    
+    
+    public class RenameFile {
+        public static void main(String[] args) {
+            String filelist;
+            if (args.length != 1) {
+                System.out.println("Usage:\n使用文件名作为参数\n\t该文件应包含要处理的文件列表");
+            } else {
+                filelist = args[0];
+                File lf = new File(filelist);
+                BufferedReader br;
+                try {
+                    br = new BufferedReader(new FileReader(lf));
+
+
+                    String line = "";
+                    int i = 0;
+                    while ((line = br.readLine()) != null) {
+                        i++;
+                        System.out.println("原文件名： "+line);
+                        String newname = addCount(i, line);
+                        File f = new File(line);
+                        if (f.exists()) {
+                            f.renameTo(new File(newname));
+                            System.out.println("新文件名： "+newname);
+                        } else {
+                            System.out.println(" 文件：" + line + "不存在");
+                        }
+                        System.out.println("--------------------");
+                    }
+
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+
+        public static String addCount(int c, String fn) {
+            String newname = "";
+            String cc = String.valueOf(c);
+            while (cc.length() < 4) {
+                cc = "0" + cc;
+            }
+            int i = fn.lastIndexOf("/");
+            if (i != -1) {
+                newname = fn.substring(0, i + 1) + cc + "_" + fn.substring(i + 1);
+            } else {
+                newname = cc + "_" + fn;
+            }
+            return newname;
+        }
+    }

@@ -1,0 +1,59 @@
+---
+layout: post
+title:  "使用python转换html文件为doc"
+date:   2014-11-19 16:14:50 +0800
+categories: blog
+tags:   [python]
+---
+有用户手册是html格式的要转换为word格式，并且把多个html文件合并到一个doc中。
+之前尝试一个使用[其他工具方法](/blog/2013/05/31/htmls-2-doc.html)，缺点是操作麻烦。
+
+用户python也可以，写成一个脚本，操作比较方便。      
+原理是：pywin32来通过com来使用office word来转换合并。所以必须在安装了Word的Windows中执行。           
+
+Example: [source code](https://github.com/snowyxx/MyTest/blob/master/htmlToDoc.py){:target="_blank"}
+
+以下我使用中用到几个方法：
+
++ 把html转为doc
+
+        doc = word.Documents.Add(filePath)
+        doc.SaveAs(docFile, FileFormat=0)
+
++ 合并的方法：
+
+        finalDoc.Application.Selection.Range.InsertFile(docFile)
+        finalDoc.Application.Selection.Range.InsertBreak(3) #3=word.WdBreakType.wdSectionBreakContinuous
+        finalDoc.Application.Selection.EndKey(6,0)  #6=word.WdUnits.wdStory  0=word.WdMovementType.wdMove 
+
++ 使用页面视图
+
+        finalDoc.ActiveWindow.View.Type=3  #3=Word.WdViewType.wdPrintView
+
++ 让表格自动适应页面
+
+        i=0
+        while(i<len(finalDoc.Tables)):
+            try:
+                finalDoc.Tables[i].AutoFitBehavior(2) #2=Word.WdAutoFitBehavior.wdAutoFitWindow
+                i=i+1
+
++ 把链接的图片添加到文档中
+
+        i=0
+        s=len(doc.InlineShapes)
+        while(i<s):
+            if doc.InlineShapes[i].Type==4: #4=word.WdInlineShapeType.wdInlineShapeLinkedPicture
+                doc.InlineShapes[i].LinkFormat.Update()
+                link=doc.InlineShapes[i].LinkFormat.SourceFullName
+                print(r' '*16+'going to handle picture: '+str(i)+"/"+str(s)+' -->'+link)
+                doc.InlineShapes[i].LinkFormat.SavePictureWithDocument=True
+            i=i+1
+
+参考资料：               
+[https://github.com/zhoucc/easyDatasheet/blob/master/win32com.txt](https://github.com/zhoucc/easyDatasheet/blob/master/win32com.txt){:target="_blank"}      
+[http://blog.csdn.net/chenjl1031/article/details/8905354](http://blog.csdn.net/chenjl1031/article/details/8905354){:target="_blank"}        
+[http://blog.csdn.net/lzl001/article/details/8435048](http://blog.csdn.net/lzl001/article/details/8435048){:target="_blank"}        
+[http://msdn.microsoft.com/en-us/library/office/ff837519(v=office.15).aspx](http://msdn.microsoft.com/en-us/library/office/ff837519(v=office.15).aspx){:target="_blank"}        
+[http://www.extendoffice.com/documents/word/635-word-remove-all-hyperlinks.html](http://www.extendoffice.com/documents/word/635-word-remove-all-hyperlinks.html){:target="_blank"}      
+[http://www.galalaly.me/index.php/2011/09/use-python-to-parse-microsoft-word-documents-using-pywin32-library/](http://www.galalaly.me/index.php/2011/09/use-python-to-parse-microsoft-word-documents-using-pywin32-library/){:target="_blank"}

@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "cron执行信息查询"
+date:   2014-06-23 17:23:50 +0800
+categories: blog
+tags:   [linux]
+---
+1. 有的系统默认没用打开cron日志，这时候从`/var/log/syslog |grep -i cron`查看
+2. 打开cron日志的方法，编辑**/etc/syslog.conf**或**/etc/rsyslog.conf**，去掉cron行的注释
+    
+        cron.* /var/log/cron.log
+   
+   然后到**/var/log/cron.log**查看信息。
+3. 具体任务的执行情况，可以输出执行日志。      
+   例如在/etc/crontab中重定向输出结果
+   
+        0 3 * * * root /opt/xxx/yyy.sh >/var/log/mycron.log 2>&1
+   
