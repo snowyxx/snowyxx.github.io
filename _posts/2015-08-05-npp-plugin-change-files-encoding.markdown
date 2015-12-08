@@ -11,7 +11,7 @@ npp只能一个一个文件地修改。实现批量修改的方法：
 
 1. Plugins 安装Python Script
 2. Plugins - Python Script - New Script
-
+{% highlight python %}
         #!/usr/bin/env python
         import os
         import sys
@@ -23,5 +23,6 @@ npp只能一个一个文件地修改。实现批量修改的方法：
         if fn.endswith(".html"):
         notepad.open(os.path.join(dir,fn))
         notepad.runMenuCommand("Encoding","Convert to UTF-8 without BOM") #npp的语言要设置为英文
+{% endhighlight %}
 
 3. Plugins - Python Script -Scripts - 你的脚本
