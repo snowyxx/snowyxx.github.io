@@ -6,3 +6,7 @@ categories: blog
 tags:   [regex]
 ---
     [一-龥]
+
+或者
+  
+    [\u4e00-\u9fa5]
