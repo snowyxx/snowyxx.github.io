@@ -16,3 +16,4 @@ twitter_username: snowyxx
 github_username:  jekyll
 # Build settings
 markdown: kramdown
+favicon: /images/favicon.png
