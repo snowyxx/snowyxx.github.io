@@ -3,19 +3,47 @@ layout: default
 ---
 
 <div class="home">
-
   <ul class="post-list">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%Y-%m-%-d" }}</span>
-
-        <h2>
+        <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}  &nbsp;&nbsp;&nbsp;&nbsp;</span>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
       </li>
     {% endfor %}
   </ul>
-
+</div>
   <!-- <p class="rss-subscribe"><a href="{{ "/feed.xml" | prepend: site.baseurl }}">订阅</a></p> -->
+<!-- Pagination links -->
+<div id="post-pagination" class="paginator">
 
+  {% if paginator.previous_page %}
+    {% if paginator.previous_page == 1 %}
+    <a href="/">&lt;</a>
+    {% else %}
+    <a href="/blog/page{{paginator.previous_page}}">&lt;</a>
+    {% endif %}
+  {% else %}
+    <span class="previous disabled">&lt;</span>
+  {% endif %}
+
+      {% if paginator.page == 1 %}
+      <span class="current-page">1</span>
+      {% else %}
+      <a href="/">1</a>
+      {% endif %}
+
+    {% for count in (2..paginator.total_pages) %}
+      {% if count == paginator.page %}
+      <span class="current-page">{{count}}</span>
+      {% else %}
+      <a href="/blog/page{{count}}">{{count}}</a>
+      {% endif %}
+    {% endfor %}
+
+  {% if paginator.next_page %}
+    <a class="next" href="/blog/page{{paginator.next_page}}">&gt;</a>
+  {% else %}
+    <span class="next disabled" >&gt;</span>
+  {% endif %}
+  (共{{ paginator.total_posts }}篇)
 </div>

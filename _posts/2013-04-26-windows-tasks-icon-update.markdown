@@ -26,3 +26,6 @@ tags:   [other]
 
 **最后恢复的方法是**:           
 首先把chrome重任务栏中解锁。然后在chrome的桌面图标右键中选择属性中的兼容性选择Win XP SP3，启动一次，图标正常了。把图标锁定到任务栏。然后关闭Chrome取消兼容性，再启动好了。
+
+**补充**
+新看到的: [http://yonsm.net/resolve-windows-7-start-menu-and-taskbar-icon-error/](http://yonsm.net/resolve-windows-7-start-menu-and-taskbar-icon-error/){:target="_blank"}

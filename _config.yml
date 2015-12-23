@@ -11,9 +11,14 @@ email: snowyxx@126.com
 description: > # this means to ignore newlines until "baseurl:"
   NOTHING AT ALL
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://xiaoxuenotes.com" # the base hostname & protocol for your site
 twitter_username: snowyxx
 github_username:  jekyll
 # Build settings
 markdown: kramdown
 favicon: /images/favicon.png
+paginate: 20
+paginate_path: "/blog/page:num/"
+timezone: Asia/Shanghai
+
+gems: [jekyll-paginate]

@@ -190,7 +190,6 @@
 }
 
 .post-link {
-    display: block;
     font-size: 16px;
 }
 
@@ -266,4 +265,27 @@ table tr
 table tr:nth-child(2n)
 {
     background-color: #f8f8f8;
+}
+
+
+.paginator {
+margin: 20px 0;
+line-height: 150%;
+display: block;
+}
+
+.paginator a,.paginator span{
+padding: 0 4px;
+margin: 2px;
+text-decoration: none;
+}
+
+.paginator .current-page {
+color: white;
+background: #1756a9;
+}
+
+.paginator a:hover{
+color: white;
+background: #83BF73;
 }
