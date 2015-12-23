@@ -11,9 +11,11 @@ tags:   [jekyll]
     paginate_path: "/blog/page:num/"
     
 但是在`jekyll serve`的时候出现警告：
+
 >Deprecation: You appear to have pagination turned on, but you haven't included the \`jekyll-paginate\` gem. Ensure you have \`gems: [jekyll-paginate]\` in your configuration file.
 
 原因[这里说明](http://jekyllrb.com/docs/pagination/){:target="_blank"}：           
+
 >For Jekyll 3, include the jekyll-paginate plugin in your Gemfile and in your _config.yml under gems. For Jekyll 2, this is standard.
 
 解决方法：
