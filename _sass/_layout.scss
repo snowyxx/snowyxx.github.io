@@ -180,7 +180,7 @@
     list-style: none;
 
     > li {
-        margin-bottom: $spacing-unit / 2;
+        margin-bottom: 10px;
     }
 }
 
@@ -239,6 +239,9 @@
         }
     }
 }
+.page-content p{
+    margin-bottom: 10px;
+}
 table
 {
     border-collapse: collapse;
@@ -289,3 +292,18 @@ background: #1756a9;
 color: white;
 background: #83BF73;
 }
+.tags{
+    list-style: none;
+}
+.tags li{
+    display: inline-block;
+    padding: .2em;
+}
+
+.listing-item,.listing-seperator{list-style-type:none;margin-bottom: 5px;}
+.listing-item a{
+    padding:.2em 1em;
+
+}
+.listing-item time{color:#999999;}
+.listing-seperator{font-weight:bold;}
