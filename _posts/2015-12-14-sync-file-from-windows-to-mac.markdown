@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "从Windows同步文件到Mac"
+title:  "在Mac中从Windows同步文件本地"
 date:   2015-12-14 11:27:05 +0800
 categories: blog
 tags:   [python,mac]

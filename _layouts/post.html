@@ -5,22 +5,70 @@ layout: default
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%Y-%m-%-d %T" }}</time>{% if page.author %} | <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}
-    {% if page.tags.size != 0 %}
- | 
-<span class="tags">
-  标签
-  {% for tag in page.tags %}
-  <a href="/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>&nbsp;
-  {% endfor %}
-</span>
-{% endif %}
+    <div class="post-meta">
+ 
+    <div>
+    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%Y-%m-%-d %T" }}</time>
+    </div>
     
-    </p>
-  </header>
+    {% if page.author %}
+    <div>
+     | <span itemprop="name">{{ page.author }}</span>
+     </div>
+    {% endif %}
+    
+    
+    {% if page.tags.size != 0 %}
+    <div>
+    &nbsp;| <span class="tags">标签
+        {% for tag in page.tags %}
+            <a href="/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>&nbsp;
+        {% endfor %}
+    </span>
+    </div>
+    {% endif %}
+    
+    {% if site.duoshuo %}
+        <div class="ds-share flat" data-thread-key="{{ page.url }}" data-title="{{ page.title }}" data-images="{{ site.url }}{{site.avadar}}" data-content="{{ page.title }}" data-url="{{ site.url }}{{ page.url }}">
+            <div class="ds-share-inline">
+                <ul>
+                    <li> | 分享到：</li>
+                    <li>
+                        <a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a>
+                    </li>
+                    <li>
+                        <a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a>
+                    </li>
 
+                </ul>
+                <div class="ds-share-icons-more"></div>
+            </div>
+        </div>
+    {% endif %} 
+    
+    
+</div>
+  </header>
+<div class="clear"> </div>
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
+
+<!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="{{ page.url }}" data-title="{{ page.title }}" data-url="{{ site.url }}{{ page.url }}"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"{{ site.duoshuo }}"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+<!-- 多说公共JS代码 end -->
 
 </article>

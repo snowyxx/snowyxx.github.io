@@ -189,11 +189,18 @@
     color: $grey-color;
 }
 
+.post-meta div {
+    float: left;
+    margin-left: 8px;
+}
+
 .post-link {
     font-size: 16px;
 }
 
-
+.clear{
+    clear:both;
+}
 
 /**
  * Posts
@@ -213,6 +220,7 @@
 }
 
 .post-content {
+    margin-top: $spacing-unit;
     margin-bottom: $spacing-unit;
 
     h2 {
@@ -307,3 +315,34 @@ background: #83BF73;
 }
 .listing-item time{color:#999999;}
 .listing-seperator{font-weight:bold;}
+
+#ds-reset .ds-avatar img {
+  width: 54px !important;
+  height: 54px !important;
+  -webkit-border-radius: 27px !important;
+  -moz-border-radius: 27px !important;
+  border-radius: 27px !important;
+  -webkit-transition: -webkit-transform 0.4s ease-out;
+  -moz-transition: -moz-transform 0.4s ease-out;
+  transition: transform 0.4s ease-out;
+}
+#ds-reset .ds-avatar img:hover {
+  -webkit-transform: rotateZ(360deg);
+  -moz-transform: rotateZ(360deg);
+  transform: rotateZ(360deg);
+}
+#ds-reset .ds-powered-by {
+  display: none;
+}
+
+#ds-share #ds-reset.ds-share-inline ul li {
+    list-style: none;
+    float: left;
+    font-size: 13px !important;
+    padding: 0! important;
+}
+#ds-reset {
+    font-size: 14px!important;
+    color: gray !important;
+    line-height: inherit!important; 
+}

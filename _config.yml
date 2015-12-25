@@ -17,8 +17,10 @@ github_username:  jekyll
 # Build settings
 markdown: kramdown
 favicon: /images/favicon.png
+avadar: /images/avadar.png
 paginate: 20
 paginate_path: "/blog/page:num/"
 timezone: Asia/Shanghai
-
+cnzz: 1257034842
+duoshuo: snowyxx
 gems: [jekyll-paginate]
