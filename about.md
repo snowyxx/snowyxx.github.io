@@ -7,6 +7,7 @@ permalink: /about/
 只是我的博客。
 
 {% if site.duoshuo %}
+<h3>最新评论</h3>
 <!-- 多说最新评论 start -->
 <div class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="70"></div>
 <!-- 多说最新评论 end -->
@@ -24,6 +25,7 @@ var duoshuoQuery = {short_name:"{{site.duoshuo}}"};
 </script>
 <!-- 多说公共JS代码 end -->
 <!-- 多说热评文章 start -->
+<h3>热评文章</h3>
 <div class="ds-top-threads" data-range="monthly" data-num-items="5"></div>
 <!-- 多说热评文章 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
