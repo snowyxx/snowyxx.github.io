@@ -13,7 +13,7 @@ tags:   [linux,mysql]
 #安装后自动启动，不喜欢，去掉
 `sudo update-rc.d -f mysql remove`
 
-#哈哈，可是为什么执行了上面的命令后，mysql还是会启动呢？在ubuntu 10.04后会这样,使用下面的方法
+###哈哈，可是为什么执行了上面的命令后，mysql还是会启动呢？在ubuntu 10.04后会这样,使用下面的方法
 `vim /etc/init.d/mysql.conf`
 
          start on (net-device-up

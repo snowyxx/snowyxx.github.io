@@ -45,3 +45,5 @@ var duoshuoQuery = {short_name:"{{site.duoshuo}}"};
 Powered by:
 {% include icon-github.html username="jekyll" %} /
 [jekyll](https://github.com/jekyll/jekyll)
+
+<p>{{ site.description }}</p>

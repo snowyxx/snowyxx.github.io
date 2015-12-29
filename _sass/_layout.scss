@@ -346,3 +346,16 @@ background: #83BF73;
     color: gray !important;
     line-height: inherit!important; 
 }
+#query{
+    width: 80%;
+    height: 25px;
+    border: solid 1px gray;
+    margin-bottom: 20px;
+}
+#searchBut{
+    height: 25px;
+}
+#searchBut:hover{
+color: white;
+background: #83BF73;
+}
