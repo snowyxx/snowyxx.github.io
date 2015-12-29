@@ -43,7 +43,7 @@ var duoshuoQuery = {short_name:"{{site.duoshuo}}"};
 <!-- 多说公共JS代码 end -->         
 
 {% endif %} 
-
+<br><br>
 Powered by:
 {% include icon-github.html username="jekyll" %} /
 [jekyll](https://github.com/jekyll/jekyll)
