@@ -9,7 +9,6 @@ layout: default
 <div id="result"></div>
 
 <script type="text/javascript">
-    
     function startSearch(searchPattern,ajaxResult){
         var output="";
         var reg = new RegExp(searchPattern,"im");
@@ -21,6 +20,7 @@ layout: default
             var url = dataJson[i].url;
             var content = dataJson[i].content;
             if (reg.test(title+tags+url+content)){
+                var item = '';
                 item = "<h3><a href='"+url+"'>" + title + "</a></h3><p>标签： " + tags + "</p><p>" + content.substr(0,254) + " ...</p>";
                 output += item;
             }
@@ -45,9 +45,13 @@ layout: default
             // code for IE6, IE5
             xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
         }
-        xmlhttp.open("GET","/search.json");
-        xmlhttp.onload = function(data){startSearch(searchPattern,xmlhttp.responseText);};
-        xmlhttp.onerror = function(data){console.log("ajax errrorr")};
+        xmlhttp.onreadystatechange=function(){
+            if (xmlhttp.readyState==4 && xmlhttp.status==200){
+                startSearch(searchPattern,xmlhttp.responseText);
+            }
+        }
+        xmlhttp.open("GET","/search.json",true);
         xmlhttp.send();
+        xmlhttp.onerror = function(data){console.log("ajax errrorr")};
     }
 </script>
