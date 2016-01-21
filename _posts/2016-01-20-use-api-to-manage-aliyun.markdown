@@ -54,3 +54,6 @@ tags:   [python]
     <--table Domain records ends-->
 
 ![APM_Table](/images/aliyun_dns.png)
+
+> 因为我只在阿里云上买了域名，其他主机存储什么的API没法试验啦。。。
+
