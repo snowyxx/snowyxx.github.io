@@ -77,7 +77,7 @@ public class execute {
 根据上面错误信息，sys.stdin.encoding为None是根本原因。
 
 sys.stdin.encoding是根据操作系统环境值来的。在命令行／终端中不是None，但是在重定向、管道、第三方工具（sublime text、pycharm），当然还有通过java Runtime运行的时候，就会是None。下面2个网页把这事说得很明白了，产生原因就不抄在这里了。
-[Stackoverflow.com](http://stackoverflow.com/questions/4545661/unicodedecodeerror-when-redirecting-to-file){:target="_blank"}
+[Stackoverflow.com](http://stackoverflow.com/questions/4545661/unicodedecodeerror-when-redirecting-to-file){:target="_blank"}       
 [https://www.v2ex.com/t/163786](https://www.v2ex.com/t/163786){:target="_blank"}
 
 **首先是解决我的问题，即java Runtime中的解决方法：设置`PYTHONIOENCODING=utf-8`**
