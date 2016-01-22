@@ -31,6 +31,13 @@ python 2.7, 重定向输出到文件时候出现错误：
     >>> print s.decode("unicode-escape")
     地图视图
 
+###另外：代码中设定编码
+
+    # coding: UTF-8
+
+    reload(sys)
+    sys.setdefaultencoding("utf-8")
+
 ###另另外：解码html code
 
     Python 2.6-3.3
