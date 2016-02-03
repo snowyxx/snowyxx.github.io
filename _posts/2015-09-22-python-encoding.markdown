@@ -68,3 +68,7 @@ python 2.7, 重定向输出到文件时候出现错误：
 参考：             
 [http://stackoverflow.com/questions/2087370/decode-html-entities-in-python-string](http://stackoverflow.com/questions/2087370/decode-html-entities-in-python-string){:target="_blank"}          
 [http://www.zhihu.com/collection/58495075](http://www.zhihu.com/collection/58495075){:target="_blank"}
+
+补充：
+另外一个挺好的文章。其中提到如何检测一个字符串的编码`chardet.detect(string)['encoding']` 和如何处理字节和字串。         
+[http://blog.ernest.me/post/python-setdefaultencoding-unicode-bytes](http://blog.ernest.me/post/python-setdefaultencoding-unicode-bytes){:target="_blank"}
