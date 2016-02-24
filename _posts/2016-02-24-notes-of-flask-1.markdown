@@ -7,7 +7,7 @@ tags:   [python,Flask]
 ---
 Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world>
 
-###初始化：
+### 初始化：
 
     $ mkdir microblog
     $ cd microblog/
@@ -255,7 +255,7 @@ Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-
     Installing collected packages: coverage
     Successfully installed coverage-4.0.3
 
-###Hello world!
+### Hello world!
 
     $ mkdir app
     $ mkdir app/static
