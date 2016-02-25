@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Flask学习笔记 1"
+title:  "Flask学习笔记 1 - hello world"
 date:   2016-02-24 11:25:05 +0800
 categories: blog
 tags:   [python,Flask]
