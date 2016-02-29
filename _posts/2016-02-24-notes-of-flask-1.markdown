@@ -7,6 +7,8 @@ tags:   [python,Flask]
 ---
 Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world>
 
+[SOURCE](https://github.com/snowyxx/microblog)
+
 ### 初始化：
 
     $ mkdir microblog

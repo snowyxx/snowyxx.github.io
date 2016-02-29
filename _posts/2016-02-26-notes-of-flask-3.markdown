@@ -7,6 +7,8 @@ tags:   [python,Flask]
 ---
 Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms>
 
+[SOURCE](https://github.com/snowyxx/microblog)
+
 使用的表单模块[Flask-WTF](http://pythonhosted.org/Flask-WTF/)是对[WTForms](http://wtforms.readthedocs.org/en/latest/)的封装。
 
 Flask-WTF配置写在根目录的config.py中：
@@ -29,7 +31,7 @@ Flask-WTF配置写在根目录的config.py中：
 
 >  OPENID_PROVIDERS是用于后面的openid
 
-在app/__init__.py中导入上面的设置
+在app/\_\_init\_\_.py中导入上面的设置
 
     {% highlight python %}
     {% raw %}

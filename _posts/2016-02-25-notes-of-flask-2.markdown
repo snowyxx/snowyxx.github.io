@@ -7,6 +7,8 @@ tags:   [python,Flask]
 ---
 Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates>
 
+[SOURCE](https://github.com/snowyxx/microblog)
+
 ### Python模板引擎<http://jinja.pocoo.org/>
 
 ### 相关文件
