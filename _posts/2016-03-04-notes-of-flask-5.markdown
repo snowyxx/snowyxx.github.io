@@ -109,7 +109,7 @@ Flask-Login需要一个从数据库获取用户的函数app/views.py：
 
 > try_login是实现openid登录的地方。
 
-Flask-OpenID的回调函数实现__after_login__。app/views.py：
+Flask-OpenID的回调函数实现after_login。app/views.py：
 
     {% highlight python %}
     {% raw %}
