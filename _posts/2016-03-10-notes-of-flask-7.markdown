@@ -47,12 +47,12 @@ Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-
 
     {% highlight html %}
     {% raw %}
-    <table>
-        <tr valign="top">
-            <td><img src="{{ post.author.avatar(64)}}" alt="{{ post.author.nickname }}"></td>
-            <td><i>{{ post.author.nickname }} says:</i><br>{{ post.body }}</td>
-        </tr>
-    </table>
+    {% extends "base.html" %}
+    {% block content %}
+        <h1>An unexpected error has occurrred</h1>
+        <p>The administrator has been notified. Sorry for the inconvenience!</p>
+        <p><a href="{{ url_for('index') }}">Home</a></p>
+    {% endblock %}
     {% endraw %}
     {% endhighlight %}
     
@@ -84,7 +84,7 @@ Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-
 
 > 当在run.py中设置`app.run(debug=False)`，出现错误不会输出给客户（浏览器）。
 
-__[NOTE]:__使用python的smtp模块把发送邮件在控制台中输出：
+__[NOTE]__ 使用python的smtp模块把发送邮件在控制台中输出：
 
     python -m smtpd -n -c DebuggingServer localhost:25
 
