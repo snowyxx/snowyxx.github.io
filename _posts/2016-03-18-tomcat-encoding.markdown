@@ -14,64 +14,64 @@ tags:   [java,tomcat]
 
 1. 提交请求的页面
         
-        - jsp `<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>`
+    - jsp `<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>`
         
-        - HTML `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">`
+    - HTML `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">`
 
 2. 请求编码设置
 
-        - GET: 在server.xml的<Connector>中指定`URIEncoding="UTF-8"`。
+    - GET: 在server.xml的<Connector>中指定`URIEncoding="UTF-8"`。
         
-        - POST：使用过滤器
+    - POST：使用过滤器
 
-            {% highlight java %}
-            {% raw %}
-            package yan.test.tomcat.encoding;
-            
-            import java.io.IOException;
-            
-            import javax.servlet.Filter;
-            import javax.servlet.FilterChain;
-            import javax.servlet.FilterConfig;
-            import javax.servlet.ServletException;
-            import javax.servlet.ServletRequest;
-            import javax.servlet.ServletResponse;
-            
-            public class CharacterEncodingFilter implements Filter{
-            
-                @Override
-                public void destroy(){
-                }
-                
-                @Override
-                public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException,ServletException   {
-                request.setCharacterEncoding("UTF-8");
-                response.setContentType("text/html; charset=UTF-8");
-                chain.doFilter(request, response);
-                }
-                
-                @Override
-                public void init(FilterConfig arg0) throws ServletException {
-                }
-                
+        {% highlight java %}
+        {% raw %}
+        package yan.test.tomcat.encoding;
+        
+        import java.io.IOException;
+        
+        import javax.servlet.Filter;
+        import javax.servlet.FilterChain;
+        import javax.servlet.FilterConfig;
+        import javax.servlet.ServletException;
+        import javax.servlet.ServletRequest;
+        import javax.servlet.ServletResponse;
+        
+        public class CharacterEncodingFilter implements Filter{
+        
+            @Override
+            public void destroy(){
             }
+            
+            @Override
+            public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException,ServletException   {
+            request.setCharacterEncoding("UTF-8");
+            response.setContentType("text/html; charset=UTF-8");
+            chain.doFilter(request, response);
+            }
+            
+            @Override
+            public void init(FilterConfig arg0) throws ServletException {
+            }
+            
+        }
 
-            {% endraw %}
-            {% endhighlight %}
+        {% endraw %}
+        {% endhighlight %}
 
 
-            {% highlight xml %}
-            {% raw %}
-            <filter>  
-                <filter-name>characterEncoding</filter-name>  
-                <filter-class>yan.test.tomcat.encoding.CharacterEncodingFilter</filter-class>  
-            </filter>  
-            <filter-mapping>  
-                <filter-name>characterEncoding</filter-name>  
-                <url-pattern>/*</url-pattern>  
-            </filter-mapping>  
-            {% endraw %}
-            {% endhighlight %}
+        {% highlight xml %}
+        {% raw %}
+        <filter>  
+            <filter-name>characterEncoding</filter-name>  
+            <filter-class>yan.test.tomcat.encoding.CharacterEncodingFilter</filter-class>  
+        </filter>  
+        <filter-mapping>  
+            <filter-name>characterEncoding</filter-name>  
+            <url-pattern>/*</url-pattern>  
+        </filter-mapping>  
+        {% endraw %}
+        {% endhighlight %}
 
 我的问题很奇怪，通过上面的办法在servlet接收到的字符还是使用`ISO-8859-1`编码。最后发现原来在这个应用中配置了个valve<https://tomcat.apache.org/tomcat-7.0-doc/config/valve.html>。在请求到达我的编码过滤器的时候，已经被getParameter()，这样就导致请求编码使用了默认的`ISO-8859-1`。
 
