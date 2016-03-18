@@ -6,7 +6,7 @@ categories: blog
 tags:   [java,tomcat]
 ---
 
-最近遇到个问题，在浏览器中提交一个请求，包含中文值的参数，在服务器端接收到编码为`ISO-8859-1`，而不是期望的`UTF-8`，结果造成乱码问题。
+最近遇到个问题，在浏览器中提交一个请求，包含中文值的参数，在服务器端接收到编码为`ISO-8859-1`，而不是期望的`UTF-8`，结果造成乱码。
 
 应用的架构为jsp＋tomcat＋struts＋postgresql。
 
@@ -14,13 +14,15 @@ tags:   [java,tomcat]
 
 1. 提交请求的页面
         
-    - jsp `<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>`
+    - jsp               
+     `<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>`
         
-    - HTML `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">`
+    - HTML          
+     `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">`
 
 2. 请求编码设置
 
-    - GET: 在server.xml的<Connector>中指定`URIEncoding="UTF-8"`。
+    - GET: 在server.xml的\<Connector\>中指定`URIEncoding="UTF-8"`。
         
     - POST：使用过滤器
 
@@ -73,7 +75,7 @@ tags:   [java,tomcat]
         {% endraw %}
         {% endhighlight %}
 
-我的问题很奇怪，通过上面的办法在servlet接收到的字符还是使用`ISO-8859-1`编码。最后发现原来在这个应用中配置了个valve<https://tomcat.apache.org/tomcat-7.0-doc/config/valve.html>。在请求到达我的编码过滤器的时候，已经被getParameter()，这样就导致请求编码使用了默认的`ISO-8859-1`。
+我的问题很奇怪，通过上面的办法在servlet接收到的字符还是使用`ISO-8859-1`编码。最后发现原来在这个应用中配置了个[valve](https://tomcat.apache.org/tomcat-7.0-doc/config/valve.html)。在请求到达我的编码过滤器的时候，已经被getParameter()，这样就导致请求编码使用了默认的`ISO-8859-1`。
 
 解决方法是在该valve类的invoke类开始添加`request.setCharacterEncoding("UTF-8");`
 
@@ -150,7 +152,7 @@ tags:   [java,tomcat]
         {% endraw %}
         {% endhighlight %}
 
-然后在修改请求的地方（例如一个过滤器）使用其中的2个setParameter()方法。
+然后在修改请求的地方（例如一个过滤器）使用其中的2个setParameter()方法来修改请求参数。
 
         {% highlight java %}
         {% raw %}
