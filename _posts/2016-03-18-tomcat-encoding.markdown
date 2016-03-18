@@ -10,7 +10,7 @@ tags:   [java,tomcat]
 
 应用的架构为jsp＋tomcat＋struts＋postgresql。
 
-通过排查和struts，postgresql都没有关系。Tomcat的默认的编码使用的`ISO-8859-1`，一般通过以下几个步骤把整个环境设置为`UTF-8`。
+通过排查和struts，postgresql都没有关系。Tomcat的默认的编码使用的`ISO-8859-1`，参考[tomcat faq](https://wiki.apache.org/tomcat/FAQ/CharacterEncoding#Q2)一般通过以下几个步骤把整个环境设置为`UTF-8`。
 
 1. 提交请求的页面
         
