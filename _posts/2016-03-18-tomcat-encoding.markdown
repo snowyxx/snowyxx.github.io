@@ -77,11 +77,11 @@ tags:   [java,tomcat]
 
 我的问题很奇怪，通过上面的办法在servlet接收到的字符还是使用`ISO-8859-1`编码。最后发现原来在这个应用中配置了个[valve](https://tomcat.apache.org/tomcat-7.0-doc/config/valve.html)。在请求到达我的编码过滤器的时候，已经被getParameter()，这样就导致请求编码使用了默认的`ISO-8859-1`。
 
-解决方法是在该valve类的invoke类开始添加`request.setCharacterEncoding("UTF-8");`
+解决方法是在该valve类的invoke方法开始的地方添加`request.setCharacterEncoding("UTF-8");`
 
 #### 附录
 
-中途修改请求参数的方法:
+修改请求参数的方法:
 
 因为请求是不可更改的，如果向请求参数map中put，会得到例外`java.lang.IllegalStateException: No modifications are allowed to a locked ParameterMap`
 
