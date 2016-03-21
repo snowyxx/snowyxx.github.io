@@ -44,7 +44,7 @@ Flask-WTF配置写在根目录的config.py中：
     {% endhighlight %}
 
 
-定义表达类app/forms.py
+定义表单类app/forms.py
 
     {% highlight python %}
     {% raw %}
