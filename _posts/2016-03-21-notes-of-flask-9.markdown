@@ -50,7 +50,7 @@ Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-
 
 在视图中接收表单数据并保存到数据库 app/views.py
 
-    {% highlight html %}
+    {% highlight python %}
     {% raw %}
     from forms import LoginForm, EditForm, PostForm
     from models import User, Post
@@ -77,20 +77,16 @@ Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-
 分页要使用`posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False)`
 
 > paginate()的参数： __page__ 是第几页；__POSTS\_PER\_PAGE__ 每页显示的数量；__False__ 是错误标志。当发生错误时，如果是False返回空列表，如果是True，转到404页面。
-
+>
 > POSTS_PER_PAGE写入到config.py中，便于以后更改。 page通过使用该句到方法参数传入。
-
+>
 > paginate()返回个Pagination对象。通过__items__获取到成员列表。
-
+>
 > Pagination用于导航的几个属性：
-
-        - has_next: True if there is at least one more page after the current one
-
-        - has_prev: True if there is at least one more page before the current one
-
-        - next_num: page number for the next page
-        
-        - prev_num: page number for the previous page
+>   - has_next: True if there is at least one more page after the current one
+>   - has_prev: True if there is at least one more page before the current one
+>   - next_num: page number for the next page
+>   - prev_num: page number for the previous page
 
 视图中路由的设置app/views.py
 
