@@ -76,13 +76,13 @@ Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-
 
 分页要使用`posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False)`
 
-> paginate()的参数： __page__ 是第几页；__POSTS\_PER\_PAGE__ 每页显示的数量；__False__ 是错误标志。当发生错误时，如果是False返回空列表，如果是True，转到404页面。
+> 1. paginate()的参数： __page__ 是第几页；__POSTS\_PER\_PAGE__ 每页显示的数量；__False__ 是错误标志。当发生错误时，如果是False返回空列表，如果是True，转到404页面。
 >
-> POSTS_PER_PAGE写入到config.py中，便于以后更改。 page通过使用该句到方法参数传入。
+> 2. POSTS_PER_PAGE写入到config.py中，便于以后更改。 page通过使用该句到方法参数传入。
 >
-> paginate()返回个Pagination对象。通过__items__获取到成员列表。
+> 3. paginate()返回个Pagination对象。通过__items__获取到成员列表。
 >
-> Pagination用于导航的几个属性：
+> 4. Pagination用于导航的几个属性：
 >
 >   - has_next: True if there is at least one more page after the current one
 >
