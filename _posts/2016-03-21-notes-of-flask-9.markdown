@@ -83,9 +83,13 @@ Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-
 > paginate()返回个Pagination对象。通过__items__获取到成员列表。
 >
 > Pagination用于导航的几个属性：
+>
 >   - has_next: True if there is at least one more page after the current one
+>
 >   - has_prev: True if there is at least one more page before the current one
+>
 >   - next_num: page number for the next page
+>
 >   - prev_num: page number for the previous page
 
 视图中路由的设置app/views.py
