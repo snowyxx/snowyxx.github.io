@@ -37,7 +37,7 @@ Whoosh设置 config.py
     {% endraw %}
     {% endhighlight %}
 
-> 索引支只对新记录有效。而且不清楚旧记录会报错。
+> 索引支只对新记录有效。而且不清除旧记录会报错。
 
 这样就可以搜索了： `Post.query.whoosh_search('second').all()`
 
@@ -151,6 +151,8 @@ Flask-WhooshAlchemy使用jieba分析器
 
 {% highlight python %}
 {% raw %}
+from jieba.analyse import ChineseAnalyzer
+
 class Post(db.Model):
     __searchable__ = ['body']
     __analyzer__ = ChineseAnalyzer()
@@ -167,4 +169,4 @@ whooshalchemy.whoosh_index(app, Post)
 {% endraw %}
 {% endhighlight %}
 
-这样的实现效果还是不能完美搜索中文。
+然并卵，这样的实现效果还是不能完美搜索中文。
