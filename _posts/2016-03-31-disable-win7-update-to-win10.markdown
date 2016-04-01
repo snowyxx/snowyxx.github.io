@@ -12,11 +12,11 @@ tags:   [windows]
 
 ![diswin72win10-hidepatch](/images/diswin72win10-hidepatch.png)
 
-如果已经安装了，到控制面板 > 系统和安全 > Windows Update > 查看更新历史 > 以安装的更新，找到这个补丁并卸载。
+如果已经安装了，到控制面板 > 系统和安全 > Windows Update > 查看更新历史 > 已安装的更新，找到这个补丁并卸载。
 
 ![diswin72win10-uninstallpatch](/images/diswin72win10-uninstallpatch.png)
 
-> 这个补丁安装之后会在c:\windows\system32中创建GWX（get Widnwos 10)文件夹。
+> 这个补丁安装之后会在c:\windows\system32中创建GWX（Get Widnwos 10?)文件夹。
 
 ### 禁止自动升级
 
