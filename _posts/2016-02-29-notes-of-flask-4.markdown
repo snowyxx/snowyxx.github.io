@@ -221,5 +221,6 @@ db_downgrade.py
     {% endraw %}
     {% endhighlight %}
 
+[Flask-SQLAlchemy一个简介](https://segmentfault.com/a/1190000004618621)
 
 下次课是如何真正地使用数据库
