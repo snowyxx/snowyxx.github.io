@@ -7,7 +7,7 @@ tags:   [python,Flask]
 ---
 Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms>
 
-[SOURCE](https://github.com/snowyxx/microblog)
+[SOURCE](https://github.com/snowyxx/myMicroblog)
 
 使用的表单模块[Flask-WTF](http://pythonhosted.org/Flask-WTF/)是对[WTForms](http://wtforms.readthedocs.org/en/latest/)的封装。
 

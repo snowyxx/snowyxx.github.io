@@ -7,7 +7,7 @@ tags:   [python,Flask]
 ---
 Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-vii-unit-testing>
 
-[SOURCE](https://github.com/snowyxx/microblog)
+[SOURCE](https://github.com/snowyxx/myMicroblog)
 
 这次课首先添加了404.html和500.html错误页面；然后配置通过邮件和文件记录日志；用重复nickename为例讲了问题解决办法；最后写了个单元测试框架。
 

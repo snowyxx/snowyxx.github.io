@@ -7,7 +7,7 @@ tags:   [python,Flask]
 ---
 Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xi-email-support>
 
-[SOURCE](https://github.com/snowyxx/microblog)
+[SOURCE](https://github.com/snowyxx/myMicroblog)
 
 这章讲解了怎么使用**Flask-Mail**发送邮件。
 

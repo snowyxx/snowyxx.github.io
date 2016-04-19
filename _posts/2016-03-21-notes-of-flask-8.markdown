@@ -7,7 +7,7 @@ tags:   [python,Flask]
 ---
 Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-viii-followers-contacts-and-friends>
 
-[SOURCE](https://github.com/snowyxx/microblog)
+[SOURCE](https://github.com/snowyxx/myMicroblog)
 
 这次课首先介绍了数据库关系，一对一，一对多，多对多。讲得非常明白。[查看原文](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-viii-followers-contacts-and-friends)。
 
