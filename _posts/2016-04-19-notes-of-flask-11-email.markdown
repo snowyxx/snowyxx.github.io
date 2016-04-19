@@ -38,6 +38,7 @@ Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-
     {% raw %}
     from flask.ext.mail import Mail
     mail = Mail(app)
+    {% endraw %}
     {% endhighlight %}
 
 ### 定义新的模块用来包含各种发送邮件函数
