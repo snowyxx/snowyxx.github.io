@@ -11,7 +11,7 @@ Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-
 
 这章讲解格式化时间。
 
-存储的日期时间都是UTC的，对于不同的用户，使用javascript格式UTC时间显示给客户。
+思路： 服务器中存储的日期时间都是UTC的，对于不同的用户，使用javascript格式UTC时间显示给客户。
 
 这里比较有意思的是：
 
@@ -68,15 +68,21 @@ app/\_\_init\_\_.py
 
 app/templates/user.html
 
+    {% highlight html %}
+    {% raw %}
     {% if user.last_seen %}
     <p><em>Last seen: {{ momentjs(user.last_seen).calendar() }}</em></p>
     {% endif %}
-
+    {% endraw %}
+    {% endhighlight %}
 
 app/templates/post.html
 
+    {% highlight html %}
+    {% raw %}
     <p><a href="{{ url_for('user', nickname=post.author.nickname)}}">{{ post.author.nickname }}</a> said {{ momentjs(post.timestamp).fromNow() }}:</p>
     <p><strong>{{ post.body }}</strong></p>
-
+    {% endraw %}
+    {% endhighlight %}
 
 [momentjs]:http://momentjs.com/
