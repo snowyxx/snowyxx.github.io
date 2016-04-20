@@ -21,11 +21,10 @@ Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-
 
 ### 使用momentjs
 
-从[momentjs][]下载moment.min.js，放到app/static/js/文件夹中。
+1. 从[momentjs][]下载moment.min.js，放到app/static/js/文件夹中。
+2. 在app/templates/base.html引用
 
-在app/templates/base.html引用
-
-    <script src="/static/js/moment.min.js"></script>
+        <script src="/static/js/moment.min.js"></script>
 
 ### 用pyhton包momentjs
 

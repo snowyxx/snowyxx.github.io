@@ -78,7 +78,8 @@ app/emails.py
     {% endhighlight %}
 
 >from .decorators import async： 在decorators.py中使用装饰器来调用新的线程来发送邮件：
->
+>       {% highlight python %}
+>       {% raw %}
 >       from threading import Thread
 >       
 >       def async(f):
@@ -86,10 +87,14 @@ app/emails.py
 >               thr = Thread(target=f, args=args, kwargs=kwargs)
 >               thr.start()
 >           return wrapper
-
+>       {% endraw %}
+>       {% endhighlight %}
+    
 > 发送邮件中的text\_body和html\_body使用模版：
 > app/templates/follower_email.txt
 >
+>       {% highlight python %}
+>       {% raw %}
 >       Dear {{ user.nickname }},
 >       
 >       {{ follower.nickname }} is now a follower. Click on the following link to visit {{ follower.nickname }}'s profile page:
@@ -99,9 +104,13 @@ app/emails.py
 >       Regards,
 >       
 >       The microblog admin
+>       {% endraw %}
+>       {% endhighlight %}
 
 > app/templates/follower_email.html
 >
+>       {% highlight python %}
+>       {% raw %}
 >       <p>Dear {{ user.nickname }},</p>
 >       <p><a href="{{ url_for('user', nickname=follower.nickname, _external=True) }}">{{ follower.nickname }}</a> is now a follower.</p>
 >       <table>
@@ -115,7 +124,8 @@ app/emails.py
 >       </table>
 >       <p>Regards,</p>
 >       <p>The <code>microblog</code> admin</p>
-
+>       {% endraw %}
+>       {% endhighlight %}
 
 ### 最后就是在要发送邮件地方添加相应的函数
 
