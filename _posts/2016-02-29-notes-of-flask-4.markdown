@@ -7,7 +7,7 @@ tags:   [python,Flask]
 ---
 Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database>
 
-[SOURCE](https://github.com/snowyxx/myMicroblog)
+[SOURCE](https://github.com/snowyxx/microblog)
 
 使用的数据库模块[Flask-SQLAlchemy](http://packages.python.org/Flask-SQLAlchemy)是对[SQLAlchemy](http://www.sqlalchemy.org/)的封装。
 

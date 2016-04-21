@@ -21,9 +21,9 @@ tags:   [python]
     else:
         print('No, it is not a palindrome')
 
-###string (str类）， help(str)
+### string (str类）， help(str)
 
-###文件
+### 文件
 
     #!python
     #filename using_file.py
@@ -46,7 +46,7 @@ tags:   [python]
         print(line,end='')
     f.close()
 
-###pickle
+### pickle
 
     #!python
     #filename pickling.py

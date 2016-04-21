@@ -5,11 +5,11 @@ date:   2015-12-25 15:11:05 +0800
 categories: blog
 tags:   [jekyll]
 ---
-###访问统计
+### 访问统计
 
 使用CNZZ。去他们网站注册个用户，然后按照向导得到一段javascript，放到文章模版页面的结尾即可。
 
-###标签页
+### 标签页
 
 做一个标签页用来按标签分组文章。主要是使用`site.tags`
 
@@ -42,7 +42,7 @@ permalink: /tags/
 {% endraw %}
 {% endhighlight %}
 
-###评论
+### 评论
 一开始是很抗拒云评论服务(Disqus、多说等)的。想法是评论页做成静态的。
 
 关于静态评论[这篇文章](http://www.hezmatt.org/~mpalmer/blog/2011/07/19/static-comments-in-jekyll.html){:target="_blank"}很好。而且github上有很多jekyll静态评论项目。
@@ -59,7 +59,7 @@ _题外话：关于多说一个蛋疼的地方,各处的说明都提到了要一
 [http://blog.puhao.me/吐槽/使用多说/](http://blog.puhao.me/%E5%90%90%E6%A7%BD/%E4%BD%BF%E7%94%A8%E5%A4%9A%E8%AF%B4/){:target="_blank"}            
 [http://liberize.me/tech/jekyll-use-duoshuo-comment-system.html](http://liberize.me/tech/jekyll-use-duoshuo-comment-system.html){:target="_blank"}
 
-###搜索
+### 搜索
 
 搜索的思路有2种：
 

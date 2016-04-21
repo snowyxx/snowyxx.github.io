@@ -7,7 +7,7 @@ tags:   [python,Flask]
 ---
 Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-x-full-text-search>
 
-[SOURCE](https://github.com/snowyxx/myMicroblog)
+[SOURCE](https://github.com/snowyxx/microblog)
 
 全文搜索使用的是[Whoosh](https://whoosh.readthedocs.org/en/latest/)，通过[Flask-WhooshAlchemy](https://github.com/gyllstromk/Flask-WhooshAlchemy)和Flask-SQLAlchemy集成在一起。
 

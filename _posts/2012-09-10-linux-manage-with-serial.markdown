@@ -5,8 +5,8 @@ date:   2012-09-10 15:44:38 +0800
 categories: blog
 tags:   [linux]
 ---
-##配置Grub，将输出重定向到串口        
-###对于**Grub1**,直接修改**menu.list**               
+## 配置Grub，将输出重定向到串口        
+### 对于**Grub1**,直接修改**menu.list**               
 
 1. 把Grub输出重定向到串口
  
@@ -41,7 +41,7 @@ tags:   [linux]
     说明：在上例中, 服务启动的信息会显示在终端上(tty0), 如果进入单用户模式, 也只会在终端(tty0)上提示输入root密码, 如果需要将服务启动的信息也输出到串口上, 可修改两个console参数的顺序, 既修改为
     `console=tty0 console=ttyS0,9600n8`
 
-###对于Grub2
+### 对于Grub2
 
 配置文件改为**grub.cfg**。不建议直接修改/boot/grub/grub.cfg文件，通过修改**/etc/default/grub**
 
@@ -58,7 +58,7 @@ tags:   [linux]
 
 然后运行命令:`update-grub`
 
-##允许从串口登陆
+## 允许从串口登陆
  
 修改/etc/inittab文件, 增加如下内容            
 `T0:23:respawn:/sbin/getty -L ttyS0 9600 vt100`         

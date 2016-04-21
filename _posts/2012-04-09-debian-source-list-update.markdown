@@ -7,10 +7,10 @@ tags:   [linux]
 ---
 安装Debain 6的时候没有设置网络，所以sources.list没有内容。使用下面的方法：
 
-###第一种：使用[http://debgen.simplylinux.ch/index.php](http://debgen.simplylinux.ch/index.php){:target="blank"} 选择版本和地区生成
+### 第一种：使用[http://debgen.simplylinux.ch/index.php](http://debgen.simplylinux.ch/index.php){:target="blank"} 选择版本和地区生成
 163镜像 http://mirrors.163.com/.help/debian.html
 
-###第二种：使用apt-spy
+### 第二种：使用apt-spy
 
 步骤： 
 

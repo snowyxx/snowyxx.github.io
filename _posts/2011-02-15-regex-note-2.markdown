@@ -5,7 +5,7 @@ date:   2011-02-15 13:32:54 +0800
 categories: blog
 tags:   [regex,perl]
 ---
-#定界符：
+# 定界符：
 
 m<abc>, m[abc]...       
 /abc/为m/abc/的简写        
@@ -15,7 +15,7 @@ m<abc>, m[abc]...
 - s：匹配任意字符。即，可以处理.和换行符。或者说是[\d\D]。
 - x：加入空白。注释#也是一种空白
 
-#绑定操作符：=～
+# 绑定操作符：=～
 
 因为默认匹配的是$_，那么如果要匹配左面的字符就要使用=~      
 例子：  
@@ -25,8 +25,8 @@ m<abc>, m[abc]...
     print "Aye, there's the rub.\n";
     }
 
-#匹配变量
-##把()中匹配的字符串放到变量$1,$2,$3...中去。      
+# 匹配变量
+## 把()中匹配的字符串放到变量$1,$2,$3...中去。      
 例子：  
      
     $_ = "Hello there, neighbor";
@@ -34,7 +34,7 @@ m<abc>, m[abc]...
     print "words were $1 $2 $3\n";
     }
     
-##不捕获变量           
+## 不捕获变量           
 在（）的左括号的后面添加上“?:”       
 例子：
              
@@ -42,7 +42,7 @@ m<abc>, m[abc]...
     print "Fred wants a $1\n";
     }
     
-##捕获变量标签
+## 捕获变量标签
 可以配捕获变量添加一个标签，放到哈希%+中去。    
 例子： 
    
@@ -51,7 +51,7 @@ m<abc>, m[abc]...
     say "I saw $+{name1} and $+{name2}";
     }
     
-##同样向后引用也可以使用这样标签 (\1;\g{1})：
+## 同样向后引用也可以使用这样标签 (\1;\g{1})：
 例子：      
 
     my $names = 'Fred Flinstone and Wilma Flinstone';
@@ -61,7 +61,7 @@ m<abc>, m[abc]...
     
 >这里的\g{last_name}还可以写成\k<last_name>
 
-##自动匹配变量（奇怪变量名）：
+## 自动匹配变量（奇怪变量名）：
 - $& : 表示捕获的字符串。        
 例子：
 
@@ -79,7 +79,7 @@ m<abc>, m[abc]...
         print "That was ($`)($&)($').\n";
         }
 
-#优先级
+# 优先级
 - Regular expression feature-------->Example
 - Parentheses (grouping or memory) -------->(...), (?:...), (?<LABEL>...)
 - Quantifiers--------> a* a+ a? a{n,m}
@@ -87,7 +87,7 @@ m<abc>, m[abc]...
 - Alternation--------> a\|b\|c
 - Atoms--------> a [abc] \d \1
 
-#测试程序：用来测试正则表达式测试的结果。匹配的字符放到<>中。
+# 测试程序：用来测试正则表达式测试的结果。匹配的字符放到<>中。
 
     #!/usr/bin/perl
     while (<>) {

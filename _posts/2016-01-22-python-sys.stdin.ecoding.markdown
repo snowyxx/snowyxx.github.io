@@ -11,7 +11,7 @@ tags:   [python,java]
 * java输出stderr
 * python sys.stdin.encoding的设置
 
-##java输出stderr
+## java输出stderr
 
 一直关注标准输出和退出码（`Runtime.getRuntime().exec().waitFor()`）为1，忽略了stderr，所以没有找到退出码为1的原因。这时候就要打印`Runtime.getRuntime().exec().getErrorStream()`
 
@@ -72,7 +72,7 @@ public class execute {
         res = urllib.quote(encodeStr.decode(sys.stdin.encoding).encode('utf8'), '')
     TypeError: decode() argument 1 must be string, not None
 
-##python sys.stdin.encoding的设置
+## python sys.stdin.encoding的设置
 
 根据上面错误信息，sys.stdin.encoding为None是根本原因。
 

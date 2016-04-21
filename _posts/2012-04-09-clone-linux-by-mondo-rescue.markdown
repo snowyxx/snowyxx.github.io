@@ -13,7 +13,7 @@ tags:   [linux]
 
 [Mondo Rescue主页](http://www.mondorescue.org/downloads.shtml){:target="blank"}
 
-###在Debian中安装    
+### 在Debian中安装    
 如果用FTP：ftp://ftp.mondorescue.org  user: anonymous  #获取resource list文件（用wget， should be more easy:)                  
 `wget ftp://ftp.mondorescue.org/debian/6.0/mondorescue.sources.list`                
 
@@ -24,14 +24,14 @@ tags:   [linux]
     apt-get update
     apt-get install mondo
     
-###备份
+### 备份
 运行mondoarchive，按照向导配置备份参数即可。备份很快，900MB的原系统要几分钟就可以生成iso文件，iso文件大300MB多。
 
-###还原
+### 还原
 把iso刻录到关盘中，然后使用其引导（就是mindi引导程序，单独的Minidi ISO有60MB左右）
 引导后直接回车就自动恢复了。可以根据提示选择其他回复方式。
 
-###截图
+### 截图
 备份和还原过程截图。
 可以备份到当前系统所在的硬盘
 ![m1](/images/m1.png)    

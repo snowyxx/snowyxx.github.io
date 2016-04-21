@@ -5,14 +5,14 @@ date:   2016-01-20 14:16:05 +0800
 categories: blog
 tags:   [python]
 ---
-###引
+### 引
 
 除了传统的本地物理资源，整个IT架构中的云计算和虚拟化的占比越来越大。云计算主要分为三类：IaaS（Infrastructure-as-a-Service，基础设施即服务）、Paas（PaaS: Platform-as-a-Service，平台即服务）和Saas（Software-as-a-Service，软件即服务）。三者的区别如下图：
 
 ![云计算模型](/images/Cloud-Service-Models.png)          
 （图片来自网络）
 
-###异构管理
+### 异构管理
 
 在运维的时候，我们总是希望有一个统一的平台来集中管理整个IT基础架构，即时有些设施是在云上的。我们期望的目标：
 
@@ -20,13 +20,13 @@ tags:   [python]
 - 无干扰。就是不用在被管资源上部署代理，通过公开API来进行管理。
 - 动作。包括：出现故障后的纠正动作；根据实际情况自动增加或减少资源投入。
 
-###阿里云
+### 阿里云
 
 阿里云提供了大量的API，运维人员可以通过API把对阿里云的监视和管理集成到目前的运维平台中。
 
 [阿里云API帮助](http://develop.aliyun.com/api){:target="_blank"}   
 
-###示例
+### 示例
 
 使用Python通过API获取所有域名信息。
 

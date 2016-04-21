@@ -106,7 +106,7 @@ characters 'a' and 'x'.&nbsp;<wbr><br></td>
 <td>
 Minimal — one or more</td>
 <td>
-#</td>
+# </td>
 <td>
 <p>
 Matches one or more occurrences of a character that precede the

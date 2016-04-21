@@ -5,9 +5,9 @@ date:   2013-06-18 16:18:55 +0800
 categories: blog
 tags:   [linux]
 ---
-##破解WPA密码
+## 破解WPA密码
 
-##准备网络
+## 准备网络
 
     ifconfig
     ifconfig eth0 192.168.0.133 netmask 255.255.255.0
@@ -15,11 +15,11 @@ tags:   [linux]
     echo 8.8.8.8 >>/etc/resolv.conf
     ping www.163.com
 
-###使用的软件是aircrack-ng:          
+### 使用的软件是aircrack-ng:          
 
     apt-get install aircrack-ng
 
-###过程
+### 过程
 
     iwconfig
     airmon-ng start wlan0

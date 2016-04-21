@@ -13,7 +13,7 @@ tags:   [linux]
 
 3. `sudo update-grub`
 
-###检查：
+### 检查：
 `ip a | grep inet6`
  
 参考：[http://wiki.ubuntu.org.cn/如何禁用IPv6](http://wiki.ubuntu.org.cn/如何禁用IPv6){:target="blank"}

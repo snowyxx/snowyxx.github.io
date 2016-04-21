@@ -11,18 +11,18 @@ tags:   [java]
 功效:将字符串以定界符为界，分析为一个个的token（可理解为单词），定界符可以自己指定。 
 
 
-##构造函数。
+## 构造函数。
 
-####StringTokenizer(String str) ：
+#### StringTokenizer(String str) ：
 构造一个用来解析str的StringTokenizer对象。java默认的分隔符是“空格”、“制表符(‘\t’)”、“换行符(‘\n’)”、“回车符(‘\r’)”。
 
-####StringTokenizer(String str, String delim) ：
+#### StringTokenizer(String str, String delim) ：
 构造一个用来解析str的StringTokenizer对象，并提供一个指定的分隔符。如new StringTokenizer("A|001:B|002:C|003",":");
 
-###StringTokenizer(String str, String delim, boolean returnDelims) ：
+### StringTokenizer(String str, String delim, boolean returnDelims) ：
 构造一个用来解析str的StringTokenizer对象，并提供一个指定的分隔符，同时，指定是否返回分隔符。
 
-##方法。
+## 方法。
 1. 所有方法均为public；
 2. 书写格式：［修饰符］　<返回类型> <方法名（［参数列表］）
 
@@ -33,7 +33,7 @@ tags:   [java]
     - Object nextElement() ：结果同4。
     - String nextToken(String delim) ：与4类似，以指定的分隔符返回结果。
 
-##例子。
+## 例子。
 
 split 与 StringTokenizer 的萧萧区别!
 

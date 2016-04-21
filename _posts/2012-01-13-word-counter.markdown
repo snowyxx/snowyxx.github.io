@@ -5,10 +5,10 @@ date:   2012-01-13 16:15:53 +0800
 categories: blog
 tags:   [perl,java]
 ---
-###Pelr：
+### Pelr：
 `perl -e '$/=undef;$_=<>; printf "$&:%d\n", s/$&//g while /\S/;' test.txt`
 
-###Java：
+### Java：
 {% highlight java %}
 import java.util.*;
 public class charCounter {  

@@ -5,10 +5,10 @@ date:   2011-08-29 10:52:39 +0800
 categories: blog
 tags:   [linux]
 ---
-###startup a simple web server which default port is 8000
+### startup a simple web server which default port is 8000
 `python -m SimpleHTTPServer 8000`
 
-###startup a SMTP server by python
+### startup a SMTP server by python
 `python -m smtpd -n -c DebuggingServer localhost:1025`
 
     -n 参数让 Python 不要进行 setuid ( 改变用户）为 "nobody" ，也就是说直接用你的帐号来运行
@@ -16,34 +16,34 @@ tags:   [linux]
     localhost:1025 参数则是让 Python 在本地的 1025 端口上开启 SMTP 服务
 
 
-###save in vim without write permission
+### save in vim without write permission
 `:w !sudo tee %`
 
-###replace some characters in previous command ^old^new^
+### replace some characters in previous command ^old^new^
 `!!:s/old/new`
 
-###quickly backup or copy a file
+### quickly backup or copy a file
 `cp filename{,bak}`
 
-###traceroute and ping 
+### traceroute and ping 
 `mtr www.google.hk`
 
-###find in command history but run it  
+### find in command history but run it  
 `!keyword:p`
 
-###better view of monut list   
+### better view of monut list   
 `mount | column -t`
 
-###mount remote folder by ssh  
+### mount remote folder by ssh  
 `sshfs name@server:/path/to/folder /path/to/mount/point`
 `fusermount -u /path/to/mount/point`
 
-###get keywork from wikipedia dns 
+### get keywork from wikipedia dns 
 `dig +short txt .wp.dg.cx`
 
 > 这也许是最有趣的一条技巧了，David Leadbeater 创建了一个 DNS 服务器，通过它当你查询一个 TXT 记录类型时，会返回一条来自于 Wikipedia 的简短的词条文字，这是他的介绍。
 
-###download a website by wget
+### download a website by wget
 `wget --random-wait -r -p -e robots=off -U Mozilla www.example.com`
 
     -random-wait 等待 0.5 到 1.5 秒的时间来进行下一次请求
@@ -55,24 +55,24 @@ tags:   [linux]
     -l 0 删除深度（默认为5）
     --wait=1h 每下载一个文件后等待1小时
     
-###get paramater of last command   
+### get paramater of last command   
 `ALT + . (or ESC + .)`
 `echo <Press ALT + 2> <Press ALT + .>`
 
-###command histroy 
+### command histroy 
 
 * .bashrc HISTCONTROL=
 * .bash_history
 * do not save the command to history if it start with space
 
-###get sub folder size 
+### get sub folder size 
 `du -h --max-depth=1|sort -rn`
 
-###mount memory to a folder
+### mount memory to a folder
 `mount -t tmpfs -o size=1024m tmpfs /mnt/ram`
 >/dev/shm is it
 
-###show runing port and process 
+### show runing port and process 
 `sudo netstat -tulnp`
 
     -t: 显示TCP链接信息
@@ -82,16 +82,16 @@ tags:   [linux]
     -p: 显示相应的进程PID以及名称（要root权限）
     如果要查看关于sockets更详细占用信息等，可以使用lsof工具。
     
-###show ascii table    
+### show ascii table    
 `man 7 ascii`
 
-###shutdown a windows server by remote 
+### shutdown a windows server by remote 
 `net rpc shutdown -I IP_ADDRESS -U username%password`
 
-###top 10 commands
+### top 10 commands
 `history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head`
 
-###cool man    
+### cool man    
 * manpages里面还有一些有趣而且实用的资料，可能鲜为人知：
 * man 1 intro - 一篇对从未接触过Linux的用户的简明教程。
 * man 2 syscalls - 内核系统请求的列表，按内核版本注释分类，系统编程必备。
@@ -118,18 +118,18 @@ tags:   [linux]
 * man 7 utf8 - 描述UTF-8编码。
 * man 7 url - 解释URL、URI、URN等的标准。
 
-###view [start wars]by telenet 
+### view [start wars]by telenet 
 `telnet towel.blinkenlights.nl`
 
-###录制Linux屏幕   
+### 录制Linux屏幕   
 `$ ffmpeg -f x11grab -s wxga -r 25 -i :0.0 -sameq /tmp/out.mpg`
 
-###用ssh远程打开程序的图形界面
+### 用ssh远程打开程序的图形界面
 
     ssh -X 用户名@服务器IP "程序名" ## 直接运行一个程序
     ssh -X 用户名@服务器IP # 或 先登陆再运行程序
 
-###免密码SSH登录主机
+### 免密码SSH登录主机
 `$ ssh-copy-id remote-machine`
 
 这个命令把当前用户的公钥串写入到远程主机的~/.ssh/authorized_keys内，这样下次使用ssh登录的时候，远程主机就直接根据这串密钥完成身份校验，不再询问密码了。前提是你当前用户有生成了公钥，默认是没有的，先执行ssh-keygen试试吧！

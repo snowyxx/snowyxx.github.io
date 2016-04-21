@@ -7,7 +7,7 @@ tags:   [python,Flask]
 ---
 Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiii-dates-and-times>
 
-[SOURCE](https://github.com/snowyxx/myMicroblog)
+[SOURCE](https://github.com/snowyxx/microblog)
 
 这章讲解格式化时间。
 

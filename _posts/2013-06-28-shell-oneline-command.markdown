@@ -7,7 +7,7 @@ tags:   [linux]
 ---
 学习[Bash One-Liners Explained](http://www.catonmat.net/blog/bash-one-liners-explained-part-one/){:target="_blank"}的笔记。
 
-##文件相关
+## 文件相关
 
 1. 清空一个文件
 
@@ -77,7 +77,7 @@ tags:   [linux]
         $ cp /path/to/file{,_copy}
             /path/to/file{,_copy}等同于 /path/to/file /path/to/file_copy
 
-##字符串相关
+## 字符串相关
 
 
 10. 输出a到z
@@ -190,7 +190,7 @@ tags:   [linux]
 
         echo 'UPPERCASESTRING' |tr '[:upper:]' '[:lower:]'
 
-##重定向
+## 重定向
 
 首先了解3个系统标准操作符：0表示标准输入stdin；1表示标准输出stdout；2表示标准错误stderr。可以创建自己的操作描述符，例如3，4，5
 
@@ -318,7 +318,7 @@ bash命令只返回最后一个命令的状态，如果通道中有多个命令�
         $ echo ${PIPESTATUS[@]}
         0 1 0 0
 
-##历史
+## 历史
 
 43. 清除历史
 
@@ -361,7 +361,7 @@ bash命令只返回最后一个命令的状态，如果通道中有多个命令�
 
         $fc
 
-##导航
+## 导航
 
 首先bash支持emacs、vi和自定义形式的操作。使用set -o emacs和set -o vi命令更改。在~/.inputrc文件中自定义。也可以使用bind命令，如bind '"\C-f": "ls\n"'绑定CTRL+f去执行ls。
 以下是一些emacs形式的操作（**有些在GUI的终端中不起作用）。

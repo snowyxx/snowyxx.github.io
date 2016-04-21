@@ -7,7 +7,7 @@ tags:   [python,Flask]
 ---
 Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ix-pagination>
 
-[SOURCE](https://github.com/snowyxx/myMicroblog)
+[SOURCE](https://github.com/snowyxx/microblog)
 
 分页使用的是[Flask-SQLAlchemy](http://packages.python.org/Flask-SQLAlchemy)的功能，很简单。在进行分页之前，首先实现提交新微博的功能。
 

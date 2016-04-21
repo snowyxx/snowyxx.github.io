@@ -17,7 +17,7 @@ Edit _/etc/snmp/snmpd.conf_ and change **rouser USERNAME** to **rouser USERNAME 
 6. test         
 `snmpwalk -v 3 -l authPriv -a sha -A PASSWORD -x AES -X PASSWORD -u USERNAME localhost`
 
-###如果没有安装net-snmp，手动配置：
+### 如果没有安装net-snmp，手动配置：
 `sudo service snmpd stop`
 
 Edit **/var/net-snmp/snmpd.conf** and add the following line to the bottom of the file:

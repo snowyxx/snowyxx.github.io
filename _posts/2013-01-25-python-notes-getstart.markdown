@@ -10,7 +10,7 @@ tags:   [python]
 选择的教程：[A Byte of Python （python简明教程）](http://www.swaroopch.com/notes/python/){:target="_blank"}             
 [中文在线阅读](http://www.swaroopch.com/notes/Python_cn-Preface/){:target="_blank"}
 
-###IDLE使用
+### IDLE使用
 说明：[http://docs.python.org/2/library/idle.html](http://docs.python.org/2/library/idle.html){:target="_blank"}
 
 **几点操作：**       
@@ -41,16 +41,16 @@ tags:   [python]
 
     help(xxx) help('xxx') help()
     
-###Linux中用env命令定义python所在位置
+### Linux中用env命令定义python所在位置
 
     #!/usr/bin/env python
 
-###String
+### String
 
 - 单引号和双引号好没有任何区别
 - 三引号"""/'''用于多行
 
-###物理行和逻辑行
+### 物理行和逻辑行
 - ；用来把物理行分为逻辑行（这个真的没有必要使用）
 - / 用来把多行合并为一行
 

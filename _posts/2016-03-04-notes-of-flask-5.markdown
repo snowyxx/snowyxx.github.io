@@ -7,7 +7,7 @@ tags:   [python,Flask]
 ---
 Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-v-user-logins>
 
-[SOURCE](https://github.com/snowyxx/myMicroblog)
+[SOURCE](https://github.com/snowyxx/microblog)
 
 > openid似乎没有推广起来。只有几个国外网站支持。而且大部分需要搭梯子。 
 

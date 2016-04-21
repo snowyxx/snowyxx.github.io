@@ -5,10 +5,10 @@ date:   2012-12-07 09:23:36 +0800
 categories: blog
 tags:   [linux]
 ---
-###安装
+### 安装
 `apt-get install snmp snmpd`
 
-###配置
+### 配置
 `vim /etc/snmp/snmpd.conf`
 
 远程访问
@@ -23,9 +23,9 @@ tags:   [linux]
     view   allview    included   .1.3.6
     rocommunity public  default    -V allview
 
-###重启服务
+### 重启服务
 `/etc/init.d/snmpd restart`
  
-###iptables
+### iptables
 
     iptables -A INPUT -i eth0 -p udp -s 60.*.*.* –dport 161 -j ACCEPT

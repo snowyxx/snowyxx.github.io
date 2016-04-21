@@ -6,7 +6,7 @@ categories: blog
 tags:   [linux]
 ---
 
-###生成key 
+### 生成key 
 
 (1) `keytool -genkey -alias tomcat -keyalg RSA -keypass changeit -storepass changeit -keystore server.keystore -validity 3600`
 
@@ -29,7 +29,7 @@ tags:   [linux]
 `keytool -delete -trustcacerts -alias tomcat -keystore D:/sdks/jdk1.5.0_11/jre/lib/security/cacerts -storepass changeit`
 
 
-###修改%TOMCAT_HOME%\conf\server.xml,找到这段代码：
+### 修改%TOMCAT_HOME%\conf\server.xml,找到这段代码：
 
     maxThreads="150" scheme="https" secure="true"
     clientAuth="false" sslProtocol="TLS" />

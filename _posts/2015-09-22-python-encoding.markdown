@@ -17,13 +17,13 @@ python 2.7, 重定向输出到文件时候出现错误：
 
 ---
 
-###python 2.7打开文件带编码参数
+### python 2.7打开文件带编码参数
 
     import io
     with open(fname, "rt", encoding="utf-8") as f:
     [http://stackoverflow.com/questions/10971033/backporting-python-3-openencoding-utf-8-to-python-2](http://stackoverflow.com/questions/10971033/backporting-python-3-openencoding-utf-8-to-python-2){:target="_blank"}
 
-###另外：解码unicode
+### 另外：解码unicode
 
     >>> s="\u5730\u56fe\u89c6\u56fe"
     >>> print s
@@ -31,14 +31,14 @@ python 2.7, 重定向输出到文件时候出现错误：
     >>> print s.decode("unicode-escape")
     地图视图
 
-###另外：代码中设定编码
+### 另外：代码中设定编码
 
     # coding: UTF-8
 
     reload(sys)
     sys.setdefaultencoding("utf-8")
 
-###另另外：解码html code
+### 另另外：解码html code
 
     Python 2.6-3.3
     You can also use the HTML parser from the standard lib
@@ -56,12 +56,12 @@ python 2.7, 重定向输出到文件时候出现错误：
     print(html.unescape('&pound;682m'))
     see https://docs.python.org/3/library/html.html#html.unescape
 
-###Linux获取文件的编码：
+### Linux获取文件的编码：
 
     file --mime known_issues.html~
     known_issues.html~: text/html; charset=iso-8859-1
 
-###Linux转换文件编码：
+### Linux转换文件编码：
 
     iconv -f iso-8859-1 -t utf-8 known_issues.html~ > known_issues.html.utf-8
 

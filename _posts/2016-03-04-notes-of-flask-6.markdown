@@ -7,7 +7,7 @@ tags:   [python,Flask]
 ---
 Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-vi-profile-page-and-avatars>
 
-[SOURCE](https://github.com/snowyxx/myMicroblog)
+[SOURCE](https://github.com/snowyxx/microblog)
 
 没有什么新概念，主要是编码。实现在用户页面中显示名称、自我介绍、最后活动时间、编辑信息页面、用户头像和该用户的微博列表。
 
