@@ -108,7 +108,8 @@ py文件：使用`gettext()`
     {% endraw %}
     {% endhighlight %}
 
-完整的国际化和本地化更改请看这里：<https://github.com/miguelgrinberg/microblog/commit/cac572cb0e427654edd3ac599f6197f1f6ee29f6>
+完整的国际化和本地化更改[请看这里](https://github.com/miguelgrinberg/microblog/commit/cac572cb0e427654edd3ac599f6197f1f6ee29f6)
+
 Flask-Babel的更多说明请看官网：[Flask-Babel][]
 
 [Flask-Babel]:https://pythonhosted.org/Flask-Babel/
