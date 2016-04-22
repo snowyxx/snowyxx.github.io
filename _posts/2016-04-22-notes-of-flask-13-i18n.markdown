@@ -102,6 +102,7 @@ py文件：使用`gettext()`
 2. 在base.html模版中使用如下代码：
 
     {% highlight html %}
+    {% raw %}
     <script src="/static/js/moment-with-locales.min.js"></script>
     <script>moment.locale("{{ g.locale }}")</script>
     {% endraw %}
