@@ -11,6 +11,8 @@ Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-
 
 这次课首先添加了404.html和500.html错误页面；然后配置通过邮件和文件记录日志；用重复nickename为例讲了问题解决办法；最后写了个单元测试框架。
 
+**补充内容** 最后添加了[测试覆盖范围检查工具](#测试范围覆盖)； [Flash应用性能分析](#应用性能分析)。
+
 ### 404和500错误页面
 
 首先设置视图app/views.py
@@ -235,3 +237,34 @@ __[NOTE]__ 使用python的smtp模块把发送邮件在控制台中输出：
     Ran 2 tests in 0.057s
     
     OK
+
+----
+
+### 测试范围覆盖
+
+[查看这里](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvi-debugging-testing-and-profiling)的__Test Coverage__部分。
+
+### 应用性能分析
+
+[查看这里](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvi-debugging-testing-and-profiling)的__Profiling for performance__部分。
+
+Python自带了性能分析工具[cProfile](http://docs.python.org/2/library/profile.html)
+Flask有一个扩展为其提供应用性能分析__Werkzeug__
+使用下面的profile.py替换run.py，启动应用就可以获得应用分析报表了。
+
+    {% highlight python %}
+    {% raw %}
+    #!flask/bin/python
+    from werkzeug.contrib.profiler import ProfilerMiddleware
+    from app import app
+
+    app.config['PROFILE'] = True
+    app.wsgi_app = ProfilerMiddleware(app.wsgi_app, restrictions=[30])
+    app.run(debug = True)
+    {% endraw %}
+    {% endhighlight %}
+
+
+
+
+

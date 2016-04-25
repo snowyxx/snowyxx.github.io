@@ -223,4 +223,30 @@ db_downgrade.py
 
 [Flask-SQLAlchemy一个简介](https://segmentfault.com/a/1190000004618621)
 
+---
+
+### 补充: 查看Flask-SQLAlchemy具体执行的语句
+
+启用慢查询监视及监视阈值： config.py
+
+    SQLALCHEMY_RECORD_QUERIES = True
+    # slow database query threshold (in seconds)
+    DATABASE_QUERY_TIMEOUT = 0.5
+
+Flash的after_request方法可用帮助我们输出每次请求的慢语句。
+
+``` python
+app/views.py
+
+from flask.ext.sqlalchemy import get_debug_queries
+from config import DATABASE_QUERY_TIMEOUT
+
+@app.after_request
+def after_request(response):
+    for query in get_debug_queries():
+        if query.duration >= DATABASE_QUERY_TIMEOUT:
+            app.logger.warning("SLOW QUERY: %s\nParameters: %s\nDuration: %fs\nContext: %s\n" % (query.statement, query.parameters, query.duration, query.context))
+    return response
+```
+
 下次课是如何真正地使用数据库
