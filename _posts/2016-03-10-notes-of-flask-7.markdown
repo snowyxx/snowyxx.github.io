@@ -11,7 +11,7 @@ Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-
 
 这次课首先添加了404.html和500.html错误页面；然后配置通过邮件和文件记录日志；用重复nickename为例讲了问题解决办法；最后写了个单元测试框架。
 
-**补充内容** 最后添加了[测试覆盖范围检查工具](#测试范围覆盖)； [Flash应用性能分析](#应用性能分析)。
+**补充内容** 最后添加了[测试覆盖范围检查工具](#coverage)； [Flash应用性能分析](#profiling)。
 
 ### 404和500错误页面
 
@@ -240,11 +240,11 @@ __[NOTE]__ 使用python的smtp模块把发送邮件在控制台中输出：
 
 ----
 
-### 测试范围覆盖
+### 测试范围覆盖<a name="coverage"></a>
 
 [查看这里](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvi-debugging-testing-and-profiling)的__Test Coverage__部分。
 
-### 应用性能分析
+### 应用性能分析<a name="profiling"></a>
 
 [查看这里](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvi-debugging-testing-and-profiling)的__Profiling for performance__部分。
 
