@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Flask学习笔记 13 - ajax"
+title:  "Flask学习笔记 14 - ajax"
 date:   2016-04-25 14:34:05 +0800
 categories: blog
 tags:   [python,Flask]
