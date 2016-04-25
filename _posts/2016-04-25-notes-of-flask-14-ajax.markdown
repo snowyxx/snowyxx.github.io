@@ -79,7 +79,7 @@ Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-
 
 > __conn.getresponse().read().decode('utf-8-sig')__ : 使用utf-8 decode的时候，回出现如下错误           
 > "Error: Unexpected error:ValueError('No JSON object could be decoded',)"          
-> 原因时response中的utf-8是呆BOM（Byte order mark）的，就是`u'\ufeff'`。所以采用[utf-8-sig][]。
+> 原因：response中的utf-8是呆BOM（Byte order mark）的，就是`u'\ufeff'`。所以采用[utf-8-sig][]。
 
 ### 获取一个微博的原始语言
 
