@@ -242,14 +242,14 @@ __[NOTE]__ 使用python的smtp模块把发送邮件在控制台中输出：
 
 ### 测试范围覆盖<a name="coverage"></a>
 
-[查看这里](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvi-debugging-testing-and-profiling)的__Test Coverage__部分。
+[查看这里](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvi-debugging-testing-and-profiling)的**Test Coverage**部分。
 
 ### 应用性能分析<a name="profiling"></a>
 
-[查看这里](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvi-debugging-testing-and-profiling)的__Profiling for performance__部分。
+[查看这里](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvi-debugging-testing-and-profiling)的**Profiling for performance**部分。
 
 Python自带了性能分析工具[cProfile](http://docs.python.org/2/library/profile.html)
-Flask有一个扩展为其提供应用性能分析__Werkzeug__
+Flask有一个扩展为其提供应用性能分析**Werkzeug**
 使用下面的profile.py替换run.py，启动应用就可以获得应用分析报表了。
 
     {% highlight python %}
