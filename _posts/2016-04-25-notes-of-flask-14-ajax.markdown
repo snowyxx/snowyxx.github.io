@@ -78,32 +78,8 @@ Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-
     {% endhighlight %}
 
 > __conn.getresponse().read().decode('utf-8-sig')__ : 使用utf-8 decode的时候，回出现如下错误           
-> "Error: Unexpected error:ValueError('No JSON object could be decoded',)"
+> "Error: Unexpected error:ValueError('No JSON object could be decoded',)"          
 > 原因时response中的utf-8是呆BOM（Byte order mark）的，就是`u'\ufeff'`。所以采用[utf-8-sig][]。
-
-### app/views.py 在这里获取每个请求头中的`Accept-Language` ，来确定语言。然后设置给g。
-
-    {% highlight python %}
-    {% raw %}
-    from app import babel
-    from config import LANGUAGES
-    
-    @babel.localeselector
-    def get_locale():
-        return request.accept_languages.best_match(LANGUAGES.keys())
-        
-    @app.before_request
-    def before_request():
-        ...
-        g.locale = get_locale()
-    {% endraw %}
-    {% endhighlight %}
-
-babel.cfg：babel的配置文件。设定什么文件要I18N。
-
-    [python: **.py]
-    [jinja2: **/templates/**.html]
-    extensions=jinja2.ext.autoescape,jinja2.ext.with_
 
 ### 获取一个微博的原始语言
 
@@ -125,7 +101,7 @@ babel.cfg：babel的配置文件。设定什么文件要I18N。
     {% endhighlight %}
     
 
-运行`$ ./db_migrate.py`来更新数据库。
+运行`flask/bin/python db_migrate.py`来更新数据库。
 
 当用户发新的微博的时候获取其语言并保存到数据库。/app/views.py
 
@@ -159,9 +135,9 @@ babel.cfg：babel的配置文件。设定什么文件要I18N。
     {% endraw %}
     {% endhighlight %}
 
-### 使用ajax发生翻译的post请求并显示结果
+### 使用ajax发送翻译的post请求并显示结果
 
-1. 服务器端，处理到/translate的post请求，把数据传给上面的translate.py，然后返回一个格式为`{ "text": "<translated text goes here>" }`的json结果。
+1. 服务器端，处理/translate的post请求，把数据传给上面的translate.py，然后返回一个格式为`{ "text": "<translated text goes here>" }`的json结果。
     app/views.py
     
             {% highlight python %}
@@ -180,7 +156,7 @@ babel.cfg：babel的配置文件。设定什么文件要I18N。
             {% endraw %}
             {% endhighlight %}
 
-2. 客户端，在微博后面添加个翻译链接。点击执行javascript函数`translate(sourceLang, destLang, sourceID, destID, loadingID)`
+2. 客户端，在微博后面添加个翻译链接，点击该链接执行一个javascript函数`translate(sourceLang, destLang, sourceID, destID, loadingID)`
     post.html
         {% highlight html %}
         {% raw %}
