@@ -9,7 +9,7 @@ Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-
 
 [SOURCE](https://github.com/snowyxx/microblog)
 
-这章通过实行翻译微博内容来将ajax的使用。
+这章通过实现翻译微博内容来讲解ajax的使用。
 
 主要包括3部分的内容：
 
@@ -204,6 +204,6 @@ Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-
     {% endraw %}
     {% endhighlight %}
 
-[guess-language]:http://code.google.com/p/guess-language/
+[guess-language]:https://github.com/kent37/guess-language
 [Microsoft Translator app]:https://datamarket.azure.com/dataset/1899a118-d202-492c-aa16-ba21c33c06cb
 [utf-8-sig]:http://stackoverflow.com/questions/17912307/u-ufeff-in-python-string
