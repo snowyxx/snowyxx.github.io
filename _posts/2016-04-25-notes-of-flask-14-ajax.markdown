@@ -204,6 +204,16 @@ Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-
     {% endraw %}
     {% endhighlight %}
 
+---
+
+### 结束
+
+这就是我的Flask学习笔记的最后一篇了。当然原作者还有2篇，讲了些Linux部署、使用mysql／postgresql作为数据库、使用web服务器（apache、gunicorn）等。
+
+- [Deployment on Linux (even on the Raspberry Pi!)](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvii-deployment-on-linux-even-on-the-raspberry-pi)
+- [Deployment on the Heroku Cloud](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud)
+
+
 [guess-language]:https://github.com/kent37/guess-language
 [Microsoft Translator app]:https://datamarket.azure.com/dataset/1899a118-d202-492c-aa16-ba21c33c06cb
 [utf-8-sig]:http://stackoverflow.com/questions/17912307/u-ufeff-in-python-string
