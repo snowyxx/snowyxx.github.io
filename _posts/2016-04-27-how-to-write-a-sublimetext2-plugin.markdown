@@ -191,7 +191,7 @@ class StringToUnicode(sublime_plugin.TextCommand):
 
 演示：
 
-![demo](images/sublimePluginDemo.git)
+![demo](/images/sublimePluginDemo.gif)
 
 ---
 
