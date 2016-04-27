@@ -198,7 +198,7 @@ class StringToUnicode(sublime_plugin.TextCommand):
 参考：                   
 [官方API](https://www.sublimetext.com/docs/2/api_reference.html)                  
 [官方例子](http://www.sublimetext.com/docs/plugin-examples)                  
-[官方给的非官方文档]。(http://docs.sublimetext.info/en/sublime-text-2/reference/plugins.html)这个很好。                               
+[官方给的非官方文档](http://docs.sublimetext.info/en/sublime-text-2/reference/plugins.html)。这个很好。                               
 [一个教程](http://code.tutsplus.com/tutorials/how-to-create-a-sublime-text-2-plugin--net-22685)：可以参考线程使用、发布插件等内容。
 
 
