@@ -6,8 +6,6 @@ categories: blog
 tags:   [python]
 ---
 
-[SOURCE](https://github.com/snowyxx/MyTest/tree/master/Properties2String)
-
 Sublime text使用越来越多，但是我有个功能需求一直以来没有找到相应的插件。那么就自己写了个。因为我要的功能很简单，所以这个插件也不复杂。主要工作是：实现功能的python代码；添加菜单；添加快捷键。简单记录下过程：
 
 > **注**：这里的插件是Sublime text 2的。如果是Sublime text 3，python代码略有不同，但是整个过程是一样的。
@@ -65,83 +63,7 @@ class ExampleCommand(sublime_plugin.TextCommand):
 
 ### 功能代码
 
-``` python
-import sublime
-import sublime_plugin
-
-
-class UnicodeToString(sublime_plugin.TextCommand):
-
-    def run(self, edit):
-        error = ''
-        if len(self.view.sel()) == 1 and self.view.sel()[0].empty():
-            # nothing selected, then convert the whole document
-            region = sublime.Region(0, self.view.size())
-            dataRegion = self.view.lines(region)
-        else:
-            dataRegion = self.view.sel()
-        for region in reversed(dataRegion):
-            s = self.view.substr(region)
-            s = s.replace(r'\\', r'\\\\')
-            s = s.replace(r'\n', r'\\n')
-            s = s.replace(r'\t', r'\\t')
-            s = s.replace(r'\r', r'\\r')
-            s = s.replace(r'\b', r'\\b')
-            s = s.replace(r'\\\\\b', r'\\\\b')
-            s = s.replace(r'\\\\\n', r'\\\\n')
-            s = s.replace(r'\\\\\t', r'\\\\t')
-            s = s.replace(r'\\\\\r', r'\\\\r')
-            s = s.replace(r"\'", r"\\'")
-            s = s.replace(r'\"', r'\\"')
-            try:
-                s = s.decode("unicode-escape")
-            except Exception, e:
-                if error == '':
-                    error += str(e) + '\n' + self.view.substr(region)+r'\n'
-                else:
-                    error += self.view.substr(region)+r'\n'
-
-            self.view.replace(edit, region, s)
-        if error != '':
-            sublime.error_message(error)
-
-
-class StringToUnicode(sublime_plugin.TextCommand):
-
-    def run(self, edit):
-        error = ''
-        if len(self.view.sel()) == 1 and self.view.sel()[0].empty():
-            # nothing selected, then convert the whole document
-            region = sublime.Region(0, self.view.size())
-            dataRegion = self.view.lines(region)
-        else:
-            dataRegion = self.view.sel()
-        for region in reversed(dataRegion):
-            s = self.view.substr(region)
-            tmp = self.getTmpStr("@#$", s)
-            s = s.replace("\\", tmp)
-            try:
-                s = s.encode("unicode-escape")
-            except Exception, e:
-                if error == '':
-                    error += str(e) + '\n' + self.view.substr(region)+r'\n'
-                else:
-                    error += self.view.substr(region)+r'\n'
-            finally:
-                s = s.replace(tmp, "\\")
-            self.view.replace(edit, region, s)
-        if error != '':
-            sublime.error_message(error)
-
-    def getTmpStr(self, tmp, s):
-        tmp = tmp + "1"
-        if s.find(tmp) > -1:
-            tmp = getTmpStr(tmp, s)
-        else:
-            pass
-        return tmp
-
-```
+[SOURCE](https://github.com/snowyxx/uni2str/blob/master/u2s.py)
 
 > 很简单，不用解释太多。实现的功能是在字符串和unicode间转换。如果你了解java I18N，就回知道其作用。              
 > reversed(dataRegion)： 一个小技巧，当你替换原来的文本的时候，从后向前，就是从大号的region开始，否则就乱套了。
