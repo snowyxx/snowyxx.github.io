@@ -169,7 +169,7 @@ profile.set_preference('general.useragent.override',"Mozilla/5.0 (Windows; Intel
 
 测试的每一步是一个命令，由Command、Target和Value组成。[Command](#command)是具体操作，比如打开（open）一个页面、检查页面中文字（verifyText）等等。[Target](#target)和[Value](#value)是command的参数，分别表示要操作的对象和其值。
 
-录制一个测试用例很简单，点击红色⏺️按钮即可。操作会自动记录下来。
+录制一个测试用例很简单，点击红色录制按钮即可。操作会自动记录下来。
 
 录制的过程中，如果要对某个文字进行操作，比如验证是否匹配正则表达式，在浏览器中右键菜单中就有可用的Selenium IDE命令了。
 
@@ -184,8 +184,8 @@ profile.set_preference('general.useragent.override',"Mozilla/5.0 (Windows; Intel
 
 使用verify还是assert？
 
-> verify即使失败还会继续执行后面的命令。
-> assert失败后退出测试用例。
+> verify即使失败还会继续执行后面的命令。            
+> assert失败后退出测试用例。              
 > 一般集合二者使用。一个assert后面跟一个或多个verify。
 
 常用命令：
@@ -204,10 +204,8 @@ profile.set_preference('general.useragent.override',"Mozilla/5.0 (Windows; Intel
 
 4. clickAndWait(locator)
 
-    > 单击一个链接、按钮等等元素，单击后等待新的页面加载
-
-    > 我们的表单提交，就可以用这个方法来单击submit按钮。
-
+    > 单击一个链接、按钮等等元素，单击后等待新的页面加载             
+    > 我们的表单提交，就可以用这个方法来单击submit按钮。              
     > 类似的方法还有selectAndWait、typeAndWait、focusAndWait……
 
 5. verifyLocation(pattern)
@@ -232,16 +230,13 @@ profile.set_preference('general.useragent.override',"Mozilla/5.0 (Windows; Intel
 
 10. verifyAttribute(locator, pattern)
 
-    > 校验指定的元素属性值，是否匹配pattern
-
-    > 例如：verifyAttribute(link=All Search Results for "bike"@href, 'glob:*/search/bike?c=0*')
-
+    > 校验指定的元素属性值，是否匹配pattern                
+    > 例如：verifyAttribute(link=All Search Results for "bike"@href, 'glob:\*/search/bike?c=0*')              
     > 即校验指定的link的href属性是否匹配"glob:*/search/bike?c=0*"
 
 11. fireEvent(locator,eventName)
 
-    > 用于调用locator指定的元素的指定eventName的事件，例如：
-
+    > 用于调用locator指定的元素的指定eventName的事件，例如：       
     > fireEvent(userLoginName,blur)，即调用文本框userLoginName的失去焦点事件
 
 <a name="target"></a>
@@ -315,7 +310,7 @@ type命令对应具体字符串。当验证的时候（verifyTextPresent、verif
 
     - 前缀为`exact:`或不写
 
-**存储的值*
+**存储的值**
 
 在前面命令存储，供后面命令使用。例如：
 
@@ -352,7 +347,7 @@ alert
 
 |command|target|value|
 | ---- | ---- | ---- |
-|open| |/| |&nbsp;|
+|open|/|&nbsp;|
 |click|btnAlert|&nbsp;|
 |assertAlert|I’m blocking!|&nbsp;|
 |verifyTextPresent|Alert is gone.|&nbsp;|
