@@ -9,7 +9,7 @@ tags:   [selenium,python]
 
 [Selenium]是针对Web应用的开源自动化测试工具。包括：
 
-1. **Selenium IDE**是一个用于录制/回放测试脚本的Firefox附加组件，录制的脚本可以生成基于Selenium RC的测试代码（Java、Ruby、C#等. 。
+1. **Selenium IDE**：是一个用于录制/回放测试脚本的Firefox附加组件，录制的脚本可以生成基于Selenium RC的测试代码（Java、Ruby、C#等. 。
 
 2. **Selenium RC**：RC由Server和Client组成两部分组成，Server负责加载/关闭浏览器以及作为HTTP代理来访问Web应用，Clinet支持多种编程语言和测试框架（TestNG、JUnit、NUnit等. 。
 
@@ -154,6 +154,7 @@ driver.delete_all_cookies()
 profile = webdriver.FirefoxProfile()
 profile.set_preference('general.useragent.override',"Mozilla/5.0 (Windows; Intel Mac OS X 10.11; rv:45.0) Gecko/20100101 Firefox/45.0")
 ```
+
 ### Selenium IDE
 
 **安装**
@@ -162,7 +163,7 @@ profile.set_preference('general.useragent.override',"Mozilla/5.0 (Windows; Intel
 
 **使用**
 
-![seleniumide](images/seleniumide.png)
+![seleniumide](/images/seleniumide.png)
 
 [用户手册](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp)
 
@@ -184,9 +185,7 @@ profile.set_preference('general.useragent.override',"Mozilla/5.0 (Windows; Intel
 使用verify还是assert？
 
 > verify即使失败还会继续执行后面的命令。
-
 > assert失败后退出测试用例。
-
 > 一般集合二者使用。一个assert后面跟一个或多个verify。
 
 常用命令：
