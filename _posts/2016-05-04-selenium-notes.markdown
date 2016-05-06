@@ -242,8 +242,7 @@ profile.set_preference('general.useragent.override',"Mozilla/5.0 (Windows; Intel
     > 用于调用locator指定的元素的指定eventName的事件，例如：       
     > fireEvent(userLoginName,blur)，即调用文本框userLoginName的失去焦点事件
 
-<a name="target"></a>
-**Target**
+#### Target
 
 就是在页面中选择要操作的对象。有以下几种方式：
 
@@ -290,8 +289,7 @@ profile.set_preference('general.useragent.override',"Mozilla/5.0 (Windows; Intel
 > 以`//`开头的为xpath，所以可以省略`xpath=`；以`document`开头的为DOM，所以可以省略`dom=`
 
 
-<a name="value"></a>
-**Value**
+#### Value
 
 type命令对应具体字符串。当验证的时候（verifyTextPresent、verifyTitle、verifyAlert、assertConfirmation、verifyText或verifyPrompt），可使用通配符、正则表达式和精准文本。
 
@@ -315,7 +313,8 @@ type命令对应具体字符串。当验证的时候（verifyTextPresent、verif
 
 4. 没有写前缀的时候，默认使用`glob:`
 
-**存储的值**
+#### 存储的值
+{:.no_toc}
 
 在前面命令存储，供后面命令使用。例如：
 
@@ -345,7 +344,8 @@ javascript使用：`storedVars[‘yourVariableName’]`
 |type|q|javascript{storedVars[‘searchString’].toUpperCase()}|
 
 
-**弹出窗口** alert/confirm/prompt
+### 弹出窗口 alert/confirm/prompt
+{:.no_toc}
 
 通用命令：`(verify|assert)(alert|confirm|prompt)`,`(verify|assert)(alert|confirm|prompt)(Present|NotPresent)`
 
@@ -383,6 +383,11 @@ prompt
 |verifyTextPresent|Selenium!|&nbsp;|
 
 
+### [Selenium RC](http://docs.seleniumhq.org/projects/remote-control/)
+
+![SeleniumRC](http://docs.seleniumhq.org/selenium-rc.png)
+
+具体使用见[文档](http://docs.seleniumhq.org/docs/05_selenium_rc.jsp)。
 
 [1]:http://seleniumhq.github.io/selenium/docs/api/py/index.html
 [Selenium]:http://docs.seleniumhq.org/download/
