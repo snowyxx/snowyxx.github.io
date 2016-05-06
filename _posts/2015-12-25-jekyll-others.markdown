@@ -5,6 +5,9 @@ date:   2015-12-25 15:11:05 +0800
 categories: blog
 tags:   [jekyll]
 ---
+* 目录
+{:toc}
+
 ### 访问统计
 
 使用CNZZ。去他们网站注册个用户，然后按照向导得到一段javascript，放到文章模版页面的结尾即可。
