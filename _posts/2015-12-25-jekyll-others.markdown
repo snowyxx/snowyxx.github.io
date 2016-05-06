@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "jekyll访问统计＋标签页＋评论＋搜索"
+title:  "jekyll访问统计＋标签页＋评论＋搜索＋目录树"
 date:   2015-12-25 15:11:05 +0800
 categories: blog
 tags:   [jekyll]
