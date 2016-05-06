@@ -23,9 +23,11 @@ tags:   [selenium,python]
 
 ### Selenium WebDriver(Python)
 
-#### [安装][1]
+#### 安装
 
     pip install -U selenium
+
+[更多][1]
 
 #### API
 
@@ -383,11 +385,14 @@ prompt
 |verifyTextPresent|Selenium!|&nbsp;|
 
 
-### [Selenium RC](http://docs.seleniumhq.org/projects/remote-control/)
+### Selenium RC
 
 ![SeleniumRC](/images/selenium-rc.png)
 
-具体使用见[文档](http://docs.seleniumhq.org/docs/05_selenium_rc.jsp)。
+具体使用见：
+
+- [文档](http://docs.seleniumhq.org/docs/05_selenium_rc.jsp)
+- [介绍](http://docs.seleniumhq.org/projects/remote-control/)
 
 [1]:http://seleniumhq.github.io/selenium/docs/api/py/index.html
 [Selenium]:http://docs.seleniumhq.org/download/
