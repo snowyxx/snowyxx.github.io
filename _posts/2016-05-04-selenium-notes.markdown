@@ -161,11 +161,11 @@ profile.set_preference('general.useragent.override',"Mozilla/5.0 (Windows; Intel
 
 ### Selenium IDE
 
-**安装**
+#### 安装
 
 在[这里下载安装](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/)Firefox的Selenium IDE插件。
 
-**使用**
+#### 使用
 
 ![seleniumide](/images/seleniumide.png)
 
@@ -181,8 +181,7 @@ profile.set_preference('general.useragent.override',"Mozilla/5.0 (Windows; Intel
 
 录制后的测试用例可以保存为html文件，供以后导入到Selenium IDE。或者导出为其他语言程序，例如python。
 
-<a name="command"></a>
-**Command**
+#### Command
 
 [参考文档](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html)
 
