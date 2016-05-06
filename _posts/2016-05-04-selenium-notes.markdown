@@ -1,10 +1,14 @@
 ---
 layout: post
-title:  "Selenium笔记"
+title:  "Selenium笔记 - 基础知识"
 date:   2016-05-04 15:06:05 +0800
 categories: blog
 tags:   [selenium,python]
 ---
+
+* 目录
+{:toc}
+
 ### Selenium
 
 [Selenium]是针对Web应用的开源自动化测试工具。包括：
@@ -184,7 +188,7 @@ profile.set_preference('general.useragent.override',"Mozilla/5.0 (Windows; Intel
 
 使用verify还是assert？
 
-> verify即使失败还会继续执行后面的命令。            
+> verify即使失败还会继续执行后面的命令。                  
 > assert失败后退出测试用例。              
 > 一般集合二者使用。一个assert后面跟一个或多个verify。
 
@@ -310,6 +314,8 @@ type命令对应具体字符串。当验证的时候（verifyTextPresent、verif
 
     - 前缀为`exact:`或不写
 
+4. 没有写前缀的时候，默认使用`glob:`
+
 **存储的值**
 
 在前面命令存储，供后面命令使用。例如：
@@ -318,11 +324,13 @@ type命令对应具体字符串。当验证的时候（verifyTextPresent、verif
 | ---- | ---- | ---- |
 |store|paul@mysite.org|userName|
 
+
 使用：`${value}`
 
 |command|target|value|
 | ---- | ---- | ---- |
 |verifyText|//div/p|${userName}|
+
 
 javascript使用：`storedVars[‘yourVariableName’]`
 
@@ -336,6 +344,7 @@ javascript使用：`storedVars[‘yourVariableName’]`
 |storeEval|storedVars[‘name’].toUpperCase()|uc|
 |storeEval|storedVars[‘name’].toLowerCase()|lc|
 |type|q|javascript{storedVars[‘searchString’].toUpperCase()}|
+
 
 **弹出窗口** alert/confirm/prompt
 
@@ -352,6 +361,7 @@ alert
 |assertAlert|I’m blocking!|&nbsp;|
 |verifyTextPresent|Alert is gone.|&nbsp;|
 
+
 confirm
 
 |command|target|value|
@@ -362,6 +372,7 @@ confirm
 |assertConfirmation|Choose an option.|&nbsp;|
 |verifyTextPresent|Rejected|&nbsp;|
 
+
 prompt
 
 |command|target|value|
@@ -371,6 +382,8 @@ prompt
 |click|id=btnPrompt|&nbsp;|
 |assertPrompt|What’s the best web QA tool?|&nbsp;|
 |verifyTextPresent|Selenium!|&nbsp;|
+
+
 
 [1]:http://seleniumhq.github.io/selenium/docs/api/py/index.html
 [Selenium]:http://docs.seleniumhq.org/download/
