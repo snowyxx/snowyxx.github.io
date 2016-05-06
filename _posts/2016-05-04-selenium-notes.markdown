@@ -383,7 +383,7 @@ prompt
 |verifyTextPresent|Selenium!|&nbsp;|
 
 
-### [Selenium RC](http://docs.seleniumhq.org/projects/remote-control/)
+### [Selenium RC](/images/remote-control/)
 
 ![SeleniumRC](http://docs.seleniumhq.org/selenium-rc.png)
 
