@@ -383,9 +383,9 @@ prompt
 |verifyTextPresent|Selenium!|&nbsp;|
 
 
-### [Selenium RC](/images/remote-control/)
+### [Selenium RC](http://docs.seleniumhq.org/projects/remote-control/)
 
-![SeleniumRC](http://docs.seleniumhq.org/selenium-rc.png)
+![SeleniumRC](/images/selenium-rc.png)
 
 具体使用见[文档](http://docs.seleniumhq.org/docs/05_selenium_rc.jsp)。
 
