@@ -23,15 +23,15 @@ tags:   [selenium,python]
 
 ### Selenium WebDriver(Python)
 
-**[安装][1]**
+#### [安装][1]
 
     pip install -U selenium
 
-**API**
+#### API
 
 <http://seleniumhq.github.io/selenium/docs/api/py/api.html>
 
-**使用**
+#### 使用
 
 ```python
 from selenium import webdriver
