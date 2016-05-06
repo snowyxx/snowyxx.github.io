@@ -389,7 +389,7 @@ prompt
 
 ![SeleniumRC](/images/selenium-rc.png)
 
-具体使用见：
+Selenium RC的具体使用见：
 
 - [文档](http://docs.seleniumhq.org/docs/05_selenium_rc.jsp)
 - [介绍](http://docs.seleniumhq.org/projects/remote-control/)
