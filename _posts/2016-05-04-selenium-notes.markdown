@@ -387,6 +387,8 @@ prompt
 
 ### Selenium RC
 
+Selenium RC架构图：
+
 ![SeleniumRC](/images/selenium-rc.png)
 
 Selenium RC的具体使用见：
