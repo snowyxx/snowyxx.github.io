@@ -103,7 +103,9 @@ page.open('http://xiaoxuenotes.com', function(status){
 });
 ```
 
-#### 输出页面中的console信息。可以用类似的方法输出alert等信息。`onConsoleMessage` `onAlert`等。
+#### 输出页面中的console信息。
+
+可以用类似的方法输出alert等信息。`onConsoleMessage` `onAlert`等。
 
 [webpageapi]
 
@@ -190,16 +192,7 @@ while(!stream.atEnd()){
 
     page.injectJs("injectme.js")
 
-example中的[injectme.js]
-[fsapi]
-
-```js
-var fs = require('fs');
-var stream = fs.open('test.js','r');
-while(!stream.atEnd()){
-    console.log(stream.readLine());
-}
-```
+参考example中的[injectme.js]
 
 #### phantomjs的自带web服务器
 
