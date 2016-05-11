@@ -31,3 +31,7 @@ tags:   [windows]
     [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate]
     "DisableOSUpgrade"=dword:00000001
 
+
+**即使隐藏了KB3035583，最近还是又给我装上了。我就又卸载了一次。OK，最终结局方案：**
+
+**Linux从入门到Mac选购！**
