@@ -50,7 +50,7 @@ with open('raw.txt','wb') as fh:
      fh.write(msg_content)
 ```
 
-因为pop不能获取收件箱以为的文件夹，所以选择imaplib。
+因为pop不能获取收件箱以外的文件夹，所以选择imaplib。
 
 ### IMAP
 

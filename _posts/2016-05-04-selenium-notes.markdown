@@ -13,9 +13,9 @@ tags:   [selenium,python]
 
 [Selenium]是针对Web应用的开源自动化测试工具。包括：
 
-1. **Selenium IDE**：是一个用于录制/回放测试脚本的Firefox附加组件，录制的脚本可以生成基于Selenium RC的测试代码（Java、Ruby、C#等. 。
+1. **Selenium IDE**：是一个用于录制/回放测试脚本的Firefox附加组件，录制的脚本可以生成基于Selenium RC的测试代码（Java、Ruby、C#等）。
 
-2. **Selenium RC**：RC由Server和Client组成两部分组成，Server负责加载/关闭浏览器以及作为HTTP代理来访问Web应用，Clinet支持多种编程语言和测试框架（TestNG、JUnit、NUnit等. 。
+2. **Selenium RC**：RC由Server和Client组成两部分组成，Server负责加载/关闭浏览器以及作为HTTP代理来访问Web应用，Clinet支持多种编程语言和测试框架（TestNG、JUnit、NUnit等）。
 
 3. **Selenium WebDriver**：WebDriver作为Selenium2的核心特性提供比RC更简洁易用的API，是官方推荐的RC替代方案。可以更好的支持动态网页，不需要再额外启动一个独立的Server。
 
