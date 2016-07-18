@@ -250,6 +250,7 @@ driver.get('http://cn.bing.com')
 print  driver.find_element_by_id('scpl0').text
 ```
 
+[phantomjs]:http://phantomjs.org/
 [netsniff.js]:https://github.com/ariya/phantomjs/blob/master/examples/netsniff.js
 [injectme.js]:https://github.com/ariya/phantomjs/blob/master/examples/injectme.js
 [webpageapi]:http://phantomjs.org/api/webpage/
