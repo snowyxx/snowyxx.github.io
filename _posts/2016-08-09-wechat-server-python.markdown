@@ -9,16 +9,12 @@ tags:   [python]
 * 目录
 {:toc}
 
-微信公众号
-公众号开发
-apache虚拟机
-功能
-
 很久之前就注册了个微信公众号，可是一直都没有用起来。所以就想弄个服务器端实现些功能。最终的选择是用web.py加Apache虚拟机的方式部署在一个现有的外网服务器上。
 
 ### 微信公众号
 
 首先你得有个注册公众号。注册地址<https://mp.weixin.qq.com/>。微信公众号分为“服务号”和“订阅号”。服务号功能更多。而且二者都有认证和非认证之分。认证的功能更多。所以说，非认证的个人订阅号功能最少。
+
 [公众号接口权限说明](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1433401084&token=&lang=zh_CN)
 
 ### 微信公众号开发信息
@@ -38,6 +34,7 @@ apache虚拟机
 配置服务器的时候，微信会向你配置的URL(服务器地址)发送一个**GET**请求，主要目的是验证签名。
 
 包括以下参数：
+
 |参数|参数|
 | ---- | ---- |
 |signature|微信加密签名，signature结合了开发者填写的token参数和请求中的timestamp参数、nonce参数。|
@@ -167,9 +164,9 @@ def POST(self):
         "/.*", "hello"
     )
 
-表示访问`/.*`有hello类处理。
+    表示访问`/.*`有hello类处理。
 
-2. 处理GET和POST请求。在类中实现GET(self)和POST(self)方法。代码如上。
+2. 处理GET和POST请求。在类中实现`GET(self)`和`POST(self)`方法。代码如上。
 
 3. 模板，以下代码用来使用templates\wx.xml模版
 
@@ -209,11 +206,11 @@ apache主目录\conf\extra\httpd-vhosts.conf  ([apache 2.4](http://httpd.apache.
 
 [web.py文档中CGI部署配置说明](http://webpy.org/cookbook/cgi-apache)
 
-配置过程2个坑：
+遇到的2个坑：
 
 1. `D:/wamp/www/weixin/test.py is not executable; ensure interpreted scripts have "#!" or "'!" first line`
 
-解决：必需在test.py第一行指定pyton地址。`#!C:\Python27\python.exe`
+    解决：必需在test.py第一行指定pyton地址。`#!C:\Python27\python.exe`
 
 2. 例外
 
@@ -231,9 +228,9 @@ apache主目录\conf\extra\httpd-vhosts.conf  ([apache 2.4](http://httpd.apache.
      sock = socket.fromfd(FCGI\_LISTENSOCK\_FILENO, socket.AF_INET,\r
     AttributeError: 'module' object has no attribute 'fromfd'\r
     
-因为Windows中没有fromfd命令。[解决方法](https://groups.google.com/forum/#!msg/webpy/Z6jPpf2xiCs/fWXAkJzAGgMJ)：      
+    因为Windows中没有fromfd命令。[解决方法](https://groups.google.com/forum/#!msg/webpy/Z6jPpf2xiCs/fWXAkJzAGgMJ)：      
 
-    注释Python27\\lib\\site-packages\\flup\\server\\fcgi_base.py 978行的代码
+    注释Python27\\lib\\site-packages\\flup\\server\\fcgi_base.py 978行左右的代码
     
             sock = socket.fromfd(FCGI_LISTENSOCK_FILENO, socket.AF_INET,
                                  socket.SOCK_STREAM)
