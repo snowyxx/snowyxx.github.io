@@ -13,7 +13,7 @@ tags:   [python]
 
 ### 微信公众号
 
-首先你得有个注册公众号。注册地址<https://mp.weixin.qq.com/>。微信公众号分为“服务号”和“订阅号”。服务号功能更多。而且二者都有认证和非认证之分。认证的功能更多。所以说，非认证的个人订阅号功能最少。
+首先你得有个注册公众号。注册地址<https://mp.weixin.qq.com/>。微信公众号分为“服务号”和“订阅号”。服务号功能更多。而且二者都有认证和非认证之分。认证的功能更多。所以说，非认证的个人订阅号功能最少。比如说微信不允许个人账号进行认证。如果你的订阅号配置了服务器，就不能自定义菜单了。
 
 [公众号接口权限说明](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1433401084&token=&lang=zh_CN)
 
@@ -156,13 +156,20 @@ def POST(self):
 
 ### web.py
 
+**安装**
+
+先安装pthon，然后用pip安装需要模块：
+
+    pip install web.python
+    pip install flup
+
+**部署**
+
 选择[web.py](http://webpy.org/cookbook/)是因为其轻。用到的功能：
 
 1. 路由
 
-    urls = (
-        "/.*", "hello"
-    )
+    `urls = ("/.*", "hello")`
 
     表示访问`/.*`有hello类处理。
 
@@ -170,8 +177,8 @@ def POST(self):
 
 3. 模板，以下代码用来使用templates\wx.xml模版
 
-    render = web.template.render('templates/')
-    return render.wx(ToUserName, FromUserName, int(time.time()), answer)
+        render = web.template.render('templates/')
+        return render.wx(ToUserName, FromUserName, int(time.time()), answer)
 
 ### web.py ＋ Apache
 
@@ -214,19 +221,19 @@ apache主目录\conf\extra\httpd-vhosts.conf  ([apache 2.4](http://httpd.apache.
 
 2. 例外
 
-    File "D:/wamp/www/weixin/test.py", line 18, in <module>\r
-     app.run()\r
-    File "C:\\Python27\\lib\\site-packages\\web\\application.py", line 313, in run\r
-     return wsgi.runwsgi(self.wsgifunc(*middleware))\r
-    File "C:\\Python27\\lib\\site-packages\\web\\wsgi.py", line 35, in runwsgi\r
-     return runfcgi(func, None)\r
-    File "C:\\Python27\\lib\\site-packages\\web\\wsgi.py", line 17, in runfcgi\r
-     return flups.WSGIServer(func, multiplexed=True, bindAddress=addr, debug=False).run()\r
-    File "C:\\Python27\\lib\\site-packages\\flup\\server\\fcgi.py", line 112, in run\r
-     sock = self._setupSocket()\r
-    File "C:\\Python27\\lib\\site-packages\\flup\\server\\fcgi_base.py", line 978, in _setupSocket\r
-     sock = socket.fromfd(FCGI\_LISTENSOCK\_FILENO, socket.AF_INET,\r
-    AttributeError: 'module' object has no attribute 'fromfd'\r
+        File "D:/wamp/www/weixin/test.py", line 18, in <module>\r
+         app.run()\r
+        File "C:\\Python27\\lib\\site-packages\\web\\application.py", line 313, in run\r
+         return wsgi.runwsgi(self.wsgifunc(*middleware))\r
+        File "C:\\Python27\\lib\\site-packages\\web\\wsgi.py", line 35, in runwsgi\r
+         return runfcgi(func, None)\r
+        File "C:\\Python27\\lib\\site-packages\\web\\wsgi.py", line 17, in runfcgi\r
+         return flups.WSGIServer(func, multiplexed=True, bindAddress=addr, debug=False).run()\r
+        File "C:\\Python27\\lib\\site-packages\\flup\\server\\fcgi.py", line 112, in run\r
+         sock = self._setupSocket()\r
+        File "C:\\Python27\\lib\\site-packages\\flup\\server\\fcgi_base.py", line 978, in _setupSocket\r
+         sock = socket.fromfd(FCGI\_LISTENSOCK\_FILENO, socket.AF_INET,\r
+        AttributeError: 'module' object has no attribute 'fromfd'\r
     
     因为Windows中没有fromfd命令。[解决方法](https://groups.google.com/forum/#!msg/webpy/Z6jPpf2xiCs/fWXAkJzAGgMJ)：      
 
@@ -245,6 +252,8 @@ apache主目录\conf\extra\httpd-vhosts.conf  ([apache 2.4](http://httpd.apache.
             在其下添加：
             isFCGI = False
     
+这样就部署完成了Windows + Apache + web.py环境作为微信服务器了。
+
 ---
 
 参考：                                   
