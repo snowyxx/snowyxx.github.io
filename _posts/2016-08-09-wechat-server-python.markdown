@@ -133,6 +133,48 @@ def POST(self):
 <FuncFlag>$funcFlag</FuncFlag>
 </xml>
 ```
+### 订阅和取消订阅事件
+
+订阅和取消订阅事件发生时微信发送事件推送，xml格式为：
+
+```xml
+<xml>
+<ToUserName><![CDATA[toUser]]></ToUserName>
+<FromUserName><![CDATA[FromUser]]></FromUserName>
+<CreateTime>123456789</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe or unsubscribe]]></Event>
+</xml>
+```
+
+订阅的时候要自动回复，返回和上面一样的xml就可以了：
+
+```python
+ $def with (toUser,fromUser,createTime,content,funcFlag=0)
+<xml>
+<ToUserName><![CDATA[$fromUser]]></ToUserName>
+<FromUserName><![CDATA[$toUser]]></FromUserName>
+<CreateTime>$createTime</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[$content]]></Content>
+<FuncFlag>$funcFlag</FuncFlag>
+</xml>
+```
+> 注意：返回的MsgType**不要**写成event
+
+处理POST请求的代码：
+
+```python
+MsgType = collection.getElementsByTagName('MsgType')[0].childNodes[0].data  # event
+try:
+    Event = collection.getElementsByTagName('Event')[0].childNodes[0].data
+except IndexError:
+    pass
+if MsgType == 'event':
+    if Event == 'subscribe':
+        answer = '欢迎关注！'
+        return render.wx(ToUserName, FromUserName, int(time.time()), answer)
+```
 
 ### 调用公众号API
 
