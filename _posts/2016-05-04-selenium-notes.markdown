@@ -398,6 +398,6 @@ Selenium RC的具体使用见：
 
 [1]:http://seleniumhq.github.io/selenium/docs/api/py/index.html
 [Selenium]:http://docs.seleniumhq.org/download/
-[xpath]:http://www.w3school.com.cn/xpath/
+[xpath]:http://www.w3schools.com/xml/xml_xpath.asp
 [DOM]:http://www.w3schools.com/js/js_htmldom.asp
-[CSS]:https://www.w3.org/TR/css3-selectors/
+[CSS]:http://www.w3schools.com/cssref/css_selectors.asp
