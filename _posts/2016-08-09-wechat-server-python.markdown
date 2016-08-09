@@ -133,6 +133,7 @@ def POST(self):
 <FuncFlag>$funcFlag</FuncFlag>
 </xml>
 ```
+
 ### 订阅和取消订阅事件
 
 订阅和取消订阅事件发生时微信发送事件推送，xml格式为：
