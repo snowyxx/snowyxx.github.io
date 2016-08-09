@@ -158,7 +158,7 @@ def POST(self):
 
 **安装**
 
-先安装pthon，然后用pip安装需要模块：
+先安装python，然后用pip安装需要模块：
 
     pip install web.python
     pip install flup
@@ -215,7 +215,7 @@ apache主目录\conf\extra\httpd-vhosts.conf  ([apache 2.4](http://httpd.apache.
 
 遇到的2个坑：
 
-1. `D:/wamp/www/weixin/test.py is not executable; ensure interpreted scripts have "#!" or "'!" first line`
+1. Apache错误日志：`D:/wamp/www/weixin/test.py is not executable; ensure interpreted scripts have "#!" or "'!" first line`
 
     解决：必需在test.py第一行指定pyton地址。`#!C:\Python27\python.exe`
 
