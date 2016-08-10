@@ -214,7 +214,7 @@ if MsgType == 'event':
 
     `urls = ("/.*", "hello")`
 
-    表示访问`/.*`有hello类处理。
+    表示访问`/.*`由hello类处理。
 
 2. 处理GET和POST请求。在类中实现`GET(self)`和`POST(self)`方法。代码如上。
 
@@ -252,9 +252,9 @@ apache主目录\conf\extra\httpd-vhosts.conf  ([apache 2.4](http://httpd.apache.
         </Directory>
     </VirtualHost>
 
-因为这个Apache来自wamp（一个Windows下的php＋apache＋mysql＋apache集成环境），已经使用CGI模块启用PHP。所以也用CGI来启动web.py。
+因为这个Apache来自wamp（一个Windows下的php＋apache＋mysql集成环境），已经使用CGI模块启用PHP。所以也用CGI来启动web.py。
 
-[web.py文档中CGI部署配置说明](http://webpy.org/cookbook/cgi-apache)
+[web.py文档中CGI部署配置说明](http://webpy.org/install#apachecgi)
 
 遇到的2个坑：
 
@@ -301,7 +301,7 @@ apache主目录\conf\extra\httpd-vhosts.conf  ([apache 2.4](http://httpd.apache.
 
 参考：                                   
 [廖雪峰的教程](http://www.liaoxuefeng.com/article/0013900476318564121d01facf844cba508396f95d9bb82000)                 
-[知乎上的回答](https://zhuanlan.zhihu.com/p/21284127)                 
+[知乎上的文章](https://zhuanlan.zhihu.com/p/21284127)                 
 [wechat-python-sdk](https://github.com/doraemonext/wechat-python-sdk)                 
 [微信文档](https://mp.weixin.qq.com/wiki)                 
 
