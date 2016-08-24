@@ -36,16 +36,8 @@ IPMI：
 
 - IBM开机自检的过程中根据提示按F1进入UEFI设置
 
-    ![setupibmipmi](/images/imm.jpg)
+    ![setupibmipmi](/images/imm.gif)
     
-1. AppID(应用ID)：系统给你的。
-2. AppSecret(应用密钥)：后面生成access_token用。
-3. 服务器配置
-    - URL(服务器地址)：服务器地址。http或https；域名或者外网地址；http必需是80端口，https必需是443端口。
-    - Token(令牌)：Token可由开发者可以任意填写，用作生成签名。作用就是验证请求是不是来自微信。
-    - EncodingAESKey(消息加解密密钥：EncodingAESKey由开发者手动填写或随机生成，将用作消息体加解密密钥。
-    - 消息加解密方式：明文模式、兼容模式和安全模式。模式的选择与服务器配置在提交后都会立即生效，请开发者谨慎填写及选择。加解密方式的默认状态为明文模式，选择兼容模式和安全模式需要提前配置好相关加解密代码。
-
 ### Web控制台 － IMM
 
 使用浏览器打开http://<上面配置的IP地址>。在接下来的登录界面中输入默认的用户名USERID和密码PASSW0RD，其中0是数字0，非字母O。
@@ -263,13 +255,15 @@ public class IpmiSnmpTest {
         //method to get attribute data from snmp agent
     }
 }
+```
 
 ### SNMP陷阱
 
 在IMM配置SNMP陷阱发送到网管系统：
 ![snmptrap](/images/immSNMPTraps.jpg) 
 
-__[请戳这里查看所有相关代码](https://github.com/snowyxx/MyTest/tree/master/ipmi)__
+[请戳这里查看所有相关代码](https://github.com/snowyxx/MyTest/tree/master/ipmi)
+
 ---
 
 参考：                                   
