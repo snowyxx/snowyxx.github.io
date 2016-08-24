@@ -262,7 +262,9 @@ public class IpmiSnmpTest {
 在IMM配置SNMP陷阱发送到网管系统：
 ![snmptrap](/images/immSNMPTraps.jpg) 
 
-[请戳这里查看所有相关代码](https://github.com/snowyxx/MyTest/tree/master/ipmi)
+---
+
+** [请戳这里查看所有相关代码](https://github.com/snowyxx/MyTest/tree/master/ipmi)
 
 ---
 
