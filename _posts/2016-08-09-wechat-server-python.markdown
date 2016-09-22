@@ -306,4 +306,5 @@ apache主目录\conf\extra\httpd-vhosts.conf  ([apache 2.4](http://httpd.apache.
 [知乎上的文章](https://zhuanlan.zhihu.com/p/21284127)                 
 [wechat-python-sdk](https://github.com/doraemonext/wechat-python-sdk)                 
 [微信文档](https://mp.weixin.qq.com/wiki)                 
+[微信企业号文档](http://qydev.weixin.qq.com/wiki/index.php?title=%E9%A6%96%E9%A1%B5)                 
 
