@@ -59,7 +59,7 @@ def GET(self):
     timestamp = data.timestamp
     nonce = data.nonce
     echostr = data.echostr
-    token = "snowyxx"
+    token = "xxxxxx"
     list = [token, timestamp, nonce]
     list.sort()
     sha1 = hashlib.sha1()
@@ -298,6 +298,10 @@ apache主目录\conf\extra\httpd-vhosts.conf  ([apache 2.4](http://httpd.apache.
             isFCGI = False
     
 这样就部署完成了Windows + Apache + web.py环境作为微信服务器了。
+
+---
+
+github: <https://github.com/snowyxx/WechatServer>
 
 ---
 
