@@ -12,7 +12,7 @@ tags:   [python, javascrip, wechat]
 
 ### 给企业号号用户发送消息
 
-微信的企业号中国有通讯录，可以给用户分部门，添加标签等。企业号号有(发送消息的API)[http://qydev.weixin.qq.com/wiki/index.php?title=%E5%8F%91%E9%80%81%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8E]。
+微信的企业号中国有通讯录，可以给用户分部门，添加标签等。企业号号有[发送消息的API](http://qydev.weixin.qq.com/wiki/index.php?title=%E5%8F%91%E9%80%81%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8E)。
 
 __POST__   `https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token=ACCESS_TOKEN`
 
@@ -93,12 +93,12 @@ private String sendMsg_ent(String token, String toUser, String content) throws E
 
 订阅号和服务号没有主动发送消息的API。但是提供[模板消息接口API](http://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1433751277&token=&lang=zh_CN)，虽然对发送模板消息的场景有限制，但是对于“故障告警”类的模板消息倒是挺友好。
 
-还是就是把消息发送给谁的问题，微信提供了标签相关API，可以给要接收消息的用户设置标签。过程如下：
+还有就是把消息发送给谁的问题，微信提供了标签相关API，可以给要接收消息的用户设置标签。过程如下：
 
 1. 在微信公众号平台中选择添加模板，记下你的模板ID。
 2. 在微信公众号平台中为用户设置标签。然后获取该标签名称的标签ID。
 3. 通过标签ID获取获取所有用户的ID
-4. 发送模板消息到没有用户ID
+4. 发送模板消息到每个用户ID
 
 __python示例__
 
@@ -330,7 +330,7 @@ private ArrayList<Integer> getTagIds(String token, String tagNames) throws Excep
 
 步骤1在页面中执行，用js
 
-```javascrip
+```javascript
 var code = window.location.href.split('code=')[1].split("&")[0]
 var getCodeUrl = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid='+APPID+'&redirect_uri='+REDIRECT_URI+'&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect';
 // use ajax to fetch user name from my wechat server
@@ -376,7 +376,7 @@ nickname = username # Userid  换用户名
 
 步骤1在页面中执行，用js
 
-```javascrip
+```javascript
 var code = window.location.href.split('code=')[1].split("&")[0]
 var getCodeUrl = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid='+APPID+'&redirect_uri='+REDIRECT_URI+'&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect';
 // use ajax to fetch user name from my wechat server
@@ -401,6 +401,8 @@ wxLogger.info(response)
 resDir = json.loads(response)
 nickname = resDir['nickname']   # openid和access_token换取了用户名
 ```
+
+[source code](https://github.com/snowyxx/WechatScripts)
 
 ---
 
