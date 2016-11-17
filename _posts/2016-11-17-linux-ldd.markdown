@@ -1,0 +1,199 @@
+---
+layout: post
+title:  "Linux可运行程序的依赖库问题"
+date:   2016-11-17 15:59:05 +0800
+categories: blog
+tags:   [linux]
+---
+
+* 目录
+{:toc}
+
+
+### ldd
+
+抄自<http://www.ibm.com/developerworks/cn/linux/l-lpic1-v3-102-3/>
+
+#### 概述
+
+在本文中，学习如何找到并加载 Linux 可执行程序所需的共享库。 您将学到：
+
+- 确定程序需要哪些共享库
+- 了解系统如何找到共享库
+- 加载共享库
+
+
+#### 静态与动态链接
+
+Linux 系统当中有两类可执行程序：
+
+- __静态链接__ 可执行程序包含了其所需的全部库函数；所有库函数都连接到程序中。 这类程序是完整的，其运行不需要外部库的支持。 静态链接程序的优点之一是其安装之前不需要做环境准备工作 。
+- __动态链接__ 可执行程序要小得多；这类程序运行时需要外部共享 函数库的支持，因此好像并不完整。除了程序体小之外，动态链接允许程序包指定必须的库，而不必将库装入程序包内。动态链接技术还允许多个运行中的程序共享一个库，这样就不会出现同一代码的多份拷贝共占内存的情况了。由于这些原因，当前多数程序采用动态链接技术。
+
+在许多 Linux 系统中有个很有趣的例子， ln 命令（/bin/ln），用于在文件之间生成链接， 不论是硬 链接还是软（或者 符号）链接。 该命令使用共享库。 共享库经常会引入库通用名与库特定层级之间的符号链接， 所以如果因为某些原因链接没有出现或已断开， 那么 ln 命令本身就无法起作用，会发生循环错误。 为避免此类问题，一些 Linux 系统包含了 lnsln（/sbin/sln）之间的静态链接版本。 清单 1 说明了采用动态链接的 ln 与采用静态链接的 sln之间大小的显著差别。 该例子来自 Fedora 12 64-bit 系统。
+
+清单 1. sln 与 ln 的大小
+
+```shell
+[ian@echidna ~]$ ls -l /sbin/sln /bin/ln
+-rwxr-xr-x. 1 root root  47384 2010-01-12 09:35 /bin/ln
+-rwxr-xr-x. 1 root root 603680 2010-01-04 09:07 /sbin/sln
+```
+
+#### 需要哪些库？
+
+尽管当前的 LPI 考试不涉及此类问题， 但您还是应当明确当今很多 Linux 系统所运行的硬件同时支持 32 位及 64 位程序。 很多库同时编译为 32 位及 64 位版本。 64 位版本通常存放在文件系统的 /lib64 目录树中，而 32 位版本则位于 /lib 目录树中。 您可能会在 64 位 Linux 系统中同时发现 /lib/libc-2.11.1.so 以及 /lib64/libc-2.11.1.so 。 这两个库允许 32 位及 64 位 C 程序在 64 位 Linux 系统当中运行。
+
+#### 关于 ldd 命令
+
+除了明确静态链接程序比较大之外，如何确定程序是否为静态链接？ 如果是静态链接，如何知道它需要哪些库？ldd 命令能够回答这些问题。 如果您正在运行 Debian 或 Ubuntu之类的程序， 可能找不到 sln 命令，因此您可能会检查 /sbin/ldconfig 能否执行。 清单 2 展示了 ldd 命令关于 ln 以及 sln 执行情况， 还有 ldconfig 可执行情况的输出。该例子来自 Fedora 12 64-bit 系统（echidna）。 为了进行对比，还列出了来自旧版本 Fedora 8 32-bit 系统（pinguino）关于 /bin/ln 的输出 。
+
+清单 2. ldd 关于 sln 以及 ln 的输出
+
+```shell
+[ian@echidna ~]$ #Fedora 12 64-bit
+[ian@echidna ~]$ ldd /sbin/sln /sbin/ldconfig /bin/ln
+/sbin/sln:
+        not a dynamic executable
+/sbin/ldconfig:
+        not a dynamic executable
+/bin/ln:
+        linux-vdso.so.1 =>  (0x00007fff644af000)
+        libc.so.6 => /lib64/libc.so.6 (0x00000037eb800000)
+        /lib64/ld-linux-x86-64.so.2 (0x00000037eb400000)
+
+[ian@pinguino ~]$ # Fedora 8 32-bit
+[ian@pinguino ~]$ ldd /bin/ln
+        linux-gate.so.1 =>  (0x00110000)
+        libc.so.6 => /lib/libc.so.6 (0x00a57000)
+        /lib/ld-linux.so.2 (0x00a38000)
+```
+
+因为 ldd 与动态链接有关， 这告诉我们 sln 与 ldconfig 都是静态链接的， 它们 “不是一个动态可执行文件”， 同时告诉我们 ln 命令所需共享库的名字（linux-vdso.so.1、libc.so.6 和 /lib64/ld-linux-x86-64.so.2）。 注意，.so 指明这些是共享库 或者动态库。 这一输出结果提供了您想了解的三类不同信息。
+
+__linux-vdso.so.1__
+
+是 Linux Virtual Dynamic Shared Object，这一点我们稍后讨论。 您还可以在 Fedora 8 中发现 linux-gate.so.1。
+
+__libc.so.6__
+
+具有指向 /lib64/libc.so.6. 的指针。
+
+__/lib64/ld-linux-x86-64.so.2__
+
+指向其他库的绝对路径。
+
+在清单 3 中，通过 ls -l 命令， 发现最后的两个库依次与库的特定版本之间具有符号链接。 该例子来自 Fedora 12 64-bit系统 。
+
+清单 3. 库符号链接
+
+```shell
+[ian@echidna ~]$ ls -l /lib64/libc.so.6 /lib64/ld-linux-x86-64.so.2
+lrwxrwxrwx. 1 root root 12 2010-01-14 14:24 /lib64/ld-linux-x86-64.so.2 -> ld-2.11.1.so
+lrwxrwxrwx. 1 root root 14 2010-01-14 14:24 /lib64/libc.so.6 -> libc-2.11.1.so
+```
+
+#### Linux Virtual Dynamic Shared Objects
+
+在早期的 x86 处理器中，用户程序与管理服务之间的通信通过软中断实现。 随着处理器速度的提高，这已成为一个严重的瓶颈。 自 Pentium® II 处理器开始，Intel® 引入了 Fast System Call 装置来提高系统调用速度， 即采用 SYSENTER 和 SYSEXIT 指令，而不是中断。
+
+您所看到的 linux-vdso.so.1 是个虚拟库，或者说是 Virtual Dynamic Shared Object，它只存在于程序的地址空间当中。 在旧版本系统中该库为 linux-gate.so.1。 该虚拟库为用户程序以处理器可支持的最快的方式 （对于特定处理器，采用中断方式；对于大多数最新的处理器，采用快速系统调用方式） 访问系统函数提供了必要的逻辑 。
+
+#### 动态加载
+
+通过前面的内容，您会很奇怪的发现 /lib/ld-linux.so.2 以及它的 64 位版本，/lib64/ld-linux-x86-64.so.2，看上去都像是共享库， 都在其各自的权限内可执行。它们是负责实现动态加载的代码。 它们读取可执行程序的头信息，这些信息采用 Executable and Linking Format 或者（ELF）格式。 它们通过这些消息，来确定哪些库是必须的，以及哪些库需要加载。 然后执行动态链接，把可执行程序当中所有的地址指针与需要加载的库联系起来， 这样程序就可以运行了。
+
+有关 ld-linux.so 的帮助也描述了 ld.so， 它为早期的 a.out 二进制格式提供类似的功能。 清单 4 举例说明， 如何利用 ld-linux.so 的 --list 选项来显示与清单 2 当中ln命令 与 ldd 命令显示结果相同的内容。
+
+清单 4. 利用 ld-linux.so 来展示库需求
+
+```shell
+[ian@echidna ~]$ /lib64/ld-linux-x86-64.so.2 --list /bin/ln
+        linux-vdso.so.1 =>  (0x00007fffc9fff000)
+        libc.so.6 => /lib64/libc.so.6 (0x00000037eb800000)
+        /lib64/ld-linux-x86-64.so.2 (0x00000037eb400000)
+
+[ian@pinguino ~]$ /lib/ld-linux.so.2 --list /bin/ln
+        linux-gate.so.1 =>  (0x00110000)
+        libc.so.6 => /lib/libc.so.6 (0x00a57000)
+        /lib/ld-linux.so.2 (0x00a38000)
+```shell
+
+注意，两个清单中的十六进制地址有可能不同。 在两次运行 ldd 命令时，该地址也可能不相同。
+
+
+#### 动态库配置
+
+动态加载器怎样找到可执行程序？对于 Linux 当中的很多问题， 都在 /etc 当中有相应的配置文件。 事实上，有两个配置文件，/etc/ld/so/conf 以及 /etc/ld.so.cache。 清单 5 展示了 Fedora 12 64 位系统当中 /etc/ld.so.conf 的内容。 注意，/etc/ld.so.conf 文件指明所有来自 ld.so.conf.d 子目录的 .conf 文件都应当被包含。 旧版系统中可能包含 /etc/ld/so/conf 的所有条目， 而不包含 /etc/ld.so.conf.d 目录中的条目。 您的系统当中 /etc/ld.so.conf 或者 /etc/ld.so.conf.d 目录的实际内容可能与此处有所差别。
+
+清单 5. /etc/ld.so.conf 的内容
+
+```shell
+[ian@echidna ~]$ cat /etc/ld.so.conf
+include ld.so.conf.d/*.conf
+[ian@echidna ~]$ ls /etc/ld.so.conf.d/*.conf
+/etc/ld.so.conf.d/kernel-2.6.31.12-174.2.19.fc12.x86_64.conf
+/etc/ld.so.conf.d/kernel-2.6.31.12-174.2.22.fc12.x86_64.conf
+/etc/ld.so.conf.d/kernel-2.6.31.12-174.2.3.fc12.x86_64.conf
+/etc/ld.so.conf.d/mysql-x86_64.conf
+/etc/ld.so.conf.d/qt-x86_64.conf
+/etc/ld.so.conf.d/tix-x86_64.conf
+/etc/ld.so.conf.d/xulrunner-64.conf
+```
+
+程序需要快速加载，因此可以使用 ldconfig 命令来处理 ld.so.conf 文件、 所有 ld.so.conf.d 包含的文件、所有受信目录当中的库、 /lib 和 /usr/lib，以及命令行当中所支持的其他内容 。 ldconfig 命令在 /etc/ld.so.cache 中为最近使用过的共享库生成必须的链接和 cache 。 动态加载器利用来自 ld.so.cache 的缓存文件来定位需要动态加载及链接的文件。 如果改变了 ld.so.conf（或在 ld.so.conf.d 中增加新文件）， 必须运行 ldconfig 命令（以 root 用户身份）来重构 ld.so.cache 文件。
+
+通常，可在不加参数的情况下， 使用 ldconfig 命令来重构 ld.so.cache 文件。 可以利用一些参数来改变这一使用习惯。 一般情况下，可使用 man ldconfig 来获得更多信息。 清单 6 举例说明利用参数 -p 来展示 ld.so.cache 的内容。
+
+清单 6. 使用 ldconfig 来展示 ld.so.cache
+
+```shell
+[ian@lyrebird ian]$ /sbin/ldconfig -p | less
+1602 libs found in cache `/etc/ld.so.cache'
+        libzip.so.1 (libc6,x86-64) => /usr/lib64/libzip.so.1
+        libz.so.1 (libc6,x86-64) => /lib64/libz.so.1
+        libz.so (libc6,x86-64) => /usr/lib64/libz.so
+        libx86.so.1 (libc6,x86-64) => /usr/lib64/libx86.so.1
+        libx11globalcomm.so.1 (libc6,x86-64) => /usr/lib64/libx11globalcomm.so.1
+        libxul.so (libc6,x86-64) => /usr/lib64/xulrunner-1.9.1/libxul.so
+        libxtables.so.2 (libc6,x86-64) => /usr/lib64/libxtables.so.2
+        libxslt.so.1 (libc6,x86-64) => /usr/lib64/libxslt.so.1
+        libxslt.so (libc6,x86-64) => /usr/lib64/libxslt.so
+        libxpcom.so (libc6,x86-64) => /usr/lib64/xulrunner-1.9.1/libxpcom.so
+        libxml2.so.2 (libc6,x86-64) => /usr/lib64/libxml2.so.2
+        libxml2.so (libc6,x86-64) => /usr/lib64/libxml2.so
+       ...
+        libABRTdUtils.so.0 (libc6,x86-64) => /usr/lib64/libABRTdUtils.so.0
+        libABRTUtils.so.0 (libc6,x86-64) => /usr/lib64/libABRTUtils.so.0
+        ld-linux.so.2 (ELF) => /lib/ld-linux.so.2
+        ld-linux-x86-64.so.2 (libc6,x86-64) => /lib64/ld-linux-x86-64.so.2
+```
+
+#### 加载指定的库
+如果您正在运行需要特定旧版共享库支持的程序， 或者您正在开发新的共享库或现有共享库的新版本， 您可能希望覆盖加载器的默认搜索路径。 使用安装在 /opt 树当中特定于产品共享库的脚本文件可能也需要这一功能。
+
+就如同可通过设置变量 PATH 来为可执行程序指定搜索路径一样， 可以将变量 LD_LIBRARY_PATH 设置为用冒号分割的， 为加载 ld.so.cache 当中所指定的共享库需要搜索的目录清单。 例如，可使用命令：
+
+`export LD_LIBRARY_PATH=/usr/lib/oldstuff:/opt/IBM/AgentController/lib`
+
+### readelf
+
+`readelf -a <file>`
+
+### 64位系统运行32位程序
+
+比较新的Linux发布版本64位的一般默认不在包含32位程序运行库。这样会得到类似下面的错误：
+
+`bash: ./xxxxxxx: /lib/xxxxxxx.so.2: bad ELF interpreter: No such file or directory`
+
+添加32位库的方法：
+
+- Ubuntu: `sudo apt-get install libc6:i386`
+- CentOS: `yum install glibc.i686`
+
+
+参考：                                   
+
+- [学习 Linux，101: 管理共享库](http://www.ibm.com/developerworks/cn/linux/l-lpic1-v3-102-3/)                   
+- [ubuntu14.04无法运行32位程序](http://www.ubuntukylin.com/ask/index.php?qa=70&qa_1=ubuntu14-04%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8C32%E4%BD%8D%E7%A8%8B%E5%BA%8F)                 
+
