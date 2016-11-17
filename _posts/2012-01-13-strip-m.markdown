@@ -12,3 +12,5 @@ tags:   [linux]
 vi中输入^M的方法：  `Ctrl + V Ctrl + M`
 
 vi中可以使用替换命令来实现：`:%s/^M$//g`
+
+sed: `sed -i 's/\r//' <filename> `
