@@ -72,3 +72,6 @@ python 2.7, 重定向输出到文件时候出现错误：
 补充：
 另外一个挺好的文章。其中提到如何检测一个字符串的编码`chardet.detect(string)['encoding']` 和如何处理字节和字串。         
 [http://blog.ernest.me/post/python-setdefaultencoding-unicode-bytes](http://blog.ernest.me/post/python-setdefaultencoding-unicode-bytes){:target="_blank"}
+
+update: 16-11-28                    
+另外一篇好文章： <https://segmentfault.com/a/1190000007594453>
