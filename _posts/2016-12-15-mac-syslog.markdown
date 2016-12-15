@@ -40,6 +40,10 @@ __生成一条syslog__
 
 `logger -s -p user.info Testing splunk syslog forwarding`
 
+在本地查看syslog
+
+`tail /var/log/system.log`
+
 ---
 
 参考：                                   
