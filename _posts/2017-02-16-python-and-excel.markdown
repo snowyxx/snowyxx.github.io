@@ -14,7 +14,7 @@ tags:   [python]
 
 ### 使用Python从日志中挑选自己要的数据
 
-使用正则表达式从日志总提起有日期和数据关键字的行。然后按天求和。
+使用正则表达式从日志中提出有日期和数据关键字的行。然后按天求和。
 
 ```python
 import os
@@ -33,16 +33,15 @@ for f in files:
         lines = fhander.readlines()
         for l in lines:
             result = re.search(pickFileSizeLinesPattern, l)
-            # pdb.set_trace()
             if result:
                 date = result.group(1)
                 size = result.group(2)
                 sizes[date] = sizes.get(date, 0) + int(size)/1024/1024
 ```
 
-这段代码把日志中满足条件的行选出来，例如
+这段代码把日志中满足条件的行选出来，例如：
 
-```log
+```
 2017-01-11 02:07:15,977 INFO Downloading: xxxxx.exe Bytes: 65658928
 2017-01-11 02:07:16,961 INFO Downloading: xxxxx_64.exe Bytes: 68804008
 
@@ -80,9 +79,7 @@ excel.save('downloaded.xls')
 
 最终生成的xls有的sheet，而且有2列的数据。如下图：
 
-![excle data](/images/excel_1.png)
-
-
+![excle data](/images/excle_1.png)
 
 ### Excel中数据处理
 
@@ -94,17 +91,17 @@ excel.save('downloaded.xls')
 
 效果如下图：
 
-![excle data sum](/images/excel_2.png)
+![excle data sum](/images/excle_2.png)
 
 
 #### 计算每月的累加值
 
 公式： `SUMPRODUCT((YEAR(A2:A2000)=D2)*(MONTH(A2:A2000)=E2)*B2:B2000)` 
 
-> SUMPRODUCT函数是处理多个数组，先求数组间的乘积，然后求和。例如`SUMPRODUCT({1,0,1},{2,2,2})`，先算乘积，得到`SUMPRODUCT({2,0,2})`，最终结果是`4`。
-> YEAR和MONTH函数获取日期格式数据的年份和月份。`YEAR(A2:A2000)=D2`判断A2中的年份是否和D2相等。得到一个从2到2000的数组`{TRUE,TRUE,FALSE,...}`
-> SUMPRODUCT能把`{TRUE,TRUE,FALSE,...}`自动转成`{1,1,0,...}`。
-> TIPS: 强制把TRUE,FALSE转成1,0的方法：`--(YEAR(A2:A2000)=D2)`
+> - SUMPRODUCT函数是处理多个数组，先求数组间的乘积，然后求和。例如`SUMPRODUCT({1,0,1},{2,2,2})`，先算乘积，得到`SUMPRODUCT({2,0,2})`，最终结果是`4`。
+> - YEAR和MONTH函数获取日期格式数据的年份和月份。`YEAR(A2:A2000)=D2`判断A2中的年份是否和D2相等。得到一个从2到2000的数组`{TRUE,TRUE,FALSE,...}`
+> - SUMPRODUCT能把`{TRUE,TRUE,FALSE,...}`自动转成`{1,1,0,...}`。
+> - TIPS: 强制把TRUE,FALSE转成1,0的方法：`--(YEAR(A2:A2000)=D2)`
 
 效果如下图：
 
@@ -113,7 +110,7 @@ excel.save('downloaded.xls')
 
 #### 插入带趋势线的图表
 
-选择月数据插入折线图表。在生成的图表上右键，选择添加趋势线。在趋势线上右键，选择设置趋势线格式。在趋势预测那里可用输入向前或向后多少周期。
+选择月数据插入折线图表。在生成的图表上右键，选择__添加趋势线__。在趋势线上右键，选择__设置趋势线格式__。在__趋势预测__那里可输入向前或向后多少周期。
 
 效果如下图：
 
