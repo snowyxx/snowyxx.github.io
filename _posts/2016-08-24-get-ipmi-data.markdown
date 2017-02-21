@@ -243,7 +243,7 @@ public class IpmiSnmpTest {
 
         ArrayList resultt=getTableRows(tables);
             // to handle the result
-        String results=getAttributes(tables);
+        String results=getAttributes(attributes);
             // to handle the result
         
     }
