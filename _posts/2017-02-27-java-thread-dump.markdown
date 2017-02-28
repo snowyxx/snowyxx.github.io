@@ -18,12 +18,12 @@ tags:   [java]
 
 1. 找到高CPU利用率的进程ID。 
 
-    - Linux `TOP`   
+    - Linux `top`   
     - Windows  `taskmgr` 
     - 或者Windows `wmic path Win32_PerfFormattedData_PerfProc_Process get Name,PercentProcessorTime,ThreadCount,CreatingProcessID`
     
     ![tasklist](/images/td.png)
-    一个可以用来测试高CPU利用率的java代码：
+    一个可以用来模拟高CPU利用率的java代码：
 
     ```java
     package test;
@@ -62,11 +62,11 @@ tags:   [java]
 2. 找到该进程ID中的高CPU的线程ID。
 
     - Linux在top中按`shift + h`  
-    - Windows  `pslist -d 337xx` (<https://technet.microsoft.com/en-us/sysinternals/bb896682.aspx>)
+    - Windows  `pslist -d 337xx(进程ID)` (<https://technet.microsoft.com/en-us/sysinternals/bb896682.aspx>)
 
     ![threadlist](/images/tdth.png)
     
-    另外一个java命令直接获得线程ID `ps -mo pid.lwp.stime.time.cpu -C java` 
+    另外一个java命令直接使用进程名称获得线程ID `ps -mo pid.lwp.stime.time.cpu -C java` 
     
     ```shell
     [user@linux ~]$ ps -mo pid.lwp.stime.time.cpu -C java
@@ -184,3 +184,4 @@ java.lang.Thread.State: RUNNABLE
 - <https://dzone.com/articles/how-analyze-java-thread-dumps>
 - <https://blogs.manageengine.com/application-performance-2/appmanager/2011/02/09/identify-java-code-consuming-high-cpu-in-linux-linking-jvm-thread-and-linux-pid.html>
 - <http://crunchify.com/how-to-generate-java-thread-dump-programmatically/>
+- <https://github.com/oldratlee/useful-scripts/blob/master/show-busy-java-threads.sh>
