@@ -27,6 +27,7 @@ var duoshuoQuery = {short_name:"{{site.duoshuo}}"};
 <!-- 多说热评文章 start -->
 <h3>热评文章</h3>
 <div class="ds-top-threads" data-range="monthly" data-num-items="5"></div>
+<ul class="ds-recent-visitors" data-num-items="20"></ul> 
 <!-- 多说热评文章 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
