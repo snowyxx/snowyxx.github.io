@@ -213,7 +213,7 @@ def guess_charset(msg):
 ---
 
 参考：                                   
-<http://www.pythoner.com/414.html>      
-[http://www.liaoxuefeng.com/wiki/](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/001386832745198026a685614e7462fb57dbf733cc9f3ad000)                 
-<http://stackoverflow.com/questions/7575943/eof-error-in-imaplib>
+- <http://www.pythoner.com/414.html>      
+- [http://www.liaoxuefeng.com/wiki/](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/001386832745198026a685614e7462fb57dbf733cc9f3ad000)                 
+- <http://stackoverflow.com/questions/7575943/eof-error-in-imaplib>
 
