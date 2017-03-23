@@ -46,6 +46,15 @@ permalink: /tags/
 {% endhighlight %}
 
 ### 评论
+
+2017.3.23更新：
+
+多说要停止服务了，看看了自己的博客几乎没人评论，所以也就不想添加其他的评论应用了。
+
+可是，如果有老师想指教呢？ 还是提供个留言的地方吧。想要个优雅的、免费的、没广告的，后来选择了Zoho Creator。点击[关于](/about)给我留言吧。
+
+==================== 以下原文 ====================
+ 
 一开始是很抗拒云评论服务(Disqus、多说等)的。想法是评论页做成静态的。
 
 关于静态评论[这篇文章](http://www.hezmatt.org/~mpalmer/blog/2011/07/19/static-comments-in-jekyll.html){:target="_blank"}很好。而且github上有很多jekyll静态评论项目。
