@@ -53,7 +53,7 @@ layout: default
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
-
+{% if site.duoshuo %}
 <!-- 多说评论框 start -->
     <div class="ds-thread" data-thread-key="{{ page.url }}" data-title="{{ page.title }}" data-url="{{ site.url }}{{ page.url }}"></div>
 <!-- 多说评论框 end -->
@@ -70,5 +70,5 @@ var duoshuoQuery = {short_name:"{{ site.duoshuo }}"};
     })();
     </script>
 <!-- 多说公共JS代码 end -->
-
+{% endif %} 
 </article>

@@ -44,6 +44,9 @@ var duoshuoQuery = {short_name:"{{site.duoshuo}}"};
 <!-- 多说公共JS代码 end -->         
 
 {% endif %} 
+
+<iframe height='700px' width='100%' frameborder='0' allowTransparency='true' scrolling='auto' src='https://creator.zohopublic.com/yanxiao/mycomment/form-embed/form/Tn2jpzJgFOzgjRrVe81xhTnxJJd1VfbGrTqu0gA88y6JZnm8QAJ3WC54NY4P4fbBFtWZKZ6PwTHYy6XpjOay0Rr2zW84dd8sHwYE'></iframe>
+
 <br><br>
 Powered by:
 {% include icon-github.html username="jekyll" %} /
