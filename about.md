@@ -4,7 +4,7 @@ title: 关于
 permalink: /about/
 ---
 
-只是我的博客。
+这里只是我的博客。如果想唠唠，给我留个言吧。
 
 {% if site.duoshuo %}
 <h3>最新评论</h3>
