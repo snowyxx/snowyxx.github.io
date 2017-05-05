@@ -20,8 +20,9 @@ python 2.7, 重定向输出到文件时候出现错误：
 ### python 2.7打开文件带编码参数
 
     import io
-    with open(fname, "rt", encoding="utf-8") as f:
-    [http://stackoverflow.com/questions/10971033/backporting-python-3-openencoding-utf-8-to-python-2](http://stackoverflow.com/questions/10971033/backporting-python-3-openencoding-utf-8-to-python-2){:target="_blank"}
+    with io.open(fname, "rt", encoding="utf-8") as f:
+    
+> [http://stackoverflow.com/questions/10971033/backporting-python-3-openencoding-utf-8-to-python-2](http://stackoverflow.com/questions/10971033/backporting-python-3-openencoding-utf-8-to-python-2){:target="_blank"}
 
 ### 另外：解码unicode
 
