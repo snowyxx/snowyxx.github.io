@@ -129,6 +129,26 @@ driver.switch_to_frame('f1')  # iframe's id is 'f1'
 element = WebDriverWait(driver,10).until(EC.presence_of_dlement_located((By.ID,'xxxx')))
 # more condition refer: http://seleniumhq.github.io/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html#module-selenium.webdriver.support.expected_conditions
 
+# the way to handle alert : 1  catch UnexpectedAlertPresentException
+
+try:
+    driver.get(courseurl)
+    time.sleep(3)
+except selenium.common.exceptions.UnexpectedAlertPresentException, e:
+    print 'I got alert exception at location 1'
+    alert = driver.switch_to.alert
+    alert.accept()
+
+# the way to handle alert : 2  Explicit wait
+
+driver.execute_script('window.setTimeout ( function() { alert ("Test"); }, 3000);') 
+time.sleep(1)  # this sleep is a workabroud for selenium.common.exceptions.WebDriverException: Message: unknown error: unhandled inspector error: {"code":-32000,"message":"Could not handle JavaScript dialog"}  # https://bugs.chromium.org/p/chromedriver/issues/detail?id=1633#c4  # https://bugs.chromium.org/p/chromedriver/issues/detail?id=1500
+alert = WebDriverWait(driver, 5).until(EC.alert_is_present())
+if alert:
+    myLogger.info(u'--- Expected alert appeared:{}'.format(alert.text))
+    alert.accept()
+
+
 #Implicit Wait
 driver.implicitly_wait(5)
 
