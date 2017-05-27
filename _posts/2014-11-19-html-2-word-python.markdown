@@ -102,4 +102,5 @@ Example: [source code](https://github.com/snowyxx/MyTest/blob/master/htmlToDoc.p
 [http://msdn.microsoft.com/en-us/library/office/ff837519(v=office.15).aspx](http://msdn.microsoft.com/en-us/library/office/ff837519(v=office.15).aspx){:target="_blank"}        
 [http://www.extendoffice.com/documents/word/635-word-remove-all-hyperlinks.html](http://www.extendoffice.com/documents/word/635-word-remove-all-hyperlinks.html){:target="_blank"}      
 [http://www.galalaly.me/index.php/2011/09/use-python-to-parse-microsoft-word-documents-using-pywin32-library/](http://www.galalaly.me/index.php/2011/09/use-python-to-parse-microsoft-word-documents-using-pywin32-library/){:target="_blank"}        
-[http://www.cnblogs.com/Ss_Andy/archive/2010/09/25/1834386.html](http://www.cnblogs.com/Ss_Andy/archive/2010/09/25/1834386.html){:target="_blank"}
+[http://www.cnblogs.com/Ss_Andy/archive/2010/09/25/1834386.html](http://www.cnblogs.com/Ss_Andy/archive/2010/09/25/1834386.html){:target="_blank"}         
+[https://stackoverflow.com/questions/26764978/using-win32com-with-multithreading](https://stackoverflow.com/questions/26764978/using-win32com-with-multithreading){:target="_blank"}
