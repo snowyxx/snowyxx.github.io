@@ -54,10 +54,52 @@ Example: [source code](https://github.com/snowyxx/MyTest/blob/master/htmlToDoc.p
                 doc.InlineShapes[i].LinkFormat.SavePictureWithDocument=True
             i=i+1
 
++ 关闭word时，提示“此文件正由另一个应用程序或用户使用” 提示保存 normal.dot
+
+    word.NormalTemplate.Saved = 1
+    
++ 多线程
+
+```python
+    import pythoncom, win32com.client, threading, time
+
+    def start():
+        # Initialize
+        pythoncom.CoInitialize()   # tofix com_error: (-2147221008, 'CoInitialize has not been called.', None, None)
+
+        # Get instance
+        xl = win32com.client.Dispatch('Excel.Application')
+
+        # Create id
+        xl_id = pythoncom.CoMarshalInterThreadInterfaceInStream(pythoncom.IID_IDispatch, xl)
+
+        # Pass the id to the new thread
+        thread = threading.Thread(target=run_in_thread, kwargs={'xl_id': xl_id})
+        thread.start()
+
+        # Wait for child to finish
+        thread.join()
+
+    def run_in_thread(xl_id):
+        # Initialize
+        pythoncom.CoInitialize()
+
+        # Get instance from the id
+        xl = win32com.client.Dispatch(
+                pythoncom.CoGetInterfaceAndReleaseStream(xl_id, pythoncom.IID_IDispatch)
+        )
+        time.sleep(5)
+
+
+    if __name__ == '__main__':
+        start()
+```
+
 参考资料：               
 [https://github.com/zhoucc/easyDatasheet/blob/master/win32com.txt](https://github.com/zhoucc/easyDatasheet/blob/master/win32com.txt){:target="_blank"}      
 [http://blog.csdn.net/chenjl1031/article/details/8905354](http://blog.csdn.net/chenjl1031/article/details/8905354){:target="_blank"}        
 [http://blog.csdn.net/lzl001/article/details/8435048](http://blog.csdn.net/lzl001/article/details/8435048){:target="_blank"}        
 [http://msdn.microsoft.com/en-us/library/office/ff837519(v=office.15).aspx](http://msdn.microsoft.com/en-us/library/office/ff837519(v=office.15).aspx){:target="_blank"}        
 [http://www.extendoffice.com/documents/word/635-word-remove-all-hyperlinks.html](http://www.extendoffice.com/documents/word/635-word-remove-all-hyperlinks.html){:target="_blank"}      
-[http://www.galalaly.me/index.php/2011/09/use-python-to-parse-microsoft-word-documents-using-pywin32-library/](http://www.galalaly.me/index.php/2011/09/use-python-to-parse-microsoft-word-documents-using-pywin32-library/){:target="_blank"}
+[http://www.galalaly.me/index.php/2011/09/use-python-to-parse-microsoft-word-documents-using-pywin32-library/](http://www.galalaly.me/index.php/2011/09/use-python-to-parse-microsoft-word-documents-using-pywin32-library/){:target="_blank"}        
+[http://www.cnblogs.com/Ss_Andy/archive/2010/09/25/1834386.html](http://www.cnblogs.com/Ss_Andy/archive/2010/09/25/1834386.html){:target="_blank"}
