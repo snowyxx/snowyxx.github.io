@@ -10,12 +10,13 @@ tags:   [python]
 
 用户python也可以，写成一个脚本，操作比较方便。      
 原理是：pywin32来通过com来使用office word来转换合并。所以必须在安装了Word的Windows中执行。           
+
 __pywin32安装__：
 
 1. 选择合适的版本程序直接安装 <https://sourceforge.net/projects/pywin32/>
 2. 使用pip https://pypi.python.org/pypi/pypiwin32 `pip install pypiwin32`
 
-Example: [source code](https://github.com/snowyxx/MyTest/blob/master/htmlToDoc.py){:target="_blank"}
+Example: [source code](https://github.com/snowyxx/pythonHtmlToDoc){:target="_blank"}
 
 以下我使用中用到几个方法：
 
