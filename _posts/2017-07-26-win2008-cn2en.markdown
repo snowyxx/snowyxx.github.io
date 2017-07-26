@@ -1,0 +1,31 @@
+---
+layout: post
+title:  "Windows 2008 R2从中文改为英文显示语言"
+date:   2017-07-26 12:17:05 +0800
+categories: blog
+tags:   [Windows]
+---
+
+主要是记下Windows 2008 R2语言包的下载地址。
+
+想把一个中文Windows 2008 R2的显示语言改为英文。可是在系统更新可选更新列表中没有可选语言（Windows 7有）。所以要找到Windows 2008 R2的英文语言包。
+        
+去微软网站下载页面中找到“语言”，可是语言包系统列表中没有Windows 2008 R2，只有Windows 10、 8.1、7。下载页面是：<https://support.microsoft.com/zh-cn/help/17777/downloads-for-windows>    
+
+搜索一下，找到“Windows Server 2008 R2 Service Pack 1 Multilingual User Interface Language Packs”。页面如下：
+        
+<https://www.microsoft.com/en-us/download/confirmation.aspx?id=2634>
+        
+然后选择语言下载，英文包大于70多MB。
+        
+在中文Windows 2008 R2以管理员身份运行下载的文件。
+
+打开控制面板 -- 时钟、语言和区域 -- 更改显示语言
+
+这时候就可以看到语言选择列表中有英文了，选择English保存，立即注销，登录后就是英文的了。
+
+---
+
+参考：                                   
+
+- <http://kaiwangchen.github.io/2014/04/15/windows-server-2008-r2-sp1-lang.html>
