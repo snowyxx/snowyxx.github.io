@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "更改Sublime Text大小"
+title:  "更改Sublime Text滚动条大小"
 date:   2017-07-27 15:50:05 +0800
 categories: blog
 tags:   [other]
