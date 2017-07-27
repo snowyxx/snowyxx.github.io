@@ -6,6 +6,7 @@ permalink: /about/
 
 这里只是我的博客。如果想唠唠，给我留个言吧。
 
+个人首页：[yanxiaoxue.com](http://yanxiaoxue.com)
 {% if site.duoshuo %}
 <h3>最新评论</h3>
 <!-- 多说最新评论 start -->
