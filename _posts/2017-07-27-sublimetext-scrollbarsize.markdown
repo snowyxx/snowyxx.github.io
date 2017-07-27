@@ -18,7 +18,6 @@ __步骤__ ：
 
 1. 菜单`Preferences -> Browse Packages...` , 在打开的文件夹中，打开`User`新建一个名称为`Theme - Default`文件夹。
 2. 创建一个新的文件，命名为`Default.sublime-theme`，打开，输入如下内容：
-
 ```js
 [
     // More visible scrollbar
@@ -44,8 +43,7 @@ __步骤__ ：
     }
 ]
 ```
-
-3. 把![demo](/images/vertical_white_scrollbar.png)和![demo](/images/h_white_scrollbar.png)复制到`Theme - Default`文件夹。就可以了。 
+3. 把![demo](/images/vertical_white_scrollbar.png)和![demo](/images/h_white_scrollbar.png)这个2个图片文件保存到`Theme - Default`文件夹。就可以了。 
 
 也可以直接把<a href="/images/Theme - Default.zip">Theme - Default.zip</a>解压缩到你的`User`文件夹，里面已经有编辑好的`Default.sublime-theme`文件和这2个图片文件。
 
