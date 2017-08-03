@@ -41,8 +41,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-# start a browser
+# start a browser 
+# or use Chrome, search and download chromedriver file and put it to you folder in OS path, `driver = webdriver.Chrome()`
+# or use phantomjs, download it and then sepcify its path: `driver = webdriver.PhantomJS(executable_path=r'D:\phantomjs-2.1.1-windows\bin\phantomjs.exe') `
 driver = webdriver.Firefox()
+
 driver.get('http://cn.bing.com')
 
 #find element 
@@ -126,7 +129,7 @@ driver.switch_to.window(driver.window_handles[1])
 driver.switch_to_frame('f1')  # iframe's id is 'f1'
 
 #Explicit wait and its condition
-element = WebDriverWait(driver,10).until(EC.presence_of_dlement_located((By.ID,'xxxx')))
+element = WebDriverWait(driver,10).until(EC.presence_of_element_located((By.ID,'xxxx')))
 # more condition refer: http://seleniumhq.github.io/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html#module-selenium.webdriver.support.expected_conditions
 
 # the way to handle alert : 1  catch UnexpectedAlertPresentException
@@ -179,6 +182,16 @@ driver.delete_all_cookies()
 #change user-agent
 profile = webdriver.FirefoxProfile()
 profile.set_preference('general.useragent.override',"Mozilla/5.0 (Windows; Intel Mac OS X 10.11; rv:45.0) Gecko/20100101 Firefox/45.0")
+
+#Get html code of a element
+element.get_attribute('innerHTML')
+
+#WebDriver default timeout   <https://stackoverflow.com/questions/17533024/how-to-set-selenium-python-webdriver-default-timeout>  <https://stackoverflow.com/questions/30114976/the-default-value-of-timeouts-on-selenium-webdriver>
+driver.set_page_load_timeout(30)   #This will throw a __TimeoutException__ whenever the page load takes more than 30 seconds.
+
+
+#Reload page and open new page by js
+driver.execute_script('location.reload();location="http://cn.bing.com"')
 ```
 
 ### Selenium IDE
