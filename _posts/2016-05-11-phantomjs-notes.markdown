@@ -237,7 +237,7 @@ page.open('http://localhost:' + port + '/', 'post', data, function (status) {
 
 ### Selenium和phantomjs
 
-Selenium和phantomjs和shell命令，如wget和curl，不同的地方是他们回真的“渲染”页面。phantomjs和Selenium不同地方是“headless”。在不需要图形界面的情况下可以使用。而且没有运行真的浏览器消耗的时间。
+Selenium和phantomjs和shell命令，如wget和curl，不同的地方是他们会真的“渲染”页面。phantomjs和Selenium不同地方是“headless”。在不需要图形界面的情况下可以使用。而且没有运行真的浏览器消耗的时间。
 
 Selenium的好处是支持各种“真的浏览器”；支持编程语言众多。
 
@@ -250,11 +250,49 @@ driver.get('http://cn.bing.com')
 print  driver.find_element_by_id('scpl0').text
 ```
 
-[phantomjs]:http://phantomjs.org/
-[netsniff.js]:https://github.com/ariya/phantomjs/blob/master/examples/netsniff.js
-[injectme.js]:https://github.com/ariya/phantomjs/blob/master/examples/injectme.js
-[webpageapi]:http://phantomjs.org/api/webpage/
-[HAR]:http://www.softwareishard.com/blog/har-12-spec
-[HAR viewer]:http://www.softwareishard.com/blog/har-viewer
-[fsapi]:http://phantomjs.org/api/fs/
+#### Selenium运行phantomjs并获取输出
+
+以下内容来自<http://www.jianshu.com/p/23a6f6fd6268>
+
+获取浏览器控制台输出：
+
+```python
+from selenium import webdriver
+driver = webdriver.PhantomJS()
+driver.get('http://www.bing.com')
+print(driver.get_log('browser'))
+```
+
+执行phantomjs脚本
+```python
+driver = webdriver.PhantomJS()
+script = "this.onResourceError = function(res) {console.log(JSON.stringify({'url': res.url, 'status': res.status}));};"
+driver.command_executor._commands['executePhantomScript'] = ('POST', '/session/$sessionId/phantom/execute')
+driver.execute('executePhantomScript', {'script': script, 'args': []})
+```
+
+上面的代码把浏览器console输出写入到ghostdriver.log文件中
+
+下面的代码可以直接打印日志__page.browserLog.push__
+```python
+from selenium import webdriver
+driver = webdriver.PhantomJS()
+script = "var page = this; page.onResourceError = function(res) {page.browserLog.push({'url': res.url, 'status': res.status});};"
+driver.command_executor._commands['executePhantomScript'] = ('POST', '/session/$sessionId/phantom/execute')
+driver.execute('executePhantomScript', {'script': script, 'args': []})
+driver.get('http://www.bing.com')
+print(driver.get_log('browser'))
+```
+
+---
+
+- [phantomjs]:http://phantomjs.org/
+- [netsniff.js]:https://github.com/ariya/phantomjs/blob/master/examples/netsniff.js
+- [injectme.js]:https://github.com/ariya/phantomjs/blob/master/examples/injectme.js
+- [webpageapi]:http://phantomjs.org/api/webpage/
+- [HAR]:http://www.softwareishard.com/blog/har-12-spec
+- [HAR viewer]:http://www.softwareishard.com/blog/har-viewer
+- [fsapi]:http://phantomjs.org/api/fs/
+- [Selenium获取PhantomJS输出]:http://www.jianshu.com/p/23a6f6fd6268
+- <https://stackoverflow.com/questions/23125557/how-to-run-webpage-code-with-phantomjs-via-ghostdriver-selenium>
 
