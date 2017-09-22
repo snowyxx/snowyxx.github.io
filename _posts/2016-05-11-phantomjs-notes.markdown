@@ -283,8 +283,12 @@ driver.execute('executePhantomScript', {'script': script, 'args': []})
 driver.get('http://www.bing.com')
 print(driver.get_log('browser'))
 ```
-
 ---
+
+参考：
+
+- <http://www.jianshu.com/p/23a6f6fd6268>
+- <https://stackoverflow.com/questions/23125557/how-to-run-webpage-code-with-phantomjs-via-ghostdriver-selenium>
 
 [phantomjs]:http://phantomjs.org/
 [netsniff.js]:https://github.com/ariya/phantomjs/blob/master/examples/netsniff.js
