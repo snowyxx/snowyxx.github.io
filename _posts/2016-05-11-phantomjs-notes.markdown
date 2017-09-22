@@ -273,7 +273,7 @@ driver.execute('executePhantomScript', {'script': script, 'args': []})
 
 上面的代码把浏览器console输出写入到ghostdriver.log文件中
 
-下面的代码可以直接打印日志__page.browserLog.push__
+下面的代码可以直接打印日志 **page.browserLog.push**
 ```python
 from selenium import webdriver
 driver = webdriver.PhantomJS()
