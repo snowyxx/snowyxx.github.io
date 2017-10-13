@@ -269,6 +269,7 @@ public class IpmiSnmpTest {
 ---
 
 参考：                                   
-[配置Nagios监控IPMI硬件设备](http://www.linuxde.net/2013/10/15408.html)                   
-[使用 ipmitool 实现 Linux 系统下对服务器的 ipmi 管理](https://www.ibm.com/developerworks/cn/linux/l-ipmi/)                 
-
+- [配置Nagios监控IPMI硬件设备](http://www.linuxde.net/2013/10/15408.html) 
+- [使用 ipmitool 实现 Linux 系统下对服务器的 ipmi 管理](https://www.ibm.com/developerworks/cn/linux/l-ipmi/) 
+- [WebNMS SNMP API help](https://www.webnms.com/snmp/help/snmpapi/snmpv1/index.html)
+- [WebNMS SNMP API java doc](https://www.webnms.com/snmp/help/snmpapi/snmpv3/javadocs/index.html)
