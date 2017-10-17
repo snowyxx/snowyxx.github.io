@@ -2,7 +2,7 @@
 layout: post
 title:  "vi在打开只读文件后用sudo改为可写"
 date:   2013-02-04 12:21:35 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 You can just 'vi filename' as a normal user. Then in the vim editor, do `:w !sudo tee %` 

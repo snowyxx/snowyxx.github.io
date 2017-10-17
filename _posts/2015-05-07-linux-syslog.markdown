@@ -2,7 +2,7 @@
 layout: post
 title:  "Linux syslog简单测试"
 date:   2015-05-07 15:04:29 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 1. 配置rsyslog输出syslog到一个接收日志的“syslog server”         

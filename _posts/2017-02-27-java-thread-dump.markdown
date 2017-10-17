@@ -2,7 +2,7 @@
 layout: post
 title:  "使用线程转储分析Java的高CPU和死锁问题"
 date:   2017-02-27 14:58:05 +0800
-categories: blog
+categories: 笔记
 tags:   [java]
 ---
 

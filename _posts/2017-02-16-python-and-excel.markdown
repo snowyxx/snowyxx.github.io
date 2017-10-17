@@ -2,7 +2,7 @@
 layout: post
 title:  "结合使用Python和Excel来分析日志的部分数据"
 date:   2017-02-16 16:20:05 +0800
-categories: blog
+categories: 笔记
 tags:   [python]
 ---
 

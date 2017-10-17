@@ -2,7 +2,7 @@
 layout: post
 title:  "oracle 12c 解锁scott用户"
 date:   2015-05-28 16:09:37 +0800
-categories: blog
+categories: 笔记
 tags:   [other]
 ---
 安装oracle 12c的时候没有解锁scott用户。安装后解锁步骤：

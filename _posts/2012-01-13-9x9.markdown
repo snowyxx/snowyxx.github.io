@@ -2,7 +2,7 @@
 layout: post
 title:  "输出99乘法表 "
 date:   2012-01-13 16:36:34 +0800
-categories: blog
+categories: 笔记
 tags:   [java,linux]
 ---
 {% highlight java %}

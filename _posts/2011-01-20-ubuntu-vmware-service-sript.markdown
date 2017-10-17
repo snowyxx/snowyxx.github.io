@@ -2,7 +2,7 @@
 layout: post
 title:  "在ubuntu开机启动vmware到虚拟机"
 date:   2011-01-20 10:48:41 +0800
-categories: blog
+categories: 笔记
 tags:   [linux,script,vmware]
 ---
 在ubuntu中安装了vmware用来运行几个虚拟机。但是每次重新启动ubuntu都要手动启动vmware和虚拟机，很不方便。两种方法，一种是直接把命令写到/etc/rc.local中；另外一种是添加一个系统服务。下面记录添加服务的过程。

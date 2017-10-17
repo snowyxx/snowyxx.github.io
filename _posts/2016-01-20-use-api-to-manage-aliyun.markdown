@@ -2,7 +2,7 @@
 layout: post
 title:  "通过API来管理阿里云"
 date:   2016-01-20 14:16:05 +0800
-categories: blog
+categories: 笔记
 tags:   [python]
 ---
 ### 引

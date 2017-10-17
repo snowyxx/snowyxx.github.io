@@ -2,7 +2,7 @@
 layout: post
 title:  "牛x Linux命令"
 date:   2011-08-29 10:52:39 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 ### startup a simple web server which default port is 8000

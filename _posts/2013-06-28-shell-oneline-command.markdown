@@ -2,7 +2,7 @@
 layout: post
 title:  "shell单行命令笔记"
 date:   2013-06-28 09:15:41 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 学习[Bash One-Liners Explained](http://www.catonmat.net/blog/bash-one-liners-explained-part-one/){:target="_blank"}的笔记。

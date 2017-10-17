@@ -2,7 +2,7 @@
 layout: post
 title:  "mac安装PostgreSQL"
 date:   2014-02-14 13:36:38 +0800
-categories: blog
+categories: 笔记
 tags:   [mac]
 ---
 1. 简单的方法是使用PostgreSQL.app

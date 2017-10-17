@@ -2,7 +2,7 @@
 layout: post
 title:  "perl笔记  io"
 date:   2011-12-12 15:03:12 +0800
-categories: blog
+categories: 笔记
 tags:   [perl]
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "mac写入NTFS移动硬盘"
 date:   2015-03-12 17:19:59 +0800
-categories: blog
+categories: 笔记
 tags:   [mac]
 ---
 以前使用 Paragon NTFS

@@ -2,7 +2,7 @@
 layout: post
 title:  "sed单行命令笔记"
 date:   2013-06-05 15:38:22 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 看博客[Famous Sed One-Liners Explained](http://www.catonmat.net/blog/sed-one-liners-explained-part-one/){:target="_blank"}记的笔记。比较awk来说这些sed命令非常难理解，所以一些命令只是记录，原文有详细的解释。

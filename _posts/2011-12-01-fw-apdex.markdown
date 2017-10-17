@@ -2,7 +2,7 @@
 layout: post
 title:  "[转载]Apdex - 应用性能指数"
 date:   2011-12-01 10:30:58 +0800
-categories: blog
+categories: 笔记
 tags:   [apdex]
 ---
 转自：[http://blog.sina.com.cn/s/blog_539204700100i4f5.html](http://blog.sina.com.cn/s/blog_539204700100i4f5.html){:target="blank"}

@@ -2,7 +2,7 @@
 layout: post
 title:  "debain: halt变成了重启"
 date:   2012-09-18 17:09:27 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 不知道为什么执行halt或变成了重启

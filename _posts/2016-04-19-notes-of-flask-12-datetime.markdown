@@ -2,7 +2,7 @@
 layout: post
 title:  "Flask学习笔记 12 - 日期和时间"
 date:   2016-04-19 17:08:05 +0800
-categories: blog
+categories: 笔记
 tags:   [python,Flask]
 ---
 Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiii-dates-and-times>

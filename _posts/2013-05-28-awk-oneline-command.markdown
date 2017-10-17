@@ -2,7 +2,7 @@
 layout: post
 title:  "awk单行命令笔记"
 date:   2013-05-28 11:11:55 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 学习[Peteris Krumins][1]的文章[《Famous Awk One-Liners Explained》][2]的笔记：             

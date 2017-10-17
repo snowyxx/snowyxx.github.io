@@ -2,7 +2,7 @@
 layout: post
 title:  "mac中使用java-home来查找安装的jdk，更改JAVA_HOME"
 date:   2014-02-12 15:17:06 +0800
-categories: blog
+categories: 笔记
 tags:   [mac]
 ---
 mac中使用java-home来更改JAVA_HOME

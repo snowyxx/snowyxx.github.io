@@ -2,7 +2,7 @@
 layout: post
 title:  "python笔记：控制结构"
 date:   2013-01-28 13:32:23 +0800
-categories: blog
+categories: 笔记
 tags:   [python]
 ---
 

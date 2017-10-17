@@ -2,7 +2,7 @@
 layout: post
 title:  "使用python下载邮件"
 date:   2016-05-23 09:16:05 +0800
-categories: blog
+categories: 笔记
 tags:   [python]
 ---
 

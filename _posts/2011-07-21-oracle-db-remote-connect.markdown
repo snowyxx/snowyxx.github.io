@@ -2,7 +2,7 @@
 layout: post
 title:  "oracle远程sysdba连接"
 date:   2011-07-21 11:32:38 +0800
-categories: blog
+categories: 笔记
 tags:   [database,oralce]
 ---
 **network\admin\sqlnet.ora**配置

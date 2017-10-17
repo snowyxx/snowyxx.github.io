@@ -2,7 +2,7 @@
 layout: post
 title:  "perl笔记  hash"
 date:   2011-12-12 15:10:35 +0800
-categories: blog
+categories: 笔记
 tags:   [perl]
 ---
 

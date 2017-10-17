@@ -2,7 +2,7 @@
 layout: post
 title:  "从Windows使用Linux的主机名称访问"
 date:   2011-10-17 11:37:31 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 使用smb配置文件，这样不用在dns服务器上做配置，是一个简单的绕行方法

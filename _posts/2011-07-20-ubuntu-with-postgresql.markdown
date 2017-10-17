@@ -2,7 +2,7 @@
 layout: post
 title:  "ubuntu- PostgreSQL安装和卸载"
 date:   2011-07-20 12:58:27 +0800
-categories: blog
+categories: 笔记
 tags:   [linux,postgresql]
 ---
 # 安装：

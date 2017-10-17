@@ -2,7 +2,7 @@
 layout: post
 title:  "ubuntu启用samba，让windows访问Linux共享文件夹"
 date:   2012-11-15 16:46:51 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 1. 安装samba服务器

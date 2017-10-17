@@ -2,7 +2,7 @@
 layout: post
 title:  "正则表达式匹配不包含某字符串的行"
 date:   2013-11-11 11:21:19 +0800
-categories: blog
+categories: 笔记
 tags:   [regex]
 ---
     ^(.(?!stringToExclude))*$

@@ -2,7 +2,7 @@
 layout: post
 title:  "linux 命令中使用减号（-）来代替标准输入输出"
 date:   2013-05-23 11:22:11 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 看到这样的命令：

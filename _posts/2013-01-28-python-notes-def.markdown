@@ -2,7 +2,7 @@
 layout: post
 title:  "python笔记：函数"
 date:   2013-01-28 15:15:25 +0800
-categories: blog
+categories: 笔记
 tags:   [python]
 ---
 

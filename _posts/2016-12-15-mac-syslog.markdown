@@ -2,7 +2,7 @@
 layout: post
 title:  "Mac中配置syslog"
 date:   2016-12-15 14:38:05 +0800
-categories: blog
+categories: 笔记
 tags:   [mac]
 ---
 <!-- 

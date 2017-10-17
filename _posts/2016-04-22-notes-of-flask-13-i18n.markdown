@@ -2,7 +2,7 @@
 layout: post
 title:  "Flask学习笔记 13 - 国际化和本地化"
 date:   2016-04-22 10:40:05 +0800
-categories: blog
+categories: 笔记
 tags:   [python,Flask]
 ---
 Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiv-i18n-and-l10n>

@@ -2,7 +2,7 @@
 layout: post
 title:  "mac关机几个快捷键"
 date:   2015-10-13 16:57:26 +0800
-categories: blog
+categories: 笔记
 tags:   [mac]
 ---
 mac关闭屏幕**Shift-Control-Power**              

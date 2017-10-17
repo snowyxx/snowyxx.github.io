@@ -2,7 +2,7 @@
 layout: post
 title:  "Linux 使用串口短信调制解调器（短信猫）"
 date:   2011-03-09 11:13:18 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 # 连接

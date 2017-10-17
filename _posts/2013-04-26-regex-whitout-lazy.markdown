@@ -2,7 +2,7 @@
 layout: post
 title:  "正则表达式不支持非贪婪模式的时候怎么办？"
 date:   2013-04-26 15:02:53 +0800
-categories: blog
+categories: 笔记
 tags:   [regex]
 ---
 非贪婪模式（lazy或non-greedy）就是最小匹配，但是在一些正则表达式中是不支持的（basic nor extended Posix/GNU），一个小技巧如下：                

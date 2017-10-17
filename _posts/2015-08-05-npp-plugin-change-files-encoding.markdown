@@ -2,7 +2,7 @@
 layout: post
 title:  "使用notepad++批量修改文件的编码"
 date:   2015-08-05 11:18:41 +0800
-categories: blog
+categories: 笔记
 tags:   [other]
 ---
 有一批文件要把文件格式从ANSI修改为UTF-8 

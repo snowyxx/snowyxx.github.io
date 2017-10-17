@@ -2,7 +2,7 @@
 layout: post
 title:  "Flask学习笔记 14 - ajax"
 date:   2016-04-25 14:34:05 +0800
-categories: blog
+categories: 笔记
 tags:   [python,Flask]
 ---
 Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xv-ajax>

@@ -2,7 +2,7 @@
 layout: post
 title:  "web.py+apache的微信公众号服务器"
 date:   2016-08-09 13:49:05 +0800
-categories: blog
+categories: 笔记
 tags:   [python]
 ---
 

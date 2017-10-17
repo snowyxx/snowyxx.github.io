@@ -2,7 +2,7 @@
 layout: post
 title:  "在Mac中从Windows同步文件本地"
 date:   2015-12-14 11:27:05 +0800
-categories: blog
+categories: 笔记
 tags:   [python,mac]
 ---
 要把Windows上的文件同步到Mac中，而且有些文件夹／文件是不想同步的。

@@ -2,7 +2,7 @@
 layout: post
 title:  "Debian中文环境设置"
 date:   2012-04-10 14:24:15 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 ## 安装gnome

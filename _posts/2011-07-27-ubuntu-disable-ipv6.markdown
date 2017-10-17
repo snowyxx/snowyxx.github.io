@@ -2,7 +2,7 @@
 layout: post
 title:  "ubuntu禁用ipv6"
 date:   2011-07-27 16:06:40 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 1. `gedit /etc/default/grub`

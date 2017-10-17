@@ -2,7 +2,7 @@
 layout: post
 title:  "忘记Linux（Redhat）密码？"
 date:   2012-09-07 10:44:29 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 修改Redhat的root密码，可以通过单用户模式修改。

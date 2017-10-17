@@ -2,7 +2,7 @@
 layout: post
 title:  "Windows中部署LDAP"
 date:   2014-08-26 13:51:28 +0800
-categories: blog
+categories: 笔记
 tags:   [windows,ldap]
 ---
 1. 下载安装[Windows版OpenLDAP](http://www.userbooster.de/download/openldap-for-windows.aspx){:target="_blank"}

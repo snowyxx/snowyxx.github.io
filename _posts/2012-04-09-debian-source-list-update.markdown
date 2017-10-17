@@ -2,7 +2,7 @@
 layout: post
 title:  "debian的sources.list更新"
 date:   2012-04-09 11:29:46 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 安装Debain 6的时候没有设置网络，所以sources.list没有内容。使用下面的方法：

@@ -2,7 +2,7 @@
 layout: post
 title:  "debain在启动时不进行磁盘检查"
 date:   2011-07-14 11:20:28 21:09:33 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 debain在运行一段时间或挂载一定次数后在开机的时候就会自检。用如下方法停止：

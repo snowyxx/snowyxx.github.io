@@ -2,7 +2,7 @@
 layout: post
 title:  "redhat 启用snmpv3 "
 date:   2012-03-28 10:14:07 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 

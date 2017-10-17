@@ -2,7 +2,7 @@
 layout: post
 title:  "perl单行命令笔记"
 date:   2013-06-26 15:33:43 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 学习[Famous Perl One-Liners Explained](http://www.catonmat.net/blog/perl-one-liners-explained-part-one/){:target="_blank"}的笔记

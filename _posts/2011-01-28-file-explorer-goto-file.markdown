@@ -2,7 +2,7 @@
 layout: post
 title:  "文件浏览器中定位文件"
 date:   2011-01-28 16:48:17 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 在文件浏览器中快速定位到一个文件的方法：    

@@ -2,7 +2,7 @@
 layout: post
 title:  "Flask学习笔记 3 - 表单"
 date:   2016-02-26 16:53:05 +0800
-categories: blog
+categories: 笔记
 tags:   [python,Flask]
 ---
 Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms>

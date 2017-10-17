@@ -2,7 +2,7 @@
 layout: post
 title:  "mac安装WebGoat"
 date:   2014-02-17 16:44:37 +0800
-categories: blog
+categories: 笔记
 tags:   [mac]
 ---
 1. 准备jre

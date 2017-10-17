@@ -2,7 +2,7 @@
 layout: post
 title:  "使用udev规则文件更改多个网卡的名称"
 date:   2013-05-03 11:09:20 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 Linux使用udev来管理硬件，`/lib/udev/write_net_rules`程序根据`persistent-net-generator.rules`中定义的规则来生成`/etc/udev/rules.d/70-persistent-net.rules`文件，网卡的名称就是基于此文件命名。

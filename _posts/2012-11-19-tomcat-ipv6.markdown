@@ -2,7 +2,7 @@
 layout: post
 title:  "tomcat的http只使用ipv6，而不使用ipv4的问题"
 date:   2012-11-19 11:20:08 +0800
-categories: blog
+categories: 笔记
 tags:   [other]
 ---
 在使用一个tomcat+mysql的Debian服务器的时候，（可能是由于使用Nessus扫描其漏洞），一段时间后不能通过浏览器访问了，发现java和mysql的进程都在运行，检查监听接口的时候，`netstat -tpl`，发现只在**tcp6**监听http端口了。             

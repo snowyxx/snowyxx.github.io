@@ -2,7 +2,7 @@
 layout: post
 title:  "修改debian终端登录的欢迎信息/etc/motd"
 date:   2013-05-16 09:52:29 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 在命令行登录到debian的时候显示的欢迎信息是**/etc/motd**，但是motd文件在系统重启的时候被重写。

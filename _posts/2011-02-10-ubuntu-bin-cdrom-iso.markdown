@@ -2,7 +2,7 @@
 layout: post
 title:  "ubuntu使用bin光盘镜像"
 date:   2011-02-10 10:26:51 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "office word:取消首字母自动大写"
 date:   2012-06-14 10:39:42 +0800
-categories: blog
+categories: 笔记
 tags:   [other]
 ---
 在word中输入的时候，段首、表和日志的首字母会自动改成大写（capitalize）

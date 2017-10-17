@@ -2,7 +2,7 @@
 layout: post
 title:  "gedit的高级查找替换插件（使用正则表达式） "
 date:   2012-03-26 10:09:02 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 ### 下载

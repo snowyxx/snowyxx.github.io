@@ -2,7 +2,7 @@
 layout: post
 title:  "word中删除全部超链接"
 date:   2013-05-31 12:47:11 +0800
-categories: blog
+categories: 笔记
 tags:   [other]
 ---
 

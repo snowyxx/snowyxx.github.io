@@ -2,7 +2,7 @@
 layout: post
 title:  "Java执行系统命令并输出结果"
 date:   2011-09-20 12:44:16 +0800
-categories: blog
+categories: 笔记
 tags:   [java]
 ---
 {% highlight java %}

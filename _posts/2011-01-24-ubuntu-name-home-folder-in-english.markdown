@@ -2,7 +2,7 @@
 layout: post
 title:  "ubuntu 更改主目录中的文件名为英文"
 date:   2011-01-24 10:48:41 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 打开终端，在终端中输入命令:      

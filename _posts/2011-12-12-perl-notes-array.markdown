@@ -2,7 +2,7 @@
 layout: post
 title:  "perl笔记  array"
 date:   2011-12-12 14:32:32 +0800
-categories: blog
+categories: 笔记
 tags:   [perl]
 ---
 

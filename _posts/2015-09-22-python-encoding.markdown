@@ -2,7 +2,7 @@
 layout: post
 title:  "python输出重定向到文件时候的UnicodeEncodeError问题"
 date:   2015-09-22 09:38:04 +0800
-categories: blog
+categories: 笔记
 tags:   [python]
 ---
 python 2.7, 重定向输出到文件时候出现错误：

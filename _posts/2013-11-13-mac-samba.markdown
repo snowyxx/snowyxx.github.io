@@ -2,7 +2,7 @@
 layout: post
 title:  "mac中mount网络共享文件夹-smb"
 date:   2013-11-13 10:25:51 +0800
-categories: blog
+categories: 笔记
 tags:   [mac]
 ---
 - 在finder中command+k，然后输入`smb://hostnamOrIP/folder`

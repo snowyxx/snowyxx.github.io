@@ -2,7 +2,7 @@
 layout: post
 title:  "Selenium笔记 - 基础知识"
 date:   2016-05-04 15:06:05 +0800
-categories: blog
+categories: 笔记
 tags:   [selenium,python]
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "objective-c string使用switch的一种方法"
 date:   2013-12-12 16:30:24 +0800
-categories: blog
+categories: 笔记
 tags:   [mac]
 ---
 {% highlight objc %}

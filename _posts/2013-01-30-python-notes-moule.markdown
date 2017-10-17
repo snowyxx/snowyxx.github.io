@@ -2,7 +2,7 @@
 layout: post
 title:  "python笔记：模块"
 date:   2013-01-30 14:52:12 +0800
-categories: blog
+categories: 笔记
 tags:   [python]
 ---
 导入模块

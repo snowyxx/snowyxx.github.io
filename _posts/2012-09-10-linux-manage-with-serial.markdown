@@ -2,7 +2,7 @@
 layout: post
 title:  "使用串口管理Debian(linux)"
 date:   2012-09-10 15:44:38 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 ## 配置Grub，将输出重定向到串口        

@@ -2,7 +2,7 @@
 layout: post
 title:  "禁止Windows 7更新到Windows 10"
 date:   2016-03-31 11:11:05 +0800
-categories: blog
+categories: 笔记
 tags:   [windows]
 ---
 

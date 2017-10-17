@@ -2,7 +2,7 @@
 layout: post
 title:  "使用Mondo rescue备份还原Debian系统(多图)"
 date:   2012-04-09 12:59:10 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 之前给的Linux系统还原光盘是用ghost作的，当用debian 5， ext3分区的时候，不能使用ghost8，只能ghost11，这些到都不是问题，就是当还原的新硬盘的时候，第一次启动的时候总是显示GRUB，然后就不能继续启动了。找了好久都没有找到解决方法。回避方法是再用ghost还原一次后就可以启动了。

@@ -2,7 +2,7 @@
 layout: post
 title:  "sharepoint designer(FrontPage)中的正则表达式使用"
 date:   2012-11-02 12:20:19 +0800
-categories: blog
+categories: 笔记
 tags:   [other]
 ---
 sharepoint designer中的正则表达式和其他的正则表达不同，开始的时候很折磨人              

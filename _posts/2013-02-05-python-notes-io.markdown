@@ -2,7 +2,7 @@
 layout: post
 title:  "python笔记：IO"
 date:   2013-02-05 16:07:48 +0800
-categories: blog
+categories: 笔记
 tags:   [python]
 ---
 -###input()  print()

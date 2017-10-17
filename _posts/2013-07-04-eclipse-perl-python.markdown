@@ -2,7 +2,7 @@
 layout: post
 title:  "eclipse+perl+python"
 date:   2013-07-04 22:42:14 +0800
-categories: blog
+categories: 笔记
 tags:   [mac]
 ---
 新的Mac Book Pro到手，安装eclipse和perl python环境

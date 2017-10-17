@@ -2,7 +2,7 @@
 layout: post
 title:  "Tomcat乱码解决"
 date:   2016-03-18 14:44:05 +0800
-categories: blog
+categories: 笔记
 tags:   [java,tomcat]
 ---
 

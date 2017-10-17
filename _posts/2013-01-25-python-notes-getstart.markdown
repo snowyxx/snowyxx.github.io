@@ -2,7 +2,7 @@
 layout: post
 title:  "python笔记：开始"
 date:   2013-01-25 10:50:53 +0800
-categories: blog
+categories: 笔记
 tags:   [python]
 ---
 开始学习python。

@@ -2,7 +2,7 @@
 layout: post
 title:  "Debian 启动时候启动MTA花费过多时间"
 date:   2012-09-10 10:13:11 +0800
-categories: blog
+categories: 笔记
 tags:   [linux]
 ---
 Debian启动的时候“**Starting MTA**”花费很长时间                 
