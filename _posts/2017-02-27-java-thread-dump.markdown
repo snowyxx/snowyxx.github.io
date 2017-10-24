@@ -185,3 +185,4 @@ java.lang.Thread.State: RUNNABLE
 - <https://blogs.manageengine.com/application-performance-2/appmanager/2011/02/09/identify-java-code-consuming-high-cpu-in-linux-linking-jvm-thread-and-linux-pid.html>
 - <http://crunchify.com/how-to-generate-java-thread-dump-programmatically/>
 - <https://github.com/oldratlee/useful-scripts/blob/master/show-busy-java-threads.sh>
+- <https://my.oschina.net/u/1859679/blog/1552290>
