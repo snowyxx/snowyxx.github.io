@@ -2,7 +2,7 @@
 layout: post
 title:  "Linux添加服务，让程序开机运行"
 date:   2012-09-28 10:07:41 +0800
-categories: 笔记
+categories: blog
 tags:   [linux]
 ---
 要在Linux添加服务，随系统启动自动运行：

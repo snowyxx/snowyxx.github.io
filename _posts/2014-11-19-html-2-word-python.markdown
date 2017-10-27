@@ -2,7 +2,7 @@
 layout: post
 title:  "使用python转换html文件为doc"
 date:   2014-11-19 16:14:50 +0800
-categories: 笔记
+categories: blog
 tags:   [python]
 ---
 有用户手册是html格式的要转换为word格式，并且把多个html文件合并到一个doc中。

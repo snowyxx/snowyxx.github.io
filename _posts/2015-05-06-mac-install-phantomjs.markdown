@@ -2,7 +2,7 @@
 layout: post
 title:  "mac安装phantomjs"
 date:   2015-05-06 16:24:11 +0800
-categories: 笔记
+categories: blog
 tags:   [mac]
 ---
 

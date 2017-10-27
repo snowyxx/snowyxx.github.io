@@ -2,7 +2,7 @@
 layout: post
 title:  "awk笔记"
 date:   2011-06-15 21:09:33 +0800
-categories: 笔记
+categories: blog
 tags:   [awk,linux]
 ---
 1. $0:当前行

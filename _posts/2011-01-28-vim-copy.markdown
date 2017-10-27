@@ -2,7 +2,7 @@
 layout: post
 title:  "vim 使用系统剪切板"
 date:   2011-01-28 09:44:08 +0800
-categories: 笔记
+categories: blog
 tags:   [linux,vim]
 ---
 在vim中称为寄存器，对应系统剪切板的寄存器为+       

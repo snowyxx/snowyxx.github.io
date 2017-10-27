@@ -2,7 +2,7 @@
 layout: post
 title:  "Flask学习笔记 9 - 分页"
 date:   2016-03-21 14:19:05 +0800
-categories: 笔记
+categories: blog
 tags:   [python,Flask]
 ---
 Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ix-pagination>

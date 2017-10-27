@@ -2,7 +2,7 @@
 layout: post
 title:  "在Windows中直接运行perl程序【cat示例】"
 date:   2011-12-01 17:38:35 +0800
-categories: 笔记
+categories: blog
 tags:   [windows,perl]
 ---
 1. 安装activeperl

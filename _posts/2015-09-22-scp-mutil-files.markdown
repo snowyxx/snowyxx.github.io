@@ -2,7 +2,7 @@
 layout: post
 title:  "scp复制多个文件"
 date:   2015-09-22 09:29:35 +0800
-categories: 笔记
+categories: blog
 tags:   [linux]
 ---
 复制本地多个文件

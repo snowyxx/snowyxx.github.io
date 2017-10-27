@@ -2,7 +2,7 @@
 layout: post
 title:  "64位Windows使用NLTK"
 date:   2015-03-11 13:32:09 +0800
-categories: 笔记
+categories: blog
 tags:   [python]
 ---
 从NLTK的网站看到只支持32位的Windows：   

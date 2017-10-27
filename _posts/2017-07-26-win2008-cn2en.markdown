@@ -2,7 +2,7 @@
 layout: post
 title:  "Windows 2008 R2从中文改为英文显示语言"
 date:   2017-07-26 12:17:05 +0800
-categories: 笔记
+categories: blog
 tags:   [Windows]
 ---
 

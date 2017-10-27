@@ -2,7 +2,7 @@
 layout: post
 title:  "perl gt 和 > 的一个区别"
 date:   2011-02-11 19:03:08 +0800
-categories: 笔记
+categories: blog
 tags:   [perl]
 ---
 个人认为：perl中gt应该是比较ascii的大小， “>”是比较数字的    

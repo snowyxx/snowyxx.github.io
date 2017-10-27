@@ -2,7 +2,7 @@
 layout: post
 title:  "破解无线路由密码"
 date:   2013-06-18 16:18:55 +0800
-categories: 笔记
+categories: blog
 tags:   [linux]
 ---
 ## 破解WPA密码

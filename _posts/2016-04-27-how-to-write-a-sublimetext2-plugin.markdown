@@ -2,7 +2,7 @@
 layout: post
 title:  "如何写个Sublime Text 2 插件"
 date:   2016-04-27 15:05:05 +0800
-categories: 笔记
+categories: blog
 tags:   [python]
 ---
 

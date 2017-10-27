@@ -2,7 +2,7 @@
 layout: post
 title:  "去掉linxu 文本的的^M "
 date:   2012-02-14 09:54:17 +0800
-categories: 笔记
+categories: blog
 tags:   [linux]
 ---
 

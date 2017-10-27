@@ -2,7 +2,7 @@
 layout: post
 title:  "docker笔记 － 开始使用"
 date:   2015-12-01 14:59:05 +0800
-categories: 笔记
+categories: blog
 tags:   [docker]
 ---
 安装Docker环境：ubuntu 14.04

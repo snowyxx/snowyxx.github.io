@@ -2,7 +2,7 @@
 layout: post
 title:  "debain安装和配置snmp代理"
 date:   2012-12-07 09:23:36 +0800
-categories: 笔记
+categories: blog
 tags:   [linux]
 ---
 ### 安装

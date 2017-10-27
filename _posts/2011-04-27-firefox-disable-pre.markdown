@@ -2,7 +2,7 @@
 layout: post
 title:  "Firefox禁用自动前后缀"
 date:   2011-04-27 17:21:33 +0800
-categories: 笔记
+categories: blog
 tags:   [firefox]
 ---
 Firefox会把不能打开的页面自动添加上www. 和 .com的前后缀。

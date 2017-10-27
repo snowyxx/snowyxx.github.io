@@ -2,7 +2,7 @@
 layout: post
 title:  "微信开发的一些笔记"
 date:   2016-10-21 10:27:05 +0800
-categories: 笔记
+categories: blog
 tags:   [python, javascrip, wechat]
 ---
 

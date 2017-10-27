@@ -2,7 +2,7 @@
 layout: post
 title:  "perl hash reference 哈希引用"
 date:   2012-10-24 14:03:16 +0800
-categories: 笔记
+categories: blog
 tags:   [perl]
 ---
     #!perl -w

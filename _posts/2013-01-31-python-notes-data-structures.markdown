@@ -2,7 +2,7 @@
 layout: post
 title:  "python笔记：数据结构"
 date:   2013-01-31 16:34:14 +0800
-categories: 笔记
+categories: blog
 tags:   [python]
 ---
 python有4种内置的数据结构（表示一组数据的集合）：            

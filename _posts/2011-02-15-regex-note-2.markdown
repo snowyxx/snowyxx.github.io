@@ -2,7 +2,7 @@
 layout: post
 title:  "正则表达式笔记2"
 date:   2011-02-15 13:32:54 +0800
-categories: 笔记
+categories: blog
 tags:   [regex,perl]
 ---
 # 定界符：

@@ -2,7 +2,7 @@
 layout: post
 title:  "mac设置和使用笔记"
 date:   2013-07-26 15:05:33 +0800
-categories: 笔记
+categories: blog
 tags:   [mac]
 ---
 1. 在Finder的标题显示完整路径

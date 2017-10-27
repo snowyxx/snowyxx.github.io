@@ -2,7 +2,7 @@
 layout: post
 title:  "abort: error: [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure "
 date:   2015-11-03 12:12:53 +0800
-categories: 笔记
+categories: blog
 tags:   [mac,python]
 ---
 

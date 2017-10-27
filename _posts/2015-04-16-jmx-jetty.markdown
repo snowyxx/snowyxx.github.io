@@ -2,7 +2,7 @@
 layout: post
 title:  "通过jmx来监控Jetty"
 date:   2015-04-16 16:48:47 +0800
-categories: 笔记
+categories: blog
 tags:   [jmx,java]
 ---
 通过Jmx监视Jetty的步骤：

@@ -2,7 +2,7 @@
 layout: post
 title:  "python交互模式下的tab自动补全"
 date:   2015-01-07 10:39:37 +0800
-categories: 笔记
+categories: blog
 tags:   [python]
 ---
     import sys

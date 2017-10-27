@@ -2,7 +2,7 @@
 layout: post
 title:  "到Github pages域名解析设置"
 date:   2015-12-11 11:07:05 +0800
-categories: 笔记
+categories: blog
 tags:   [other]
 ---
 把博客迁移到Github pages后设置了域名解析后可以访问www.xiaoxuenotes.com了。但是会收到Github的邮件，让添加CNAME。

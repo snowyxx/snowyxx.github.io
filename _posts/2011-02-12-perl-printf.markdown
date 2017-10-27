@@ -2,7 +2,7 @@
 layout: post
 title:  "perl笔记1 - 使用printf格式化输出"
 date:   2011-02-12 15:09:06 +0800
-categories: 笔记
+categories: blog
 tags:   [perl]
 ---
 纯笔记，内容来自《Learning Perl 5th Edition》

@@ -2,7 +2,7 @@
 layout: post
 title:  "Windows 2008r2 集群部署"
 date:   2014-07-30 10:13:04 +0800
-categories: 笔记
+categories: blog
 tags:   [windows]
 ---
 ## 主机：

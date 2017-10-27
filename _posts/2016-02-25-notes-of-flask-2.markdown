@@ -2,7 +2,7 @@
 layout: post
 title:  "Flask学习笔记 2 - 模板"
 date:   2016-02-25 14:02:05 +0800
-categories: 笔记
+categories: blog
 tags:   [python,Flask]
 ---
 Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates>

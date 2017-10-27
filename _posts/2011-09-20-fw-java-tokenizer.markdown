@@ -2,7 +2,7 @@
 layout: post
 title:  "转：java.util.StringTokenizer"
 date:   2011-09-20 10:27:35 +0800
-categories: 笔记
+categories: blog
 tags:   [java]
 ---
 

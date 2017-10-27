@@ -2,7 +2,7 @@
 layout: post
 title:  "Windows任务栏中的chrome图标变成qq的了"
 date:   2013-04-26 09:49:25 +0800
-categories: 笔记
+categories: blog
 tags:   [other]
 ---
 不知为啥Windows任务栏中的chrome图标变成qq的了

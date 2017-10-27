@@ -2,7 +2,7 @@
 layout: post
 title:  "Windows录制屏幕的方法"
 date:   2016-11-23 17:07:05 +0800
-categories: 笔记
+categories: blog
 tags:   [windows]
 ---
 

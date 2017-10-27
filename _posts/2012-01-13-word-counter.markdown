@@ -2,7 +2,7 @@
 layout: post
 title:  "统计字符串中每个字符出现的次数 "
 date:   2012-01-13 16:15:53 +0800
-categories: 笔记
+categories: blog
 tags:   [perl,java]
 ---
 ### Pelr：

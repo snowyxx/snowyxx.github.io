@@ -2,7 +2,7 @@
 layout: post
 title:  "Dell OptiPlex 780不能开机，黄灯闪，1 3灯闪"
 date:   2012-06-13 08:37:57 +0800
-categories: 笔记
+categories: blog
 tags:   [other]
 ---
 [参考这里](http://supportapj.dell.com/support/edocs/systems/op780/cs/sm/sm_dt/diags.htm){:target="blank"}

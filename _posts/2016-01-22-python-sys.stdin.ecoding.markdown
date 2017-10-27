@@ -2,7 +2,7 @@
 layout: post
 title:  "python system.stdin.encoding为None的问题"
 date:   2016-01-22 14:45:05 +0800
-categories: 笔记
+categories: blog
 tags:   [python,java]
 ---
 在执行[通过API来管理阿里云](/blog/2016/01/20/use-api-to-manage-aliyun.html)中脚本的时候遇到问题：     

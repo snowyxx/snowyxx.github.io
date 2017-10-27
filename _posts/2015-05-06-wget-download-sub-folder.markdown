@@ -2,7 +2,7 @@
 layout: post
 title:  "wget下载文件及子目录"
 date:   2015-05-06 16:21:05 +0800
-categories: 笔记
+categories: blog
 tags:   [linux]
 ---
 `wget -c -r -np -k -L -p http://xxx.x.x.xxx.com/xxx/`

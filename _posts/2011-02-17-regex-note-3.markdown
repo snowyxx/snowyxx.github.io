@@ -2,7 +2,7 @@
 layout: post
 title:  "正则表达式笔记3"
 date:   2011-02-17 15:57:30 +0800
-categories: 笔记
+categories: blog
 tags:   [regex,perl]
 ---
 今天学的有点乱，一点一点地捋。。。

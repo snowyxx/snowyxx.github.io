@@ -2,7 +2,7 @@
 layout: post
 title:  "perl笔记  大小写转换"
 date:   2011-12-16 13:57:40 +0800
-categories: 笔记
+categories: blog
 tags:   [perl]
 ---
 大小写转换有两种方法，一种用**正则中的转意字符**，另外一种是**字符串函数**

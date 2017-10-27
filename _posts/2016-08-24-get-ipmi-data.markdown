@@ -2,7 +2,7 @@
 layout: post
 title:  "几种通过IPMI获取IBM服务器硬件信息的方法"
 date:   2016-08-24 14:42:05 +0800
-categories: 笔记
+categories: blog
 tags:   [python, IPMI]
 ---
 

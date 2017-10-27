@@ -2,7 +2,7 @@
 layout: post
 title:  "jekyll分页+jekyll中变量"
 date:   2015-12-23 14:49:05 +0800
-categories: 笔记
+categories: blog
 tags:   [jekyll]
 ---
 按照[说明](http://jekyllrb.com/docs/pagination/){:target="_blank"}在_config.yml添加：

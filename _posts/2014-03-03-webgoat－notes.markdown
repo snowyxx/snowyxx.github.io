@@ -2,7 +2,7 @@
 layout: post
 title:  "WebGoat笔记"
 date:   2014-03-03 16:23:37 +0800
-categories: 笔记
+categories: blog
 tags:   [web]
 ---
 1. http splitting

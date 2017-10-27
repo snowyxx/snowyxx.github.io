@@ -2,7 +2,7 @@
 layout: post
 title:  "ubuntu修改smplayer的格式关联"
 date:   2011-01-26 00:05:42 +0800
-categories: 笔记
+categories: blog
 tags:   [linux]
 ---
 之前在kubuntu中安装了smplayer后文件格式进行了自动关联。但是ubuntu中就没有关联了。smplayer的选项中页面关联格式的。如果选中一个视频文件在属性中修改关联格式非常的麻烦。       

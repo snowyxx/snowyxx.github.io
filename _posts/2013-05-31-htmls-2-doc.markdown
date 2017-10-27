@@ -2,7 +2,7 @@
 layout: post
 title:  "把多个html文件转换成一个doc文档的方法"
 date:   2013-05-31 14:28:07 +0800
-categories: 笔记
+categories: blog
 tags:   [other]
 ---
 要把一个用户手册转换成功一个word文档，这个用户手册有几个百个html页面，做起来来很麻烦，也没有找到很好满足我的要求的软件，最后的过程如下，效果还不错。

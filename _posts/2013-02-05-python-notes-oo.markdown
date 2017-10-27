@@ -2,7 +2,7 @@
 layout: post
 title:  "python笔记：类"
 date:   2013-02-05 14:38:45 +0800
-categories: 笔记
+categories: blog
 tags:   [python]
 ---
     #!python

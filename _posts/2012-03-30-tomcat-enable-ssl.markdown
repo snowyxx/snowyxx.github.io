@@ -2,7 +2,7 @@
 layout: post
 title:  "tomcat 启动ssl（ubuntu）"
 date:   2012-03-30 14:35:32 +0800
-categories: 笔记
+categories: blog
 tags:   [linux]
 ---
 

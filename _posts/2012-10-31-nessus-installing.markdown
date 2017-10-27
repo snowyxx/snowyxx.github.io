@@ -2,7 +2,7 @@
 layout: post
 title:  "nessus安装记录"
 date:   2012-10-31 16:23:22 +0800
-categories: 笔记
+categories: blog
 tags:   [other]
 ---
 1. 到官网下载

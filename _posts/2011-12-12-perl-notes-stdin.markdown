@@ -2,7 +2,7 @@
 layout: post
 title:  "perl笔记  stdin"
 date:   2011-12-12 14:35:00 +0800
-categories: 笔记
+categories: blog
 tags:   [perl]
 ---
 

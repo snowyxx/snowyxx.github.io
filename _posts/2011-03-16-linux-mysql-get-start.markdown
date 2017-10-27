@@ -2,7 +2,7 @@
 layout: post
 title:  "ubuntu- mysql安装和简单配置"
 date:   2011-03-16 15:58:23 +0800
-categories: 笔记
+categories: blog
 tags:   [linux,mysql]
 ---
 纯笔记：

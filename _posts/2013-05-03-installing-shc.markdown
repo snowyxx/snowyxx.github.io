@@ -2,7 +2,7 @@
 layout: post
 title:  "安装shc"
 date:   2013-05-03 16:58:29 +0800
-categories: 笔记
+categories: blog
 tags:   [linux]
 ---
 shc是对shell脚本进行加密的工具，对于那些不想让别人看到内容脚本很有用。

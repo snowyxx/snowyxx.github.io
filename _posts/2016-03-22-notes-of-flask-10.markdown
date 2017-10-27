@@ -2,7 +2,7 @@
 layout: post
 title:  "Flask学习笔记 10 - 搜索"
 date:   2016-03-22 11:09:05 +0800
-categories: 笔记
+categories: blog
 tags:   [python,Flask]
 ---
 Flask教程：<http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-x-full-text-search>

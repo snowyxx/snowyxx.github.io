@@ -2,7 +2,7 @@
 layout: post
 title:  "Android手机不能通过TL-WR841N上网问题解决 "
 date:   2012-03-03 09:17:03 +0800
-categories: 笔记
+categories: blog
 tags:   [other]
 ---
 Android手机不能通过TL-WR841N上网，虽然已经连接到网络但是不能打开网页。确定不是DNS的问题。这个问题困扰了好久，找了好多方法都无效，最后终于找到有效的了：
