@@ -26,6 +26,17 @@ tags:   [linux]
                 Tag="foobar"
                 Severity="error"
                 Facility="local7")
+                
+    [zhSyslogGenerator.py](https://github.com/snowyxx/MyTest/blob/master/zhSyslogGenerator.py)是一个用来生成中文syslog日志的脚本。
+    对应的`/etc/rsyslog.conf`添加类似于以下的配置：
+    ```shell
+    module(load="imfile" PollingInterval="5")
+    input(type="imfile"
+    File="/home/yan/yantestlog.txt"
+    Tag = "yantest"
+    Severity="error"
+    Facility="local7")
+    ```
 
 4. 接收syslog
     接收syslog的叫syslog server。可以使用一些现成的工具或日志管理分析软件                
