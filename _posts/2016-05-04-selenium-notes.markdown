@@ -48,6 +48,9 @@ driver = webdriver.Firefox()
 
 driver.get('http://cn.bing.com')
 
+#refresh
+driver.refresh()
+
 #find element 
 # find\_element and find\_elements
 driver.find_element_by_id('scpl0')
