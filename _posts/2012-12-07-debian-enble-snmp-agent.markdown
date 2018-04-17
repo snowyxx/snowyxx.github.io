@@ -47,7 +47,8 @@ access  AllGroup        ""      any     noauth  exact   AllView         none    
 $cat /etc/sysconfig/snmpd
 # snmpd command line options
 #OPTIONS="-LS0-6d -Lf /dev/null -p /var/run/snmpd.pid -x 0.0.0.0"
-```shell
+```
+
 配置完成后重启SNMP服务：
 
 `service snmpd restart`
