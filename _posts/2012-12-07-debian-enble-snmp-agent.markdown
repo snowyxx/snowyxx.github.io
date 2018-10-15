@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "debain安装和配置snmp代理"
+title:  "Linux安装和配置snmp代理"
 date:   2012-12-07 09:23:36 +0800
 categories: blog
 tags:   [linux]
@@ -9,6 +9,7 @@ tags:   [linux]
 * 目录
 {:toc}
 
+## Red hat/CentOS配置
 
 ### 安装
 `apt-get install snmp snmpd`
@@ -36,7 +37,7 @@ tags:   [linux]
     iptables -A INPUT -i eth0 -p udp -s 60.*.*.* –dport 161 -j ACCEPT
     
     
-### Red hat/Cent配置
+## Red hat/CentOS配置
 
 ```shell
 $cat /etc/snmp/snmpd.conf
