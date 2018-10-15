@@ -5,6 +5,11 @@ date:   2012-12-07 09:23:36 +0800
 categories: blog
 tags:   [linux]
 ---
+
+* 目录
+{:toc}
+
+
 ### 安装
 `apt-get install snmp snmpd`
 
@@ -31,7 +36,7 @@ tags:   [linux]
     iptables -A INPUT -i eth0 -p udp -s 60.*.*.* –dport 161 -j ACCEPT
     
     
-### redhad/centos配置
+### Red hat/Cent配置
 
 ```shell
 $cat /etc/snmp/snmpd.conf
