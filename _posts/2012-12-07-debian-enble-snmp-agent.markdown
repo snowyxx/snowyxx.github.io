@@ -9,7 +9,7 @@ tags:   [linux]
 * 目录
 {:toc}
 
-## Red hat/CentOS配置
+## Ubuntu/Debian配置
 
 ### 安装
 `apt-get install snmp snmpd`
