@@ -40,4 +40,4 @@ tags:   [awk,linux]
 18. ORS：输出记录分隔符。                
 
 ---
-参考：[http://www-128.ibm.com/developerworks/cn/linux/shell/awk/awk-1/index.html](http://www-128.ibm.com/developerworks/cn/linux/shell/awk/awk-1/index.html){:target="_blank"}
+参考：[https://www.ibm.com/developerworks/cn/linux/shell/awk/awk-1/index.html](https://www.ibm.com/developerworks/cn/linux/shell/awk/awk-1/index.html){:target="_blank"}
