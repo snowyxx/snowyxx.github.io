@@ -40,7 +40,7 @@ tags:   [linux]
 
 4. 接收syslog
     接收syslog的叫syslog server。可以使用一些现成的工具或日志管理分析软件                
-    对于java来说一个简单的测试方法，使用现成的API：[syslog4j](http://www.syslog4j.org/){:target="_blank"}     
+    对于java来说一个简单的测试方法，使用现成的API：[syslog4j](https://github.com/syslog4j/syslog4j){:target="_blank"}     
     使用方法：
                
         java -cp syslog4j-0.9.46.jar org.productivity.java.syslog4j.server.SyslogServerMain -p 514 udp
