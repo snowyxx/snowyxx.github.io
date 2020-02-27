@@ -56,4 +56,5 @@ tags:   [mac]
 `youtube-dl -f bestvideo+bestaudio`
 
 - youtube-dl下载选择语言的自动字幕和选择格式的视频
+
 `youtube-dl --proxy 127.0.0.1:8087 --write-auto-sub --sub-lang en,zh-Hans 'https://youtu.be/Pe85BH9SiS8'`
