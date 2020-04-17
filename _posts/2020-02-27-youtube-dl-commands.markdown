@@ -58,3 +58,7 @@ tags:   [mac]
 - youtube-dl下载选择语言的自动字幕和选择格式的视频, 格式22 （best）
 
 `youtube-dl --proxy 127.0.0.1:8087 --write-auto-sub --sub-lang en,zh-Hans -f 22 'https://youtu.be/Pe85BH9SiS8'`
+
+- youtube-dl下载选择语言的自动字幕和选择格式的视频, 格式137 （1080p）从文件获得视频列表
+
+`youtube-dl --proxy 127.0.0.1:8087 --write-auto-sub --sub-lang en,zh-Hans -f 137 -a vides.txt`
