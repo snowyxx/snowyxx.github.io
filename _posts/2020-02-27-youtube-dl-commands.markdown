@@ -59,6 +59,17 @@ tags:   [mac]
 
 `youtube-dl --proxy 127.0.0.1:8087 --write-auto-sub --sub-lang en,zh-Hans -f 22 'https://youtu.be/Pe85BH9SiS8'`
 
-- youtube-dl下载选择语言的自动字幕和选择格式的视频, 格式137 （1080p）从文件获得视频列表
+- 下载最优MP4格式视频和m4a音频，并合并为mp4文件
 
-`youtube-dl --proxy 127.0.0.1:8087 --write-auto-sub --sub-lang en,zh-Hans -f 137 -a vides.txt`
+`youtube-dl --proxy 127.0.0.1:8087 -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]' -a filelist.txt`
+
+> 要合并，要安装ffmpeg  `brew install ffmpeg`
+> 如果下载了单独的音频和视频，可以用以下命令来合并 `ffmpeg -i xxxx.mp4 -i xxxx.m4a -c copy -map 0:v:0 -map 1:a:0 output.mp4`
+
+---
+
+参考：                                   
+
+- <https://ifttl.com/merge-m4a-and-mp4-files>
+- <https://www.ostechnix.com/youtube-dl-tutorial-with-examples-for-beginners/>
+- <https://github.com/ytdl-org/youtube-dl/issues/4886>
