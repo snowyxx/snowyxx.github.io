@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Mac下python 2.7的2个ssl错误解决"
-date:   2020-02-27 15:50:05 +0800
+date:   2020-07-23 15:50:05 +0800
 categories: blog
 tags:   [mac, python, ssl]
 ---
