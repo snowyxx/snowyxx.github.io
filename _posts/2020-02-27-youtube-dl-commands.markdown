@@ -61,6 +61,8 @@ tags:   [mac]
 
 - 下载最优MP4格式视频和m4a音频，并合并为mp4文件
 
+> 遇到certificate verify failed (_ssl.c:727)的错误，添加参数`--no-check-certificate`可以回避。
+
 `youtube-dl --proxy 127.0.0.1:8087 -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]' -a filelist.txt`
 
 > 要合并，要安装ffmpeg  `brew install ffmpeg`
