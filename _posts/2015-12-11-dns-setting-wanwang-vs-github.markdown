@@ -5,6 +5,8 @@ date:   2015-12-11 11:07:05 +0800
 categories: blog
 tags:   [other]
 ---
+
+
 把博客迁移到Github pages后设置了域名解析后可以访问www.xiaoxuenotes.com了。但是会收到Github的邮件，让添加CNAME。
 而且不能用xiaoxuenotes.com访问，有点low。网上大家的方法各异。最后找到最合适我要求的方法。
 
@@ -21,13 +23,20 @@ tags:   [other]
 **新的配置：**               
 代码根目录CNAME文件内容：
     
-    xiaoxuenotes.com
+    XIAOXUENOTES.COM
     
 万网域名解析设置    
 
 ![wanwang](/images/wanwang_new.png)
 
 这样就可以使用xiaoxuenotes.com和www.xiaoxuenotes.com访问了。
+
+Github pages新A记录指向的IP地址
+
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
 
 ---
 
