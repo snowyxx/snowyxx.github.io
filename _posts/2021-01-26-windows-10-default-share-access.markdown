@@ -24,12 +24,16 @@ mount_smbfs: mount error: /Users/myname/258d: Unknown error: -1073741412
 
 解决方法：
 
-- Windows 10只能用_administrator_用户访问。其他用户即使在administrators组也不行。那么就启用administrator，用户其访问即可。
+- Windows 10只能用**administrator**用户访问。其他用户即使在administrators组也不行。那么就启用administrator，用户其访问即可。
 
 - 如果想让其他用户可以访问默认共享。在该Windows 10上做如下设置：
 
     1.打开注册表（win+r输入regedit回车）
+    
     2.打开HKEY\_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+    
     3.右击右面空白处并新建DWORD (32 位)
+    
     4.把新建的命名为LocalAccountTokenFilterPolicy
+    
     5.双击把它的值改为1
