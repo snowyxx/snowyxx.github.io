@@ -16,3 +16,9 @@ tags:   [mac]
 3. 添加：`LABEL=你的卷标名 none ntfs rw,auto,nobrowse`
 4. 重新插入移动硬盘
 5. 转到/Volumes/你的卷标名 （Finder中使用shift+cmd+g）就可以写入了。
+
+2022-6-16 更新 
+
+以上方法在macOS 12.4 Monterey 上不灵。找到了个免费的方法：[mounty](https://mounty.app/)
+
+安装： `brew install --cask mounty`
