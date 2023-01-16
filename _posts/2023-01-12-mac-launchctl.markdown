@@ -6,7 +6,7 @@ categories: blog
 tags:   [mac, 计划任务, launchctl]
 ---
 
-好久没有花1个小时以上来解决一个问题了。。。而且2022年一篇博客都没有写。
+好久没有花1个小时以上来调查一个技术问题了。。。而且2022年一篇博客都没有写。
 
 想在Mac设置个计划任务，定时执行我的一个python脚本。
 
@@ -18,8 +18,10 @@ tags:   [mac, 计划任务, launchctl]
 
 ```shell
 #!/bin/sh
-cd /Users/username/Documents/ZohoRepository
-python mygit.py my mail
+echo `date +"%Y-%m-%d %H:%M:%S"`
+set -x
+cd /Users/yan/Documents/ZohoRepository
+/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7 mygit.py my mail
 ```
 修改脚本权限： `chmod 777 mygit.sh`
 
@@ -98,20 +100,20 @@ python mygit.py my mail
 
 `/bin/sh: /Users/username/Documents/ZohoRepository/mygit.sh: Operation not permitted`
 
-这里话费了好多时间来找解决方法：
+这里花费了好多时间来找解决方法：
 
-在Mac的设置（13.01 版本） - 隐私与安全性 - 完全磁盘访问权限， 添加/bin下的bash或sh
+*在Mac的设置（13.01 版本） - 隐私与安全性 - 完全磁盘访问权限， 添加/bin下的bash或sh*
 
 ### 故障排查工具
 
 plist文件检查：plutil
 
-launchctl：图像工具 - launchcontrol 可以编辑plist文件、查看错误、查看日志等等
+launchcontrol：launchctl的图形工具 - 可以编辑plist文件、查看错误、查看日志等等
 
 
 ### 参考
 
-下面几个网页比较有价值：
+下面几个网页比较有参考价值：
 
 - https://zhuanlan.zhihu.com/p/388287366
 
